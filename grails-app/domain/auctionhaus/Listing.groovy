@@ -10,11 +10,11 @@ class Listing {
     String listingDescription
     BigDecimal bidIncAmt = 0.5
     Customer seller
-
+  //Listing belongs to a customer and has many bids
     static belongsTo = [seller: Customer]
     static hasMany = [bids: Bid]
 
-
+  //Get highest Bid Amount for the listing
     BigDecimal getHighestBid() {
 
         def highestBid
@@ -33,7 +33,8 @@ class Listing {
 
     }
 
-    BigDecimal GetMinBid()
+    // Get the next minimum bid a bidder can place
+    BigDecimal getMinBid()
 
     {
         if (bids)        {
@@ -47,6 +48,19 @@ class Listing {
 
     }
 
+    // Get the winner(Customer) for the listing
+
+        Customer getWinner() {
+
+         listingEndDateTime>= new Date() ? getWinningBid().bidder : null
+
+    }
+
+    Bid getWinningBid()
+    {
+
+     Bid.findByListingAndBidAmount(this,getHighestBid())
+    }
 
     static constraints = {
 
@@ -59,8 +73,8 @@ class Listing {
         listingDescription size:0..255
 
         //L3: Listing Date time must be in future
-        listingEndDateTime nullable:false,validator: {val,obj ->
-         if (val.compareTo(new Date())>0)
+        listingEndDateTime nullable:false,validator: {
+         if (it.compareTo(new Date())>0)
         return ('invalid ListingEndDateTime')
         }
     }

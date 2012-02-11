@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="1" hostname="AmIts-MacBook-Pro.local" name="auctionhaus.BidTests" tests="1" time="1.025" timestamp="2012-02-10T02:01:06">
+  <properties />
+  <testcase classname="auctionhaus.BidTests" name="testSomething" time="0.931">
+    <failure message="java.lang.AssertionError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
+	at auctionhaus.BidTests.testSomething(BidTests.groovy:15)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+</testsuite>

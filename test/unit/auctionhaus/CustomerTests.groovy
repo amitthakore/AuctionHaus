@@ -20,7 +20,7 @@ class CustomerTests {
     mockForConstraintsTests(Customer, [existingCustomer])
 
     def customer = new Customer()
-    assert !customer.validate()
+    assert  customer.validate()
     assert "nullable" == customer.errors["email"]
     assert "nullable" == customer.errors["password"]
 
@@ -29,7 +29,11 @@ class CustomerTests {
     assert !customer.validate()
     assert "unique" == customer.errors["email"]
 
+  // unique constrains
 
+        customer = new Customer(email:"amit_thakore@hotmail.com",password: "123456",createddate: new Date())
+        assert !customer.validate()
+        assert "unique" == customer.errors["email"]
     }
 
 

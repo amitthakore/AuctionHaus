@@ -11,7 +11,9 @@ import org.junit.*
 @TestFor(Listing)
 class ListingTests {
 
-    void testSomething() {
+    void testConstrains() {
+     mockDomain(Listing)
+     mockDomain(Customer)
        fail "Implement me"
     }
 }

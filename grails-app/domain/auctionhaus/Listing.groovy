@@ -74,8 +74,8 @@ class Listing {
 
         //L-4: Listing Date time must be in future
         listingEndDateTime nullable:false,validator: {
-         if (it.compareTo(new Date())>0)
-        return ('invalid ListingEndDateTime')
+                if (it.compareTo(new Date())>0)
+                    return ('invalid ListingEndDateTime')
         }
     }
 

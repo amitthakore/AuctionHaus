@@ -80,7 +80,7 @@
       <file leaf-file-name="Listing.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="13" selection-start="1834" selection-end="1834" vertical-scroll-proportion="-11.043478">
+            <state line="64" column="21" selection-start="1302" selection-end="1302" vertical-scroll-proportion="-41.739132">
               <folding>
                 <element signature="e#21#81#0" expanded="true" />
               </folding>
@@ -91,16 +91,16 @@
       <file leaf-file-name="Bid.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Bid.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="57" selection-start="215" selection-end="215" vertical-scroll-proportion="-4.5652175">
+            <state line="26" column="68" selection-start="968" selection-end="968" vertical-scroll-proportion="-16.956522">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerTests.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CustomerTests.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="57" selection-start="1673" selection-end="1722" vertical-scroll-proportion="-10.391304">
+            <state line="37" column="3" selection-start="1274" selection-end="1274" vertical-scroll-proportion="-0.54485047">
               <folding>
                 <element signature="e#21#47#0" expanded="true" />
               </folding>
@@ -108,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListingTests.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ListingTests.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="87" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.6976744">
+            <state line="21" column="34" selection-start="552" selection-end="552" vertical-scroll-proportion="-6.521739">
               <folding />
             </state>
           </provider>
@@ -158,9 +158,9 @@
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/CustomerListing.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Customer.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Bid.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" />
         <option value="$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" />
       </list>
     </option>
   </component>
@@ -330,7 +330,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.ListingTests.testConstrains">
+  <component name="RunManager" selected="JUnit.CustomerTests">
     <configuration default="false" name="BidTests" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="AuctionHaus" />
       <setting name="vmparams" value="" />
@@ -617,7 +617,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24512987" sideWeight="0.67247385" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32752612" sideWeight="0.5073052" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32752612" sideWeight="0.5073052" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -687,16 +687,6 @@
         <state line="3" column="85" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Bid.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="57" selection-start="215" selection-end="215" vertical-scroll-proportion="-4.5652175">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/BidTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="6" selection-start="198" selection-end="198" vertical-scroll-proportion="-5.826087">
@@ -704,6 +694,28 @@
             <element signature="e#23#49#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Bid.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="68" selection-start="968" selection-end="968" vertical-scroll-proportion="-16.956522">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="21" selection-start="1302" selection-end="1302" vertical-scroll-proportion="-41.739132">
+          <folding>
+            <element signature="e#21#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Customer.groovy">
@@ -716,31 +728,19 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy">
+    <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="13" selection-start="1834" selection-end="1834" vertical-scroll-proportion="-11.043478">
-          <folding>
-            <element signature="e#21#81#0" expanded="true" />
-          </folding>
+        <state line="21" column="34" selection-start="552" selection-end="552" vertical-scroll-proportion="-6.521739">
+          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="57" selection-start="1673" selection-end="1722" vertical-scroll-proportion="-10.391304">
+        <state line="37" column="3" selection-start="1274" selection-end="1274" vertical-scroll-proportion="-0.54485047">
           <folding>
             <element signature="e#21#47#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="87" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.6976744">
-          <folding />
         </state>
       </provider>
     </entry>

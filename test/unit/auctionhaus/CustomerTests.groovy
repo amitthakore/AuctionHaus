@@ -35,7 +35,7 @@ class CustomerTests
 
 
     //C-1: Verify that customer object has email,password and create date fields
-        def customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createddate: new Date()).save()
+        def customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createddate: new Date()) .save()
 
     assert customer.validate()
     assert customer.email == 'amitthakore16@gmail.com'

@@ -80,7 +80,7 @@
       <file leaf-file-name="Listing.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="1" selection-start="1833" selection-end="1833" vertical-scroll-proportion="-12.347826">
+            <state line="79" column="13" selection-start="1834" selection-end="1834" vertical-scroll-proportion="-11.043478">
               <folding>
                 <element signature="e#21#81#0" expanded="true" />
               </folding>
@@ -100,7 +100,7 @@
       <file leaf-file-name="CustomerTests.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="19" selection-start="1687" selection-end="1687" vertical-scroll-proportion="-7.130435">
+            <state line="47" column="57" selection-start="1673" selection-end="1722" vertical-scroll-proportion="-10.391304">
               <folding>
                 <element signature="e#21#47#0" expanded="true" />
               </folding>
@@ -111,7 +111,7 @@
       <file leaf-file-name="ListingTests.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="24" selection-start="295" selection-end="295" vertical-scroll-proportion="0.6687898">
+            <state line="35" column="87" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.6976744">
               <folding />
             </state>
           </provider>
@@ -129,7 +129,7 @@
       <file leaf-file-name="BidTests.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/BidTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.9130435">
+            <state line="11" column="6" selection-start="198" selection-end="198" vertical-scroll-proportion="-5.826087">
               <folding>
                 <element signature="e#23#49#0" expanded="true" />
               </folding>
@@ -158,8 +158,8 @@
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/CustomerListing.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Customer.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Bid.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" />
         <option value="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" />
         <option value="$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy" />
       </list>
     </option>
@@ -330,7 +330,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.CustomerTests">
+  <component name="RunManager" selected="JUnit.ListingTests.testConstrains">
     <configuration default="false" name="BidTests" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="AuctionHaus" />
       <setting name="vmparams" value="" />
@@ -370,6 +370,40 @@
       <envs />
       <patterns />
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ListingTests.testConstrains" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="auctionhaus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="AuctionHaus" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="auctionhaus" />
+      <option name="MAIN_CLASS_NAME" value="auctionhaus.ListingTests" />
+      <option name="METHOD_NAME" value="testConstrains" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -522,10 +556,11 @@
         <option name="Make" enabled="false" />
       </method>
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Grails.Grails:AuctionHaus" />
       <item index="1" class="java.lang.String" itemvalue="Grails.BidTests" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerTests" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ListingTests.testConstrains" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -568,9 +603,9 @@
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39721254" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32752612" sideWeight="0.49756494" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32752612" sideWeight="0.48701298" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -582,7 +617,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24512987" sideWeight="0.67247385" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32752612" sideWeight="0.49675325" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32752612" sideWeight="0.5073052" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -662,21 +697,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="1" selection-start="1833" selection-end="1833" vertical-scroll-proportion="-12.347826">
-          <folding>
-            <element signature="e#21#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/BidTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.9130435">
+        <state line="11" column="6" selection-start="198" selection-end="198" vertical-scroll-proportion="-5.826087">
           <folding>
             <element signature="e#23#49#0" expanded="true" />
           </folding>
@@ -693,9 +716,21 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="13" selection-start="1834" selection-end="1834" vertical-scroll-proportion="-11.043478">
+          <folding>
+            <element signature="e#21#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="19" selection-start="1687" selection-end="1687" vertical-scroll-proportion="-7.130435">
+        <state line="47" column="57" selection-start="1673" selection-end="1722" vertical-scroll-proportion="-10.391304">
           <folding>
             <element signature="e#21#47#0" expanded="true" />
           </folding>
@@ -704,7 +739,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="295" selection-end="295" vertical-scroll-proportion="0.6687898">
+        <state line="35" column="87" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.6976744">
           <folding />
         </state>
       </provider>

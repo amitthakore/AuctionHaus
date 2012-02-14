@@ -8,8 +8,8 @@ class Listing {
     Date  listingEndDateTime
     BigDecimal startingBidPrice
     String listingDescription
-    BigDecimal bidIncAmt = 0.5
     Customer seller
+    BigDecimal bidIncAmt = 0.5
   //Listing belongs to a customer and has many bids
     static belongsTo = [seller: Customer]
     static hasMany = [bids: Bid]
@@ -64,15 +64,15 @@ class Listing {
 
     static constraints = {
 
-        //L1:Listing name must be less than 64 characters
+        //L-1:Listing name must be less than 64 characters
         listingName nullable: false, blank:false,size:1..63
 
-        //L2 : LisitngBidPrice can not be blank
+        //L-2 : LisitngBidPrice can not be blank
         startingBidPrice blank:false
-        //L3 : Listing description should be less than 255 characters
+        //L-3 : Listing description should be less than 255 characters
         listingDescription size:0..255
 
-        //L3: Listing Date time must be in future
+        //L-4: Listing Date time must be in future
         listingEndDateTime nullable:false,validator: {
          if (it.compareTo(new Date())>0)
         return ('invalid ListingEndDateTime')

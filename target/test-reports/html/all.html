@@ -14,10 +14,15 @@
         Unit Test Results
      - All tests </h1>
 <p class="intro">
-                        A single test executed
+                        Executed
+                        6
+                        tests
                     
                         with
-                        one failure
+                        one error
+
+                        and
+                        2 failures
                         .
                     </p>
 </div>
@@ -57,7 +62,7 @@
 <p>
 <span class="icon failure"></span><b class="testname message failure">testSomething</b>
 </p>
-<p class="summary">Executed in 0.931 seconds.</p>
+<p class="summary">Executed in 0.785 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo">
 <div class="details">
@@ -74,11 +79,181 @@
 <div class="clearfix output footer">
 <div class="sysout">
 <h2>Standard output</h2>
-<pre class="stdout"></pre>
+<pre class="stdout">--Output from testSomething--
+</pre>
 </div>
 <div class="syserr">
 <h2>System error</h2>
 <pre class="syserr">--Output from testSomething--
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite failure">
+<div class="header">
+<h2>CustomerIntegrationTestTests</h2>
+<h3>
+                        A single test executed
+                    
+                        with
+                        one failure
+                        .
+                    </h3>
+</div>
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="testUniqueEmail">
+<div class="grid_3 alpha">
+<p>
+<span class="icon failure"></span><b class="testname message failure">testUniqueEmail</b>
+</p>
+<p class="summary">Executed in 0.319 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">Assertion failed: 
+
+assert 'unique' == customer.errors["email"]
+                |  |        |     |
+                |  |        |     null
+                |  |        grails.validation.ValidationErrors: 0 errors
+                |  auctionhaus.Customer : 1
+                false
+</b>
+</p>
+<pre>junit.framework.AssertionFailedError: Assertion failed: 
+
+assert 'unique' == customer.errors["email"]
+                |  |        |     |
+                |  |        |     null
+                |  |        grails.validation.ValidationErrors: 0 errors
+                |  auctionhaus.Customer : 1
+                false
+
+	at auctionhaus.CustomerIntegrationTestTests.testUniqueEmail(CustomerIntegrationTestTests.groovy:30)
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">--Output from testUniqueEmail--
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">--Output from testUniqueEmail--
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite error">
+<div class="header">
+<h2>ListingTests</h2>
+<h3>
+                        A single test executed
+                    
+                        with
+                        one error
+                        .
+                    </h3>
+</div>
+<div class="testcase clearfix error grid_8 alpha omega" data-name="testConstrains">
+<div class="grid_3 alpha">
+<p>
+<span class="icon error"></span><b class="testname message error">testConstrains</b>
+</p>
+<p class="summary">Executed in 0.143 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []
+Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()</b>
+</p>
+<pre>groovy.lang.MissingMethodException: No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []
+Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()
+	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.withManualFlushMode(UniqueConstraint.groovy:103)
+	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.processValidate(UniqueConstraint.groovy:39)
+	at grails.test.MockUtils$_addValidateMethod_closure87.doCall(MockUtils.groovy:1017)
+	at grails.test.MockUtils$_addValidateMethod_closure88.doCall(MockUtils.groovy:1060)
+	at auctionhaus.ListingTests.testConstrains(ListingTests.groovy:25)
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">--Output from testConstrains--
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">--Output from testConstrains--
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite success">
+<div class="header">
+<h2>CustomerTests</h2>
+<h3>
+                        Executed
+                        3
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testCustomerRequiredFields">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testCustomerRequiredFields</b>
+</p>
+<p class="summary">Executed in 0.93 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testCustomerValidEmail">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testCustomerValidEmail</b>
+</p>
+<p class="summary">Executed in 0.071 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testCustomerValidPassword">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testCustomerValidPassword</b>
+</p>
+<p class="summary">Executed in 0.044 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">--Output from testCustomerRequiredFields--
+--Output from testCustomerValidEmail--
+--Output from testCustomerValidPassword--
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">--Output from testCustomerRequiredFields--
+--Output from testCustomerValidEmail--
+--Output from testCustomerValidPassword--
 </pre>
 </div>
 </div>

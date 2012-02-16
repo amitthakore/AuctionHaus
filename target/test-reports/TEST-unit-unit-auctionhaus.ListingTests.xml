@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="AmIts-MacBook-Pro.local" name="auctionhaus.ListingTests" tests="1" time="0.147" timestamp="2012-02-15T06:16:36">
+  <properties />
+  <testcase classname="auctionhaus.ListingTests" name="testConstrains" time="0.143">
+    <error message="No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []&#xa;Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []
+Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()
+	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.withManualFlushMode(UniqueConstraint.groovy:103)
+	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.processValidate(UniqueConstraint.groovy:39)
+	at grails.test.MockUtils$_addValidateMethod_closure87.doCall(MockUtils.groovy:1017)
+	at grails.test.MockUtils$_addValidateMethod_closure88.doCall(MockUtils.groovy:1060)
+	at auctionhaus.ListingTests.testConstrains(ListingTests.groovy:25)
+</error>
+  </testcase>
+  <system-out><![CDATA[--Output from testConstrains--
+]]></system-out>
+  <system-err><![CDATA[--Output from testConstrains--
+]]></system-err>
+</testsuite>

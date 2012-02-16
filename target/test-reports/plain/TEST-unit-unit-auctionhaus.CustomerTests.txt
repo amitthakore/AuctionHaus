@@ -1,0 +1,16 @@
+Testsuite: auctionhaus.CustomerTests
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.085 sec
+------------- Standard Output ---------------
+--Output from testCustomerRequiredFields--
+--Output from testCustomerValidEmail--
+--Output from testCustomerValidPassword--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testCustomerRequiredFields--
+--Output from testCustomerValidEmail--
+--Output from testCustomerValidPassword--
+------------- ---------------- ---------------
+
+Testcase: testCustomerRequiredFields took 0.93 sec
+Testcase: testCustomerValidEmail took 0.071 sec
+Testcase: testCustomerValidPassword took 0.044 sec

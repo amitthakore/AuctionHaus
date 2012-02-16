@@ -1,10 +1,13 @@
 Testsuite: auctionhaus.BidTests
-Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 1.025 sec
+Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.856 sec
+------------- Standard Output ---------------
+--Output from testSomething--
+------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testSomething--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0.928 sec
+Testcase: testSomething took 0.782 sec
 	FAILED
 java.lang.AssertionError: Implement me
 junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me

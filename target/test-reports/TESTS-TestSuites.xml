@@ -1,18 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="1" hostname="AmIts-MacBook-Pro.local" id="0" name="BidTests" package="auctionhaus" tests="1" time="1.025" timestamp="2012-02-10T02:01:06">
+  <testsuite errors="0" failures="1" hostname="AmIts-MacBook-Pro.local" id="0" name="CustomerIntegrationTestTests" package="auctionhaus" tests="1" time="0.32" timestamp="2012-02-15T06:16:47">
       <properties />
 
-      <testcase classname="auctionhaus.BidTests" name="testSomething" time="0.931">
+      <testcase classname="auctionhaus.CustomerIntegrationTestTests" name="testUniqueEmail" time="0.319">
+          <failure message="Assertion failed: &#xa;&#xa;assert &apos;unique&apos; == customer.errors[&quot;email&quot;]&#xa;                |  |        |     |&#xa;                |  |        |     null&#xa;                |  |        grails.validation.ValidationErrors: 0 errors&#xa;                |  auctionhaus.Customer : 1&#xa;                false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert &apos;unique&apos; == customer.errors[&quot;email&quot;]
+                |  |        |     |
+                |  |        |     null
+                |  |        grails.validation.ValidationErrors: 0 errors
+                |  auctionhaus.Customer : 1
+                false
+
+	at auctionhaus.CustomerIntegrationTestTests.testUniqueEmail(CustomerIntegrationTestTests.groovy:30)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testUniqueEmail--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testUniqueEmail--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="AmIts-MacBook-Pro.local" id="1" name="BidTests" package="auctionhaus" tests="1" time="0.856" timestamp="2012-02-15T06:16:34">
+      <properties />
+
+      <testcase classname="auctionhaus.BidTests" name="testSomething" time="0.785">
           <failure message="java.lang.AssertionError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
 	at auctionhaus.BidTests.testSomething(BidTests.groovy:15)
 </failure>
 
       </testcase>
 
-      <system-out><![CDATA[]]></system-out>
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
 
       <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="2" name="CustomerTests" package="auctionhaus" tests="3" time="1.085" timestamp="2012-02-15T06:16:35">
+      <properties />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerRequiredFields" time="0.93" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerValidEmail" time="0.071" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerValidPassword" time="0.044" />
+
+      <system-out><![CDATA[--Output from testCustomerRequiredFields--
+--Output from testCustomerValidEmail--
+--Output from testCustomerValidPassword--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testCustomerRequiredFields--
+--Output from testCustomerValidEmail--
+--Output from testCustomerValidPassword--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="AmIts-MacBook-Pro.local" id="3" name="ListingTests" package="auctionhaus" tests="1" time="0.147" timestamp="2012-02-15T06:16:36">
+      <properties />
+
+      <testcase classname="auctionhaus.ListingTests" name="testConstrains" time="0.143">
+          <error message="No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []&#xa;Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []
+Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()
+	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.withManualFlushMode(UniqueConstraint.groovy:103)
+	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.processValidate(UniqueConstraint.groovy:39)
+	at grails.test.MockUtils$_addValidateMethod_closure87.doCall(MockUtils.groovy:1017)
+	at grails.test.MockUtils$_addValidateMethod_closure88.doCall(MockUtils.groovy:1060)
+	at auctionhaus.ListingTests.testConstrains(ListingTests.groovy:25)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testConstrains--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testConstrains--
 ]]></system-err>
 
   </testsuite>

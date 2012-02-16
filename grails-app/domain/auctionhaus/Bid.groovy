@@ -27,7 +27,7 @@ class Bid {
 
         // B3: Bids are required to have a bidder(integration test)
 
-        bidder(validator: {val, obj, errors ->
+        bidder( validator: {val, obj, errors ->
             if (obj.listing) {
                 println "Errors: ${errors}"
                 val != obj.listing.seller

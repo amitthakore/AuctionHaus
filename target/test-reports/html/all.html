@@ -14,11 +14,11 @@
         Unit Test Results
      - All tests </h1>
 <p class="intro">
-                        A single test executed
+                        Executed
+                        4
+                        tests
                     
-                        with
-                        one failure
-                        .
+                        without a single error or failure!
                     </p>
 </div>
 <div class="grid_2 omega">
@@ -41,34 +41,55 @@
 </nav>
 </div>
 <div class="clear"></div>
-<div class="testsuite failure">
+<div class="testsuite success">
 <div class="header">
 <h2>BidTests</h2>
 <h3>
-                        A single test executed
+                        Executed
+                        4
+                        tests
                     
-                        with
-                        one failure
-                        .
+                        without a single error or failure!
                     </h3>
 </div>
-<div class="testcase clearfix failure grid_8 alpha omega" data-name="testSomething">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidNullFieldsCauseError">
 <div class="grid_3 alpha">
 <p>
-<span class="icon failure"></span><b class="testname message failure">testSomething</b>
+<span class="icon success"></span><b class="testname message success">testBidNullFieldsCauseError</b>
 </p>
-<p class="summary">Executed in 0.931 seconds.</p>
+<p class="summary">Executed in 0.592 seconds.</p>
 </div>
-<div class="grid_5 omega outputinfo">
-<div class="details">
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidNonNullFieldsOK">
+<div class="grid_3 alpha">
 <p>
-<b class="message">java.lang.AssertionError: Implement me</b>
+<span class="icon success"></span><b class="testname message success">testBidNonNullFieldsOK</b>
 </p>
-<pre>junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
-	at auctionhaus.BidTests.testSomething(BidTests.groovy:15)
-</pre>
+<p class="summary">Executed in 0.041 seconds.</p>
 </div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
 </div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidListingNullCausesError">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testBidListingNullCausesError</b>
+</p>
+<p class="summary">Executed in 0.022 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidListingNonNullOK">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testBidListingNonNullOK</b>
+</p>
+<p class="summary">Executed in 0.059 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
 <div class="clearfix output footer">
@@ -78,7 +99,10 @@
 </div>
 <div class="syserr">
 <h2>System error</h2>
-<pre class="syserr">--Output from testSomething--
+<pre class="syserr">--Output from testBidNullFieldsCauseError--
+--Output from testBidNonNullFieldsOK--
+--Output from testBidListingNullCausesError--
+--Output from testBidListingNonNullOK--
 </pre>
 </div>
 </div>

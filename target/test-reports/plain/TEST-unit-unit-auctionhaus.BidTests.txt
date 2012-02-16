@@ -1,12 +1,13 @@
 Testsuite: auctionhaus.BidTests
-Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 1.025 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.735 sec
 ------------- Standard Error -----------------
---Output from testSomething--
+--Output from testBidNullFieldsCauseError--
+--Output from testBidNonNullFieldsOK--
+--Output from testBidListingNullCausesError--
+--Output from testBidListingNonNullOK--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0.928 sec
-	FAILED
-java.lang.AssertionError: Implement me
-junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
-	at auctionhaus.BidTests.testSomething(BidTests.groovy:15)
-
+Testcase: testBidNullFieldsCauseError took 0.592 sec
+Testcase: testBidNonNullFieldsOK took 0.042 sec
+Testcase: testBidListingNullCausesError took 0.022 sec
+Testcase: testBidListingNonNullOK took 0.059 sec

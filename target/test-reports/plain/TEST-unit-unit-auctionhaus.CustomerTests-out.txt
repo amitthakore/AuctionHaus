@@ -1,0 +1,3 @@
+--Output from testCustomerRequiredFields--
+--Output from testCustomerValidEmail--
+--Output from testCustomerValidPassword--

@@ -1,5 +1,5 @@
 Testsuite: auctionhaus.BidTests
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.735 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
 ------------- Standard Error -----------------
 --Output from testBidNullFieldsCauseError--
 --Output from testBidNonNullFieldsOK--
@@ -7,7 +7,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.735 sec
 --Output from testBidListingNonNullOK--
 ------------- ---------------- ---------------
 
-Testcase: testBidNullFieldsCauseError took 0.592 sec
-Testcase: testBidNonNullFieldsOK took 0.042 sec
-Testcase: testBidListingNullCausesError took 0.022 sec
-Testcase: testBidListingNonNullOK took 0.059 sec
+Testcase: testBidNullFieldsCauseError took 0.588 sec
+Testcase: testBidNonNullFieldsOK took 0.025 sec
+Testcase: testBidListingNullCausesError took 0.021 sec
+Testcase: testBidListingNonNullOK took 0.055 sec

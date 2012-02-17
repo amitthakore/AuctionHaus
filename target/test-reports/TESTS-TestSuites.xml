@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Hennepins-MacBook-Pro.local" id="0" name="BidTests" package="auctionhaus" tests="6" time="0.743" timestamp="2012-02-17T01:35:06">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="0" name="CustomerIntegrationTestTests" package="auctionhaus" tests="2" time="0.387" timestamp="2012-02-17T07:22:48">
       <properties />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidNullFieldsCauseError" time="0.58" />
+      <testcase classname="auctionhaus.CustomerIntegrationTestTests" name="testUniqueEmailError" time="0.346" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidNonNullFieldsOK" time="0.022" />
+      <testcase classname="auctionhaus.CustomerIntegrationTestTests" name="testUniqueEmailOK" time="0.038" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidListingNullCausesError" time="0.022" />
+      <system-out><![CDATA[--Output from testUniqueEmailError--
+--Output from testUniqueEmailOK--
+]]></system-out>
 
-      <testcase classname="auctionhaus.BidTests" name="testBidListingNonNullOK" time="0.05" />
+      <system-err><![CDATA[--Output from testUniqueEmailError--
+--Output from testUniqueEmailOK--
+]]></system-err>
 
-      <testcase classname="auctionhaus.BidTests" name="testBidBidderNullCausesError" time="0.023" />
+  </testsuite>
+  <testsuite errors="1" failures="1" hostname="AmIts-MacBook-Pro.local" id="1" name="BidTests" package="auctionhaus" tests="6" time="1.468" timestamp="2012-02-17T07:22:37">
+      <properties />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidBidderNonNullOK" time="0.021" />
+      <testcase classname="auctionhaus.BidTests" name="testBidNullFieldsCauseError" time="0.993">
+          <failure message="Assertion failed: &#xa;&#xa;assert &quot;nullable&quot; == bidNull.errors[&quot;bidDatetime&quot;]&#xa;                  |  |       |     |&#xa;                  |  |       |     null&#xa;                  |  |       org.codehaus.groovy.grails.plugins.testing.GrailsMockErrors: 4 errors&#xa;                  |  |       Field error in object &apos;auctionhaus.Bid&apos; on field &apos;bidDateTime&apos;: rejected value [null]; codes [auctionhaus.Bid.bidDateTime.nullable.error.auctionhaus.Bid.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.error.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.error.java.util.Date,auctionhaus.Bid.bidDateTime.nullable.error,bid.bidDateTime.nullable.error.auctionhaus.Bid.bidDateTime,bid.bidDateTime.nullable.error.bidDateTime,bid.bidDateTime.nullable.error.java.util.Date,bid.bidDateTime.nullable.error,auctionhaus.Bid.bidDateTime.nullable.auctionhaus.Bid.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.java.util.Date,auctionhaus.Bid.bidDateTime.nullable,bid.bidDateTime.nullable.auctionhaus.Bid.bidDateTime,bid.bidDateTime.nullable.bidDateTime,bid.bidDateTime.nullable.java.util.Date,bid.bidDateTime.nullable,nullable.auctionhaus.Bid.bidDateTime,nullable.bidDateTime,nullable.java.util.Date,nullable]; arguments [bidDateTime,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]&#xa;                  |  |       Field error in object &apos;auctionhaus.Bid&apos; on field &apos;bidAmount&apos;: rejected value [null]; codes [auctionhaus.Bid.bidAmount.nullable.error.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.nullable.error.bidAmount,auctionhaus.Bid.bidAmount.nullable.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.nullable.error,bid.bidAmount.nullable.error.auctionhaus.Bid.bidAmount,bid.bidAmount.nullable.error.bidAmount,bid.bidAmount.nullable.error.java.math.BigDecimal,bid.bidAmount.nullable.error,auctionhaus.Bid.bidAmount.nullable.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.nullable.bidAmount,auctionhaus.Bid.bidAmount.nullable.java.math.BigDecimal,auctionhaus.Bid.bidAmount.nullable,bid.bidAmount.nullable.auctionhaus.Bid.bidAmount,bid.bidAmount.nullable.bidAmount,bid.bidAmount.nullable.java.math.BigDecimal,bid.bidAmount.nullable,nullable.auctionhaus.Bid.bidAmount,nullable.bidAmount,nullable.java.math.BigDecimal,nullable]; arguments [bidAmount,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]&#xa;                  |  |       Field error in object &apos;auctionhaus.Bid&apos; on field &apos;bidder&apos;: rejected value [null]; codes [auctionhaus.Bid.bidder.nullable.error.auctionhaus.Bid.bidder,auctionhaus.Bid.bidder.nullable.error.bidder,auctionhaus.Bid.bidder.nullable.error.auctionhaus.Customer,auctionhaus.Bid.bidder.nullable.error,bid.bidder.nullable.error.auctionhaus.Bid.bidder,bid.bidder.nullable.error.bidder,bid.bidder.nullable.error.auctionhaus.Customer,bid.bidder.nullable.error,auctionhaus.Bid.bidder.nullable.auctionhaus.Bid.bidder,auctionhaus.Bid.bidder.nullable.bidder,auctionhaus.Bid.bidder.nullable.auctionhaus.Customer,auctionhaus.Bid.bidder.nullable,bid.bidder.nullable.auctionhaus.Bid.bidder,bid.bidder.nullable.bidder,bid.bidder.nullable.auctionhaus.Customer,bid.bidder.nullable,nullable.auctionhaus.Bid.bidder,nullable.bidder,nullable.auctionhaus.Customer,nullable]; arguments [bidder,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]&#xa;                  |  |       Field error in object &apos;auctionhaus.Bid&apos; on field &apos;listing&apos;: rejected value [null]; codes [auctionhaus.Bid.listing.nullable.error.auctionhaus.Bid.listing,auctionhaus.Bid.listing.nullable.error.listing,auctionhaus.Bid.listing.nullable.error.auctionhaus.Listing,auctionhaus.Bid.listing.nullable.error,bid.listing.nullable.error.auctionhaus.Bid.listing,bid.listing.nullable.error.listing,bid.listing.nullable.error.auctionhaus.Listing,bid.listing.nullable.error,auctionhaus.Bid.listing.nullable.auctionhaus.Bid.listing,auctionhaus.Bid.listing.nullable.listing,auctionhaus.Bid.listing.nullable.auctionhaus.Listing,auctionhaus.Bid.listing.nullable,bid.listing.nullable.auctionhaus.Bid.listing,bid.listing.nullable.listing,bid.listing.nullable.auctionhaus.Listing,bid.listing.nullable,nullable.auctionhaus.Bid.listing,nullable.listing,nullable.auctionhaus.Listing,nullable]; arguments [listing,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]&#xa;                  |  auctionhaus.Bid : null&#xa;                  false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
-      <system-out><![CDATA[]]></system-out>
+assert &quot;nullable&quot; == bidNull.errors[&quot;bidDatetime&quot;]
+                  |  |       |     |
+                  |  |       |     null
+                  |  |       org.codehaus.groovy.grails.plugins.testing.GrailsMockErrors: 4 errors
+                  |  |       Field error in object &apos;auctionhaus.Bid&apos; on field &apos;bidDateTime&apos;: rejected value [null]; codes [auctionhaus.Bid.bidDateTime.nullable.error.auctionhaus.Bid.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.error.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.error.java.util.Date,auctionhaus.Bid.bidDateTime.nullable.error,bid.bidDateTime.nullable.error.auctionhaus.Bid.bidDateTime,bid.bidDateTime.nullable.error.bidDateTime,bid.bidDateTime.nullable.error.java.util.Date,bid.bidDateTime.nullable.error,auctionhaus.Bid.bidDateTime.nullable.auctionhaus.Bid.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.java.util.Date,auctionhaus.Bid.bidDateTime.nullable,bid.bidDateTime.nullable.auctionhaus.Bid.bidDateTime,bid.bidDateTime.nullable.bidDateTime,bid.bidDateTime.nullable.java.util.Date,bid.bidDateTime.nullable,nullable.auctionhaus.Bid.bidDateTime,nullable.bidDateTime,nullable.java.util.Date,nullable]; arguments [bidDateTime,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
+                  |  |       Field error in object &apos;auctionhaus.Bid&apos; on field &apos;bidAmount&apos;: rejected value [null]; codes [auctionhaus.Bid.bidAmount.nullable.error.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.nullable.error.bidAmount,auctionhaus.Bid.bidAmount.nullable.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.nullable.error,bid.bidAmount.nullable.error.auctionhaus.Bid.bidAmount,bid.bidAmount.nullable.error.bidAmount,bid.bidAmount.nullable.error.java.math.BigDecimal,bid.bidAmount.nullable.error,auctionhaus.Bid.bidAmount.nullable.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.nullable.bidAmount,auctionhaus.Bid.bidAmount.nullable.java.math.BigDecimal,auctionhaus.Bid.bidAmount.nullable,bid.bidAmount.nullable.auctionhaus.Bid.bidAmount,bid.bidAmount.nullable.bidAmount,bid.bidAmount.nullable.java.math.BigDecimal,bid.bidAmount.nullable,nullable.auctionhaus.Bid.bidAmount,nullable.bidAmount,nullable.java.math.BigDecimal,nullable]; arguments [bidAmount,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
+                  |  |       Field error in object &apos;auctionhaus.Bid&apos; on field &apos;bidder&apos;: rejected value [null]; codes [auctionhaus.Bid.bidder.nullable.error.auctionhaus.Bid.bidder,auctionhaus.Bid.bidder.nullable.error.bidder,auctionhaus.Bid.bidder.nullable.error.auctionhaus.Customer,auctionhaus.Bid.bidder.nullable.error,bid.bidder.nullable.error.auctionhaus.Bid.bidder,bid.bidder.nullable.error.bidder,bid.bidder.nullable.error.auctionhaus.Customer,bid.bidder.nullable.error,auctionhaus.Bid.bidder.nullable.auctionhaus.Bid.bidder,auctionhaus.Bid.bidder.nullable.bidder,auctionhaus.Bid.bidder.nullable.auctionhaus.Customer,auctionhaus.Bid.bidder.nullable,bid.bidder.nullable.auctionhaus.Bid.bidder,bid.bidder.nullable.bidder,bid.bidder.nullable.auctionhaus.Customer,bid.bidder.nullable,nullable.auctionhaus.Bid.bidder,nullable.bidder,nullable.auctionhaus.Customer,nullable]; arguments [bidder,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
+                  |  |       Field error in object &apos;auctionhaus.Bid&apos; on field &apos;listing&apos;: rejected value [null]; codes [auctionhaus.Bid.listing.nullable.error.auctionhaus.Bid.listing,auctionhaus.Bid.listing.nullable.error.listing,auctionhaus.Bid.listing.nullable.error.auctionhaus.Listing,auctionhaus.Bid.listing.nullable.error,bid.listing.nullable.error.auctionhaus.Bid.listing,bid.listing.nullable.error.listing,bid.listing.nullable.error.auctionhaus.Listing,bid.listing.nullable.error,auctionhaus.Bid.listing.nullable.auctionhaus.Bid.listing,auctionhaus.Bid.listing.nullable.listing,auctionhaus.Bid.listing.nullable.auctionhaus.Listing,auctionhaus.Bid.listing.nullable,bid.listing.nullable.auctionhaus.Bid.listing,bid.listing.nullable.listing,bid.listing.nullable.auctionhaus.Listing,bid.listing.nullable,nullable.auctionhaus.Bid.listing,nullable.listing,nullable.auctionhaus.Listing,nullable]; arguments [listing,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
+                  |  auctionhaus.Bid : null
+                  false
+
+	at auctionhaus.BidTests.testBidNullFieldsCauseError(BidTests.groovy:24)
+</failure>
+
+      </testcase>
+
+      <testcase classname="auctionhaus.BidTests" name="testBidNonNullFieldsOK" time="0.061">
+          <error message="No such property: bidDatetime for class: auctionhaus.Bid&#xa;Possible solutions: bidDateTime" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: bidDatetime for class: auctionhaus.Bid
+Possible solutions: bidDateTime
+	at auctionhaus.BidTests.testBidNonNullFieldsOK(BidTests.groovy:37)
+</error>
+
+      </testcase>
+
+      <testcase classname="auctionhaus.BidTests" name="testBidListingNullCausesError" time="0.047" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidListingNonNullOK" time="0.132" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidBidderNullCausesError" time="0.051" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidBidderNonNullOK" time="0.092" />
+
+      <system-out><![CDATA[--Output from testBidNullFieldsCauseError--
+--Output from testBidNonNullFieldsOK--
+--Output from testBidListingNullCausesError--
+--Output from testBidListingNonNullOK--
+--Output from testBidBidderNullCausesError--
+--Output from testBidBidderNonNullOK--
+]]></system-out>
 
       <system-err><![CDATA[--Output from testBidNullFieldsCauseError--
 --Output from testBidNonNullFieldsOK--
@@ -23,6 +68,60 @@
 --Output from testBidListingNonNullOK--
 --Output from testBidBidderNullCausesError--
 --Output from testBidBidderNonNullOK--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="2" name="CustomerTests" package="auctionhaus" tests="6" time="0.958" timestamp="2012-02-17T07:22:38">
+      <properties />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerNullFieldsCauseError" time="0.105" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerNonNullFieldsOK" time="0.708" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerEmailOK" time="0.024" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerEmailError" time="0.032" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerPasswordError" time="0.027" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerPasswordOK" time="0.019" />
+
+      <system-out><![CDATA[--Output from testCustomerNullFieldsCauseError--
+--Output from testCustomerNonNullFieldsOK--
+--Output from testCustomerEmailOK--
+--Output from testCustomerEmailError--
+--Output from testCustomerPasswordError--
+--Output from testCustomerPasswordOK--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testCustomerNullFieldsCauseError--
+--Output from testCustomerNonNullFieldsOK--
+--Output from testCustomerEmailOK--
+--Output from testCustomerEmailError--
+--Output from testCustomerPasswordError--
+--Output from testCustomerPasswordOK--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="AmIts-MacBook-Pro.local" id="3" name="ListingTests" package="auctionhaus" tests="1" time="0.108" timestamp="2012-02-17T07:22:39">
+      <properties />
+
+      <testcase classname="auctionhaus.ListingTests" name="testConstrains" time="0.106">
+          <error message="No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []&#xa;Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []
+Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()
+	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.withManualFlushMode(UniqueConstraint.groovy:103)
+	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.processValidate(UniqueConstraint.groovy:39)
+	at grails.test.MockUtils$_addValidateMethod_closure87.doCall(MockUtils.groovy:1017)
+	at grails.test.MockUtils$_addValidateMethod_closure88.doCall(MockUtils.groovy:1060)
+	at auctionhaus.ListingTests.testConstrains(ListingTests.groovy:25)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testConstrains--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testConstrains--
 ]]></system-err>
 
   </testsuite>

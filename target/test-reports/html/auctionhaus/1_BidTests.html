@@ -2,44 +2,33 @@
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-        Unit Test Results
-     - Failed tests</title>
-<link href="stylesheet.css" rel="stylesheet" type="text/css">
+                    Test - BidTests</title>
+<link rel="shortcut icon" href="http://grails.org/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
 </head>
 <body>
-<div id="report" class="container container_8">
-<div class="grid_6 alpha">
+<div class="container container_8" id="report">
+<div class="grid_6">
+<a title="Home" href="../index.html">
 <div class="grailslogo"></div>
-<h1>
-        Unit Test Results
-     - Failed tests</h1>
-<p class="intro">
-                        Executed
-                        15
-                        tests
-                    
-                        with
-                        2 errors
-
-                        and
-                        one failure
-                        .
-                    </p>
+</a>
+<h1>BidTests</h1>
+<h2>Package: auctionhaus</h2>
 </div>
-<div class="grid_2 omega">
+<div class="grid_2">
 <nav id="navigationlinks">
 <p>
-<a href="failed.html">
+<a href="../failed.html">
                     Tests with failure and errors
                 </a>
 </p>
 <p>
-<a href="index.html">
+<a href="../index.html">
                     Package summary
                 </a>
 </p>
 <p>
-<a href="all.html">
+<a href="../all.html">
                     Show all tests
                 </a>
 </p>
@@ -185,56 +174,6 @@ Possible solutions: bidDateTime
 --Output from testBidListingNonNullOK--
 --Output from testBidBidderNullCausesError--
 --Output from testBidBidderNonNullOK--
-</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="testsuite error">
-<div class="header">
-<h2>ListingTests</h2>
-<h3>
-                        A single test executed
-                    
-                        with
-                        one error
-                        .
-                    </h3>
-</div>
-<div class="testcase clearfix error grid_8 alpha omega" data-name="testConstrains">
-<div class="grid_3 alpha">
-<p>
-<span class="icon error"></span><b class="testname message error">testConstrains</b>
-</p>
-<p class="summary">Executed in 0.106 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo">
-<div class="details">
-<p>
-<b class="message">No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []
-Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()</b>
-</p>
-<pre>groovy.lang.MissingMethodException: No signature of method: auctionhaus.Customer.withSession() is applicable for argument types: () values: []
-Possible solutions: withSession(groovy.lang.Closure), withNewSession(groovy.lang.Closure), getVersion()
-	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.withManualFlushMode(UniqueConstraint.groovy:103)
-	at org.grails.datastore.gorm.validation.constraints.UniqueConstraint.processValidate(UniqueConstraint.groovy:39)
-	at grails.test.MockUtils$_addValidateMethod_closure87.doCall(MockUtils.groovy:1017)
-	at grails.test.MockUtils$_addValidateMethod_closure88.doCall(MockUtils.groovy:1060)
-	at auctionhaus.ListingTests.testConstrains(ListingTests.groovy:25)
-</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="clearfix output footer">
-<div class="sysout">
-<h2>Standard output</h2>
-<pre class="stdout">--Output from testConstrains--
-</pre>
-</div>
-<div class="syserr">
-<h2>System error</h2>
-<pre class="syserr">--Output from testConstrains--
 </pre>
 </div>
 </div>

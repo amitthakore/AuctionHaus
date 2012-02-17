@@ -1,0 +1,13 @@
+Testsuite: auctionhaus.CustomerIntegrationTestTests
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.387 sec
+------------- Standard Output ---------------
+--Output from testUniqueEmailError--
+--Output from testUniqueEmailOK--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testUniqueEmailError--
+--Output from testUniqueEmailOK--
+------------- ---------------- ---------------
+
+Testcase: testUniqueEmailError took 0.346 sec
+Testcase: testUniqueEmailOK took 0.038 sec

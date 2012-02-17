@@ -13,50 +13,95 @@ import com.sun.tools.internal.xjc.generator.util.ExistingBlockReference
 
 class CustomerTests
 {
-    void testCustomerRequiredFields()  {
+    void testCustomerNullFieldsCauseError()
+    {
         mockForConstraintsTests(Customer)
-     // C-1 Customer have email address, password and created date fields
+
      // C-1 Test Email,password and created date are required fields
+     // Create customer object with null values and test if making them nullable gives errors.
+        def customerNull = new Customer()
 
-       def customernull = new Customer()
+        assert  !customerNull.validate()
 
-    assert  !customernull.validate()
+        assert "nullable" == customerNull.errors["email"]
+        assert "nullable" == customerNull.errors["password"]
+        assert "nullable" == customerNull.errors["createdDate"]
 
-    assert "nullable" == customernull.errors["email"]
-    assert "nullable" == customernull.errors["password"]
-    assert "nullable" == customernull.errors["createddate"]
-
-        //unique constrains
-       // customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createddate: new Date()).save()
-       // assert !customer.validate()
-       // assert "unique" == customer.errors["email"]
-        // unique constrains
-    //C-1: Verify that customer object has email,password and create date fields
-        def customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createddate: new Date()) .save()
     }
 
-    void testCustomerValidEmail()  {
+    void testCustomerNonNullFieldsOK()
+    {
         mockForConstraintsTests(Customer)
-        def customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createddate: new Date()) .save()
-        assert customer.validate()
-        assert customer.email == 'amitthakore16@gmail.com'
+    // C-1 Test Email,password and created date are required fields
+        def customer = new Customer()
+        customer.email = "amitthakore16@gmail.com"
+        customer.password = "123456"
+        customer.createdDate  = new Date()
+        customer.validate()
+
+        assert customer.errors["email"] != "nullable"
+        assert customer.errors["password"] != "nullable"
+        assert customer.errors["createdDate"] != "nullable"
+    }
+
+
+    void testCustomerEmailOK()
+    {
+        mockForConstraintsTests(Customer)
+        def customerEmailOK = new Customer()
+        customerEmailOK.email = "amitthakore16@gmail.com"
+        customerEmailOK.password = "123456"
+        customerEmailOK.createdDate  = new Date()
+        assert customerEmailOK.validate()
+        assert "email" != customerEmailOK.errors["email"]
+    }
+
+    void testCustomerEmailError()
+    {
     //C-3: Verify that email is a valid email address
 
-    def customeremail = new Customer(email:"amitthakore17@gmail.com",password: "1123456",createddate: new Date()).save()
-    assert customeremail.validate()
-    assert "email" != customeremail.errors["email"]
+
+        def customerEmail = new Customer()
+        customerEmail.email = "amitthakore16gmail.com"
+        customerEmail.password = "123456"
+        customerEmail.createdDate  = new Date()
+
+        assert !customerEmail.validate()
+        assert "email" != customerEmail.errors["email"]
 
     }
 
-    void testCustomerValidPassword()  {
+    void testCustomerPasswordError()
+    {
         mockForConstraintsTests(Customer)
 
-            def customerPassword = new Customer(email:"amitthakore17@gmail.com",password: "1123456",createddate: new Date()).save()
-            assert customerPassword.validate()
+        def customerPassWord = new Customer()
+        customerPassWord.email = "amitthakore16@gmail.com"
+        customerPassWord.password = "123459999996"
+        customerPassWord.createdDate  = new Date()
+
+        assert !customerPassWord.validate()
     //C-4: Password must be between 6-8 characters (unit test)
-    assert "size" != customerPassword.errors["password"]
+        assert "size" == customerPassWord.errors["password"]
 
 
     }
+
+
+    void testCustomerPasswordOK()
+    {
+        mockForConstraintsTests(Customer)
+
+        def customerPassWord = new Customer()
+        customerPassWord.email = "amitthakore16@gmail.com"
+        customerPassWord.password = "123459"
+        customerPassWord.createdDate  = new Date()
+
+        assert customerPassWord.validate()
+        //C-4: Password must be between 6-8 characters (unit test)
+        assert "size" != customerPassWord.errors["password"]
+
+
     }
 
+}

@@ -19,7 +19,7 @@ class CustomerIntegrationTestTests extends GroovyTestCase   {
    }
 
     @Test
-    void testUniqueEmail(){
+    void testUniqueEmailError(){
 
   //    C-2: Email address must be a unique field (integration test)
    def customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createdDate: new Date())
@@ -27,7 +27,21 @@ class CustomerIntegrationTestTests extends GroovyTestCase   {
    
     customer.email == "amitthakore16@gmail.com"
 
-       customer.save()
+       !customer.validate()
         assert 'unique' != customer.errors["email"]
     }
+
+    @Test
+    void testUniqueEmailOK(){
+
+        //    C-2: Email address must be a unique field (integration test)
+        def customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createdDate: new Date())
+        customer.save(flush:true)
+
+        customer.email == "amitthakore17@gmail.com"
+
+        customer.validate()
+        assert 'unique' == customer.errors["email"]
+    }
+
 }

@@ -58,6 +58,7 @@ class CustomerTests
 
     void testCustomerEmailError()
     {
+        mockForConstraintsTests(Customer)
     //C-3: Verify that email is a valid email address
 
 
@@ -67,7 +68,7 @@ class CustomerTests
         customerEmail.createdDate  = new Date()
 
         assert !customerEmail.validate()
-        assert "email" != customerEmail.errors["email"]
+        assert "email" == customerEmail.errors["email"]
 
     }
 

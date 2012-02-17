@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56ba817e-5fa5-4444-afe5-17e138cc07fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage-error.log" afterPath="$PROJECT_DIR$/coverage-error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stacktrace.log" afterPath="$PROJECT_DIR$/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TEST-unit-unit-auctionhaus.BidTests.xml" afterPath="$PROJECT_DIR$/target/test-reports/TEST-unit-unit-auctionhaus.BidTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/all.html" afterPath="$PROJECT_DIR$/target/test-reports/html/all.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/failed.html" afterPath="$PROJECT_DIR$/target/test-reports/html/failed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/html/index.html" afterPath="$PROJECT_DIR$/target/test-reports/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-auctionhaus.BidTests-out.txt" afterPath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-auctionhaus.BidTests-out.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-auctionhaus.BidTests.txt" afterPath="$PROJECT_DIR$/target/test-reports/plain/TEST-unit-unit-auctionhaus.BidTests.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTestTests.groovy" afterPath="$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTestTests.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" />
     </list>
     <ignored path="AuctionHaus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerTests.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CustomerTests.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="52" selection-start="2296" selection-end="2448" vertical-scroll-proportion="1.9565217">
+            <state line="76" column="41" selection-start="2282" selection-end="2282" vertical-scroll-proportion="-0.52866244">
               <folding />
             </state>
           </provider>
@@ -107,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerIntegrationTestTests.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CustomerIntegrationTestTests.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTestTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="0.10714286">
+            <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,11 +159,11 @@
         <option value="$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy" />
         <option value="$PROJECT_DIR$/test/integration/CustomerIntegrationTest.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Bid.groovy" />
-        <option value="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/auctionhaus/Customer.groovy" />
         <option value="$PROJECT_DIR$/target/test-reports/html/all.html" />
         <option value="$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTestTests.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" />
       </list>
     </option>
   </component>
@@ -398,7 +388,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Grails.Grails:AuctionHaus">
+  <component name="RunManager" selected="JUnit.CustomerTests">
     <configuration default="false" name="BidTests" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="AuctionHaus" />
       <setting name="vmparams" value="" />
@@ -780,7 +770,7 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.49756494" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24431819" sideWeight="0.21777004" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.49675325" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.49675325" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -790,8 +780,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33279222" sideWeight="0.6707317" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32752612" sideWeight="0.5073052" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33279222" sideWeight="0.67247385" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32752612" sideWeight="0.5073052" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -910,16 +900,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy">
+    <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTestTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="52" selection-start="2296" selection-end="2448" vertical-scroll-proportion="1.9565217">
+        <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTestTests.groovy">
+    <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="0.10714286">
+        <state line="76" column="41" selection-start="2282" selection-end="2282" vertical-scroll-proportion="-0.52866244">
           <folding />
         </state>
       </provider>

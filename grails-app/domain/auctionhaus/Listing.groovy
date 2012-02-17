@@ -17,7 +17,7 @@ class Listing {
   //Get highest Bid Amount for the listing
     BigDecimal getHighestBid() {
 
-        def highestBid
+    def highestBid
 
      if (bids) {
 

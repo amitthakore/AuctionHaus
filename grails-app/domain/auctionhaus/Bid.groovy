@@ -4,7 +4,7 @@ import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 
 class Bid {
      BigDecimal bidAmount
-     Date    bidDatetime
+     Date    bidDateTime
    //B2 Bids are required to be for a listing (unit Test)
     //B3 Bids are required to have a bidder(unit Test)
     static belongsTo = [listing : Listing, bidder :Customer]
@@ -12,7 +12,7 @@ class Bid {
 
     static constraints = {
     //B1 Bid Date time is a required field
-    bidDatetime blank:false
+    bidDateTime blank:false
     //B1 Bid are required to have a Bid amount
     //B5 The Bid amount must be at least .50 higher than the previous Bid for the same listing (integration test)
         bidAmount nullable: false, validator: {val, obj, errors ->
@@ -23,6 +23,7 @@ class Bid {
                 }
                 return isGood
             }
+
         }
 
 

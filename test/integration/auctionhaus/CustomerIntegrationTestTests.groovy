@@ -7,7 +7,7 @@ import org.junit.*
 
 class CustomerIntegrationTestTests extends GroovyTestCase   {
 
-     static transactional = true
+
    @Before
   void setUp() {
         // Setup logic here
@@ -22,7 +22,7 @@ class CustomerIntegrationTestTests extends GroovyTestCase   {
     void testUniqueEmail(){
 
   //    C-2: Email address must be a unique field (integration test)
-   def customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createddate: new Date())
+   def customer = new Customer(email:"amitthakore16@gmail.com",password: "123456",createdDate: new Date())
         customer.save(flush:true)
    
     customer.email == "amitthakore16@gmail.com"

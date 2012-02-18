@@ -32,13 +32,13 @@ class ListingTests {
     //test that if required fields are  present, validation is successful (happy path)
     void testRequiredListingFieldsOK()
     {
-      def testEndDateTime = new Date() + 1
-      def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
+        def testEndDateTime = new Date() + 1
+        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-      def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
-       
-      assert testList.validate()
-        
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+
+        assert testList.validate()
+
     }
 
     //L-2: Listings have the following optional fields: description (unit test)
@@ -194,7 +194,7 @@ class ListingTests {
         assert testList.errors["listingName"] != null
     }
 
-  //  L-7: Listing has a nullable field for the winner (Customer) (unit test)
+    //  L-7: Listing has a nullable field for the winner (Customer) (unit test)
     //test that a listing has a winner field (happy path)
     void testOptionalWinnerFieldOK()
     {
@@ -208,6 +208,6 @@ class ListingTests {
         //listing should have a winner field that is null since the auction is not complete
         assert (testList.winner == null)
 
-    }  
+    }
 
 }

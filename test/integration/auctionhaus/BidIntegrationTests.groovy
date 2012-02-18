@@ -154,7 +154,7 @@ class BidIntegrationTests extends GroovyTestCase {
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
 
-    //    testList.addToBids(bidTest)
+        //    testList.addToBids(bidTest)
 
 
 

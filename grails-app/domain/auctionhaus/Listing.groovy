@@ -13,7 +13,7 @@ class Listing {
     Customer seller,winner
     BigDecimal bidIncAmt = 0.5
     Collection<Bid> bids
-  //Listing belongs to a customer and has many bids
+    //Listing belongs to a customer and has many bids
     static belongsTo = [seller: Customer]
     static hasMany = [bids: Bid]
 
@@ -52,8 +52,8 @@ class Listing {
 
         //Listing Date time must be in future
         listingEndDateTime nullable:false,validator: {
-                if (it.compareTo(new Date())<0)
-                    return ('invalid listingEndDateTime')
+            if (it.compareTo(new Date())<0)
+                return ('invalid listingEndDateTime')
         }
         //  Listing has a nullable field for the winner (Customer)
         winner nullable:true
@@ -63,24 +63,24 @@ class Listing {
         bids nullable: true, validator: {
 
 
-                    val, obj ->
+            val, obj ->
 
-                    //check each bid and see that its listing property matches instance of listing object
-            
-                    val.each{
-                        if(it.listing != obj)
-                        {
-                              return false
-                        }
+            //check each bid and see that its listing property matches instance of listing object
 
-                    }
-                    return true
+            val.each{
+                if(it.listing != obj)
+                {
+                    return false
                 }
 
+            }
+            return true
+        }
 
 
 
-        
+
+
     }
 
 }

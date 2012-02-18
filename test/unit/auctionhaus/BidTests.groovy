@@ -16,7 +16,7 @@ import org.junit.*
 class BidTests {
 
 
-   // B-1: Bids have the following required fields: amount and date/time of bid (unit test)
+    // B-1: Bids have the following required fields: amount and date/time of bid (unit test)
     //check that null required bid fields cause an error (exceptional case)
     void testBidNullFieldsCauseError()
     {
@@ -46,9 +46,9 @@ class BidTests {
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
         def bidTest = new Bid(bidAmount: 20, bidDateTime: new Date(), bidder: testSeller, listing:testList )
-        
-        
-       assert  bidTest.validate()
+
+
+        assert  bidTest.validate()
 
         assert bidTest.errors["bidDatetime"]   != "nullable"
         assert bidTest.errors["bidAmount"]   != "nullable"
@@ -93,8 +93,8 @@ class BidTests {
 
     }
 
-  //  B-3: Bids are required to have a bidder (Customer) (unit test)
-  //check that null required bidder causes an error (exceptional case)
+    //  B-3: Bids are required to have a bidder (Customer) (unit test)
+    //check that null required bidder causes an error (exceptional case)
     void testBidBidderNullCausesError()
     {
         mockForConstraintsTests(Bid)
@@ -107,7 +107,7 @@ class BidTests {
 
 
 
-        
+
     }
 
     //  B-3: Bids are required to have a bidder (Customer) (unit test)
@@ -136,7 +136,7 @@ class BidTests {
 
     }
 
-  //  B-4: A Listing has a list of Bids for that Listing (unit test)
+    //  B-4: A Listing has a list of Bids for that Listing (unit test)
     //test that I can add a bid to the list of bids for the Listing
     void testListingHasListOfBids()
     {
@@ -154,7 +154,7 @@ class BidTests {
 
         def bidTest = new Bid(bidAmount: 20, bidDateTime: new Date(), bidder: testSeller )
 
-        
+
         mockDomain(Listing,[testList])
 
         testList.addToBids(bidTest)
@@ -164,9 +164,9 @@ class BidTests {
 
         //check that the listing for the bid is the same listing we just added the bid to
         assert (bidTest.listing == testList)
-         //check that no validator error on bids property
+        //check that no validator error on bids property
         assert "validator" != testList.errors["bids"]
-        
+
     }
 
 

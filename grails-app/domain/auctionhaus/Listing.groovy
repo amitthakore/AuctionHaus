@@ -39,7 +39,7 @@ class Listing {
         def highestBid = startingBidPrice
 
         bids.each{
-            if ((it.bidAmount > highestBid) && (it.bidAmount < bidAmount) && (it.bidDateTime.before( bidDate )) )
+            if ((it.bidAmount > highestBid) &&  (it.bidDateTime.before( bidDate )) )
                 highestBid = it.bidAmount
         }
 

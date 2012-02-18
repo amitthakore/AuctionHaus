@@ -24,15 +24,15 @@ class Listing {
     BigDecimal getNextHighestBid(bidAmount,bidDate) {
 
 
-        def highestBid = startingBidPrice
+        def nextHighestBid = startingBidPrice
 
         //look at each bid and remember bidAmount of the bid that comes before the argument bidDate
         bids.each{
             if ((it.bidAmount > highestBid) &&  (it.bidDateTime.before( bidDate )) )
-                highestBid = it.bidAmount
+                nextHighestBid = it.bidAmount
         }
 
-        return highestBid
+        return nextHighestBid
 
 
     }

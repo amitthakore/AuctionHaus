@@ -18,7 +18,12 @@
                         31
                         tests
                     
-                        without a single error or failure!
+                        with
+                        2 errors
+
+                        and
+                        one failure
+                        .
                     </p>
 </div>
 <div class="grid_2 omega">
@@ -41,7 +46,7 @@
 </nav>
 </div>
 <div class="clear"></div>
-<div class="testsuite success">
+<div class="testsuite error">
 <div class="header">
 <h2>BidIntegrationTests</h2>
 <h3>
@@ -49,37 +54,75 @@
                         4
                         tests
                     
-                        without a single error or failure!
+                        with
+                        2 errors
+
+                        and
+                        one failure
+                        .
                     </h3>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidNotHighEnoughCausesError">
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="testBidNotHighEnoughCausesError">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testBidNotHighEnoughCausesError</b>
+<span class="icon failure"></span><b class="testname message failure">testBidNotHighEnoughCausesError</b>
 </p>
-<p class="summary">Executed in 0.332 seconds.</p>
+<p class="summary">Executed in 0.252 seconds.</p>
 </div>
-<div class="grid_5 omega outputinfo"></div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">junit.framework.AssertionFailedError: Closure auctionhaus.BidIntegrationTests$_testBidNotHighEnoughCausesError_closure1@494c009f should have failed with an exception of type grails.validation.ValidationException, instead got Exception groovy.lang.MissingPropertyException: No such property: highestBid for class: auctionhaus.Listing</b>
+</p>
+<pre>junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Closure auctionhaus.BidIntegrationTests$_testBidNotHighEnoughCausesError_closure1@494c009f should have failed with an exception of type grails.validation.ValidationException, instead got Exception groovy.lang.MissingPropertyException: No such property: highestBid for class: auctionhaus.Listing
+	at auctionhaus.BidIntegrationTests.testBidNotHighEnoughCausesError(BidIntegrationTests.groovy:51)
+</pre>
+</div>
+</div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidHighEnoughOK">
+<div class="testcase clearfix error grid_8 alpha omega" data-name="testBidHighEnoughOK">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testBidHighEnoughOK</b>
+<span class="icon error"></span><b class="testname message error">testBidHighEnoughOK</b>
 </p>
-<p class="summary">Executed in 0.027 seconds.</p>
+<p class="summary">Executed in 0.055 seconds.</p>
 </div>
-<div class="grid_5 omega outputinfo"></div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">No such property: highestBid for class: auctionhaus.Listing</b>
+</p>
+<pre>groovy.lang.MissingPropertyException: No such property: highestBid for class: auctionhaus.Listing
+	at auctionhaus.Listing$_getNextHighestBid_closure1.doCall(Listing.groovy:31)
+	at auctionhaus.Listing.getNextHighestBid(Listing.groovy:30)
+	at auctionhaus.Bid$__clinit__closure1_closure2.doCall(Bid.groovy:23)
+	at auctionhaus.BidIntegrationTests.testBidHighEnoughOK(BidIntegrationTests.groovy:88)
+</pre>
+</div>
+</div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingSavedBidsAlsoSaved">
+<div class="testcase clearfix error grid_8 alpha omega" data-name="testListingSavedBidsAlsoSaved">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testListingSavedBidsAlsoSaved</b>
+<span class="icon error"></span><b class="testname message error">testListingSavedBidsAlsoSaved</b>
 </p>
-<p class="summary">Executed in 0.051 seconds.</p>
+<p class="summary">Executed in 0.037 seconds.</p>
 </div>
-<div class="grid_5 omega outputinfo"></div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">No such property: highestBid for class: auctionhaus.Listing</b>
+</p>
+<pre>groovy.lang.MissingPropertyException: No such property: highestBid for class: auctionhaus.Listing
+	at auctionhaus.Listing$_getNextHighestBid_closure1.doCall(Listing.groovy:31)
+	at auctionhaus.Listing.getNextHighestBid(Listing.groovy:30)
+	at auctionhaus.Bid$__clinit__closure1_closure2.doCall(Bid.groovy:23)
+	at auctionhaus.BidIntegrationTests.testListingSavedBidsAlsoSaved(BidIntegrationTests.groovy:126)
+</pre>
+</div>
+</div>
 <div class="clear"></div>
 </div>
 <div class="testcase clearfix success grid_8 alpha omega" data-name="testListingNotSavedBidsAlsoNotSaved">
@@ -87,7 +130,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testListingNotSavedBidsAlsoNotSaved</b>
 </p>
-<p class="summary">Executed in 0.019 seconds.</p>
+<p class="summary">Executed in 0.03 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -128,7 +171,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testBidNullFieldsCauseError</b>
 </p>
-<p class="summary">Executed in 0.56 seconds.</p>
+<p class="summary">Executed in 0.551 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -138,7 +181,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testBidNonNullFieldsOK</b>
 </p>
-<p class="summary">Executed in 0.093 seconds.</p>
+<p class="summary">Executed in 0.082 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -148,7 +191,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testBidListingNullCausesError</b>
 </p>
-<p class="summary">Executed in 0.034 seconds.</p>
+<p class="summary">Executed in 0.026 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -158,7 +201,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testBidListingNonNullOK</b>
 </p>
-<p class="summary">Executed in 0.033 seconds.</p>
+<p class="summary">Executed in 0.024 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -168,7 +211,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testBidBidderNullCausesError</b>
 </p>
-<p class="summary">Executed in 0.028 seconds.</p>
+<p class="summary">Executed in 0.019 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -178,7 +221,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testBidBidderNonNullOK</b>
 </p>
-<p class="summary">Executed in 0.031 seconds.</p>
+<p class="summary">Executed in 0.02 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -188,7 +231,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testListingHasListOfBids</b>
 </p>
-<p class="summary">Executed in 0.115 seconds.</p>
+<p class="summary">Executed in 0.099 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -235,7 +278,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testUniqueEmailError</b>
 </p>
-<p class="summary">Executed in 0.039 seconds.</p>
+<p class="summary">Executed in 0.066 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -245,7 +288,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testUniqueEmailOK</b>
 </p>
-<p class="summary">Executed in 0.023 seconds.</p>
+<p class="summary">Executed in 0.026 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -282,7 +325,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testCustomerNullFieldsCauseError</b>
 </p>
-<p class="summary">Executed in 0.028 seconds.</p>
+<p class="summary">Executed in 0.03 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -292,7 +335,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testCustomerNonNullFieldsOK</b>
 </p>
-<p class="summary">Executed in 0.307 seconds.</p>
+<p class="summary">Executed in 0.318 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -302,7 +345,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testCustomerEmailOK</b>
 </p>
-<p class="summary">Executed in 0.023 seconds.</p>
+<p class="summary">Executed in 0.016 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -312,7 +355,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testCustomerEmailError</b>
 </p>
-<p class="summary">Executed in 0.014 seconds.</p>
+<p class="summary">Executed in 0.02 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -322,7 +365,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testCustomerPasswordError</b>
 </p>
-<p class="summary">Executed in 0.015 seconds.</p>
+<p class="summary">Executed in 0.014 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -332,7 +375,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testCustomerPasswordOK</b>
 </p>
-<p class="summary">Executed in 0.015 seconds.</p>
+<p class="summary">Executed in 0.014 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -397,7 +440,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testRequiredListingFieldsOK</b>
 </p>
-<p class="summary">Executed in 0.019 seconds.</p>
+<p class="summary">Executed in 0.02 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -417,7 +460,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testListingSellerNullCausesError</b>
 </p>
-<p class="summary">Executed in 0.015 seconds.</p>
+<p class="summary">Executed in 0.016 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -447,7 +490,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testListingEndDateTimeInFutureOK</b>
 </p>
-<p class="summary">Executed in 0.019 seconds.</p>
+<p class="summary">Executed in 0.014 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -457,7 +500,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testListingEndDateTimeInPastCausesError</b>
 </p>
-<p class="summary">Executed in 0.013 seconds.</p>
+<p class="summary">Executed in 0.024 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -467,7 +510,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testListingNameFieldOK</b>
 </p>
-<p class="summary">Executed in 0.013 seconds.</p>
+<p class="summary">Executed in 0.02 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -477,7 +520,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testListingNameFieldOversizeErrors</b>
 </p>
-<p class="summary">Executed in 0.013 seconds.</p>
+<p class="summary">Executed in 0.014 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -487,7 +530,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testOptionalWinnerFieldOK</b>
 </p>
-<p class="summary">Executed in 0.012 seconds.</p>
+<p class="summary">Executed in 0.013 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>

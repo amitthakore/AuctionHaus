@@ -15,42 +15,89 @@ class Listing {
     static belongsTo = [seller: Customer]
     static hasMany = [bids: Bid]
 
-  //Get highest Bid Amount for the listing
+    //Get highest Bid Amount for the listing
     BigDecimal getHighestBid() {
 
-        def highestBid
 
-    //    if (bids) {
+        def highestBid = startingBidPrice
 
-         highestBid = Bid.createCriteria().get() {
-              eq('listing',this)
-              projections
-                      {
-                          max "bidAmount"
-                      }
-         }
+        bids.each{
+            if (it.bidAmount > highestBid)
+                highestBid = it.bidAmount
+        }
 
-      //  }
+        return highestBid
 
-            if (highestBid == null)
-                return 0
-            else
-                return highestBid
 
     }
+
+
+    //Get highest Bid Amount for the listing
+    BigDecimal getNextHighestBid(bidAmount) {
+
+
+        def highestBid = startingBidPrice
+
+        bids.each{
+            if ((it.bidAmount > highestBid) && (it.bidAmount < bidAmount))
+                highestBid = it.bidAmount
+        }
+
+        return highestBid
+
+
+    }
+
+
+
+    //Get  Bid Amount for previous bid
+    BigDecimal getBidAmountPreviousBid(Bid b) {
+
+        def currentBid
+        def previousBid
+
+        def done = false;
+
+        bids.each{
+            previousBid = currentBid
+            currentBid = it
+
+            //if (done){
+              //      return currentBid.bidAmount
+              //}
+
+            if (currentBid.bidAmount == b.bidAmount)
+            {
+            //  done = true;
+                if(previousBid == null)    {
+                    return startingBidPrice
+                }
+                else       {
+                    return previousBid.bidAmount
+                 }
+            }
+        }
+
+       return startingBidPrice
+
+
+    }
+
 
     // Get the next minimum bid a bidder can place
     BigDecimal getMinBid()
 
     {
-        if (bids)        {
 
-     getHighestBid() + bidIncAmt
+        if (bids)
+        {
+
+            return getHighestBid() + bidIncAmt
         }
         else{
 
-        startingBidPrice
-    }
+             return startingBidPrice
+        }
 
     }
 

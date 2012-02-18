@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Hennepins-MacBook-Pro.local" id="0" name="CustomerIntegrationTestTests" package="auctionhaus" tests="1" time="0.224" timestamp="2012-02-18T06:21:34">
+  <testsuite errors="0" failures="0" hostname="Hennepins-MacBook-Pro.local" id="0" name="BidIntegrationTests" package="auctionhaus" tests="4" time="0.534" timestamp="2012-02-18T09:06:16">
       <properties />
 
-      <testcase classname="auctionhaus.CustomerIntegrationTestTests" name="testUniqueEmailOK" time="0.214" />
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testBidNotHighEnoughCausesError" time="0.388" />
+
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testBidHighEnoughOK" time="0.035" />
+
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testListingSavedBidsAlsoSaved" time="0.066" />
+
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testListingNotSavedBidsAlsoNotSaved" time="0.026" />
 
       <system-out><![CDATA[]]></system-out>
 
-      <system-err><![CDATA[--Output from testUniqueEmailOK--
+      <system-err><![CDATA[--Output from testBidNotHighEnoughCausesError--
+--Output from testBidHighEnoughOK--
+--Output from testListingSavedBidsAlsoSaved--
+--Output from testListingNotSavedBidsAlsoNotSaved--
 ]]></system-err>
 
   </testsuite>

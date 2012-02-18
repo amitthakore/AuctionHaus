@@ -15,9 +15,9 @@ class Bid {
     bidDateTime blank:false
     //B1 Bid are required to have a Bid amount
     //B5 The Bid amount must be at least .50 higher than the previous Bid for the same listing (integration test)
-        bidAmount nullable: false, validator: {val, obj, errors ->
+        bidAmount nullable: false, validator: {val, obj ->
             if (obj.listing) {
-                def isGood = (val >= obj.listing.minBid)
+                def isGood = (val >= (obj.listing.getNextHighestBid(val) + 0.5))
                 if (!isGood) {
                     return ('The Bid amount must be at least .50 higher than the previous Bid for the same listing')
                 }

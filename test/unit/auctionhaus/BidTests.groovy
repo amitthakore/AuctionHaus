@@ -37,7 +37,7 @@ class BidTests {
         BigDecimal startingBidPrice = 10.00
         // Create a test end date and time that is one day from today
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createddate: new Date())
+        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
@@ -76,7 +76,7 @@ class BidTests {
         BigDecimal startingBidPrice = 10.00
         // Create a test end date and time that is one day from today
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createddate: new Date())
+        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
@@ -116,7 +116,7 @@ class BidTests {
         BigDecimal startingBidPrice = 10.00
         // Create a test end date and time that is one day from today
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createddate: new Date())
+        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
@@ -144,11 +144,11 @@ class BidTests {
         BigDecimal startingBidPrice = 10.00
 
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createddate: new Date())
+        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
-        def bidTest = new Bid(bidAmount: 20, bidDateTime: new Date(), bidder: testSeller, listing:testList )
+        def bidTest = new Bid(bidAmount: 20, bidDateTime: new Date(), bidder: testSeller )
 
         
         mockDomain(Listing,[testList])
@@ -158,6 +158,9 @@ class BidTests {
 
         assert testList.validate()
 
+        //check that the listing for the bid is the same listing we just added the bid to
+        assert (bidTest.listing == testList)
+         //check that no validator error on bids property
         assert "validator" != testList.errors["bids"]
         
     }

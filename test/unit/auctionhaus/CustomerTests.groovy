@@ -16,12 +16,13 @@ import com.sun.tools.internal.xjc.generator.util.ExistingBlockReference
 
 class CustomerTests
 {
+
+    // C-1 Test Email,password and created date are required fields
+    // Create customer object with null values and test if making them nullable gives errors. (exceptional path)
     void testCustomerNullFieldsCauseError()
     {
         mockForConstraintsTests(Customer)
 
-     // C-1 Test Email,password and created date are required fields
-     // Create customer object with null values and test if making them nullable gives errors.
         def customerNull = new Customer()
 
         assert  !customerNull.validate()
@@ -32,10 +33,13 @@ class CustomerTests
 
     }
 
+
+    // C-1 Test Email,password and created date are required fields
+    // Create customer object and fill required values and test if validation successful with no nullable errors. (happy path)
     void testCustomerNonNullFieldsOK()
     {
         mockForConstraintsTests(Customer)
-    // C-1 Test Email,password and created date are required fields
+
         def customer = new Customer()
         customer.email = "amitthakore16@gmail.com"
         customer.password = "123456"
@@ -47,7 +51,8 @@ class CustomerTests
         assert customer.errors["createdDate"] != "nullable"
     }
 
-
+    //C-3: Verify that email is a valid email address
+    // Create customer object with valid email address and test validation succeeds with no error on email property. (happy path)
     void testCustomerEmailOK()
     {
         mockForConstraintsTests(Customer)
@@ -58,11 +63,12 @@ class CustomerTests
         assert customerEmailOK.validate()
         assert "email" != customerEmailOK.errors["email"]
     }
-
+    //C-3: Verify that email is a valid email address
+    // Create customer object with invalid email address and test validation fails with error on email property. (exceptional path)
     void testCustomerEmailError()
     {
         mockForConstraintsTests(Customer)
-    //C-3: Verify that email is a valid email address
+
 
 
         def customerEmail = new Customer()
@@ -75,6 +81,9 @@ class CustomerTests
 
     }
 
+
+    //C-4: Password must be between 6-8 characters (unit test)
+    // Create customer object with invalid password and test validation fails with error on password property. (exceptional path)
     void testCustomerPasswordError()
     {
         mockForConstraintsTests(Customer)
@@ -85,13 +94,14 @@ class CustomerTests
         customerPassWord.createdDate  = new Date()
 
         assert !customerPassWord.validate()
-    //C-4: Password must be between 6-8 characters (unit test)
+
         assert "size" == customerPassWord.errors["password"]
 
 
     }
 
-
+    //C-4: Password must be between 6-8 characters (unit test)
+    // Create customer object with valid password and test validation succeeds with no error on password property. (happy path)
     void testCustomerPasswordOK()
     {
         mockForConstraintsTests(Customer)

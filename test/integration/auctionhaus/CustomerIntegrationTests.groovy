@@ -17,10 +17,13 @@ class CustomerIntegrationTests extends GroovyTestCase{
         // Tear down logic here
     }
 
+
+    //    C-2: Email address must be a unique field (integration test)
+    //   Test that saving two customers with identical email addresses causes validation error on email property (exceptional case)
     @Test
     void testUniqueEmailError(){
 
-        //    C-2: Email address must be a unique field (integration test)
+
         def customer = new Customer()
         customer.email = "amitthakore16@gmail.com"
         customer.password = "123459"
@@ -36,10 +39,14 @@ class CustomerIntegrationTests extends GroovyTestCase{
         assert customer1.errors["email"] != null
     }
 
+
+
+    //    C-2: Email address must be a unique field (integration test)
+    //   Test that saving two customers with different email addresses is successfully validated with no errors on email property (exceptional case)
     @Test
     void testUniqueEmailOK(){
 
-        //    C-2: Email address must be a unique field (integration test)
+
         def customer = new Customer()
         customer.email = "amitthakore16@gmail.com"
         customer.password = "123459"

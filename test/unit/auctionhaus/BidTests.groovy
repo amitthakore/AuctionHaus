@@ -32,7 +32,7 @@ class BidTests {
     }
 
     // B-1: Bids have the following required fields: amount and date/time of bid (unit test)
-    //check that there is no nullable error when the required fields are present (happy path)
+    //check that validation successful and no nullable error when the required fields are present (happy path)
     void testBidNonNullFieldsOK()
     {
         mockForConstraintsTests(Bid)
@@ -71,7 +71,7 @@ class BidTests {
     }
 
     //B-2: Bids are required to be for a Listing (unit test)
-    //check that no nullable error when listing is present (exceptional case)
+    //check that validation successful and no nullable error when listing is present (exceptional case)
     void testBidListingNonNullOK()
     {
         mockForConstraintsTests(Bid)

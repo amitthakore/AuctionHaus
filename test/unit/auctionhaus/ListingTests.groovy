@@ -14,7 +14,7 @@ import org.junit.*
 class ListingTests {
 
     //L-1: Listings have the following required fields: name, end date/time, and starting bid price (unit test)
-    //test that if required fields are not present, there are validation errors (exceptional path)
+    //test that if required fields are not present, there are validation errors of 'nullable' on the required fields (exceptional path)
     void testRequiredListingFieldsMissingCauseError()
     {
         mockForConstraintsTests(Listing)
@@ -29,7 +29,7 @@ class ListingTests {
 
     }
     //L-1: Listings have the following required fields: name, end date/time, and starting bid price (unit test)
-    //test that if required fields are  present, there are no validation errors (happy path)
+    //test that if required fields are  present, validation is successful (happy path)
     void testRequiredListingFieldsOK()
     {
       def testEndDateTime = new Date() + 1
@@ -42,7 +42,7 @@ class ListingTests {
     }
 
     //L-2: Listings have the following optional fields: description (unit test)
-    //test that it is possible to enter a description for a listing (happy path)
+    //test that it is possible to enter a description for a listing and validate successfully, no errors on description field (happy path)
     void testOptionalListingDescriptionFieldOK()
     {
         def testEndDateTime = new Date() + 1
@@ -61,7 +61,7 @@ class ListingTests {
     }
 
     // L-3: Listings are required to have a seller (Customer) (unit test)
-    // test that there is a validation error for a listing that has no seller
+    // test that there is a validation error 'nullable' for a listing that has no seller
     void testListingSellerNullCausesError()
     {
         mockForConstraintsTests(Listing)
@@ -102,7 +102,7 @@ class ListingTests {
     }
 
     //L-4: Listing descriptions must be less than 256 characters (unit test)
-    //test that it is possible to enter a description for a listing under 256 characters (happy path)
+    //test that it is possible to enter a description for a listing under 256 characters and validate without error (happy path)
     void testListingDescriptionFieldOK()
     {
         def testEndDateTime = new Date() + 1
@@ -119,7 +119,7 @@ class ListingTests {
     }
 
     //L-4: Listing descriptions must be less than 256 characters (unit test)
-    //test that a listing over 256 characters causes validation error (exceptional path)
+    //test that a listing over 256 characters causes validation error on description field (exceptional path)
     void testListingDescriptionFieldOversizeError()
     {
         def testEndDateTime = new Date() + 1
@@ -152,7 +152,7 @@ class ListingTests {
 
     }
     //L-5: Listing end date/time must be in the future (unit test)
-    //test that a listing with a date/time in past causes validation error
+    //test that a listing with a date/time in past causes validation error on listingEndDateTime field
     void testListingEndDateTimeInPastCausesError()
     {
 
@@ -168,7 +168,7 @@ class ListingTests {
     }
 
     //L-6: Listing name must be less than 64 characters (unit test)
-    //test that it is possible to enter a name for a listing under 64 characters (happy path)
+    //test that it is possible to enter a name for a listing under 64 characters and validate without error (happy path)
     void testListingNameFieldOK()
     {
         def testEndDateTime = new Date() + 1
@@ -181,7 +181,7 @@ class ListingTests {
 
     }
     //L-6: Listing name must be less than 64 characters (unit test)
-    //test that entering a name for a listing over 64 characters causes validation error (happy path)
+    //test that entering a name for a listing over 64 characters causes validation error on listingName field (happy path)
     void testListingNameFieldOversizeErrors()
     {
         def testEndDateTime = new Date() + 1

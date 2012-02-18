@@ -19,7 +19,7 @@ class BidIntegrationTests extends GroovyTestCase {
 
 
     // B-5: The Bid amount must be at least .50 higher than the previous Bid for the same listing (integration test)
-    //Test that adding a bid that is not 0.50 higher than previous bid causes validation error. (exceptional case)
+    //Test that adding a bid that is not 0.50 higher than previous bid causes validation error on bidAmount field. (exceptional case)
     @Test
     void testBidNotHighEnoughCausesError()
     {
@@ -60,7 +60,7 @@ class BidIntegrationTests extends GroovyTestCase {
 
 
     // B-5: The Bid amount must be at least .50 higher than the previous Bid for the same listing (integration test)
-    //Test that adding a bid that is 0.50 higher than previous bid is successful. (happy path)
+    //Test that adding a bid that is 0.50 higher than previous bid  successfully validates, no error on bidAmount field. (happy path)
     @Test
     void testBidHighEnoughOK()
     {

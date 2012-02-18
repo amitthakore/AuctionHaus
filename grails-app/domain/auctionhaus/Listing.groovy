@@ -17,21 +17,7 @@ class Listing {
     static belongsTo = [seller: Customer]
     static hasMany = [bids: Bid]
 
-    //Get highest Bid Amount for the listing
-    BigDecimal getHighestBid() {
 
-
-        def highestBid = startingBidPrice
-
-        bids.each{
-            if (it.bidAmount > highestBid)
-                highestBid = it.bidAmount
-        }
-
-        return highestBid
-
-
-    }
 
 
     //Get next highest Bid Amount for the listing
@@ -53,38 +39,6 @@ class Listing {
 
 
 
-
-    // Get the next minimum bid a bidder can place
-    BigDecimal getMinBid()
-
-    {
-
-        if (bids)
-        {
-
-            return getHighestBid() + bidIncAmt
-        }
-        else{
-
-             return startingBidPrice
-        }
-
-    }
-
-    // Get the winner(Customer) for the listing
-
-    Customer getWinningCustomer() {
-
-            listingEndDateTime>= new Date() ? getWinningBid().bidder : null
-
-    }
-
-    //get the winning bid for the listing
-    Bid getWinningBid()
-    {
-
-         Bid.findByListingAndBidAmount(this,getHighestBid())
-    }
 
     static constraints = {
 

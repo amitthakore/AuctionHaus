@@ -2,6 +2,7 @@ package auctionhaus
 
 import static org.junit.Assert.*
 import org.junit.*
+import grails.validation.ValidationException
 
 
 //Amit Thakore and Ben Williams
@@ -19,7 +20,7 @@ class CustomerIntegrationTests extends GroovyTestCase{
 
 
     //    C-2: Email address must be a unique field (integration test)
-    //   Test that saving two customers with identical email addresses causes validation error on email property (exceptional case)
+    //   Test that saving two customers with identical email addresses causes validation exception (exceptional case)
     @Test
     void testUniqueEmailError(){
 
@@ -33,10 +34,11 @@ class CustomerIntegrationTests extends GroovyTestCase{
         customer1.email = "amitthakore16@gmail.com"
         customer1.password = "123459"
         customer1.createdDate  = new Date()
-        customer1.save()
 
-        assert  !customer1.validate()
-        assert customer1.errors["email"] != null
+        shouldFail(ValidationException){
+            customer1.save()               //this should throw ValidationException
+        }
+
     }
 
 

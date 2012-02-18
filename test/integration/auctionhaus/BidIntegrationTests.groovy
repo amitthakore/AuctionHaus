@@ -2,6 +2,8 @@ package auctionhaus
 
 import static org.junit.Assert.*
 import org.junit.*
+import org.springframework.test.annotation.ExpectedException
+import grails.validation.ValidationException
 
 //Amit Thakore and Ben Williams
 
@@ -19,7 +21,7 @@ class BidIntegrationTests extends GroovyTestCase {
 
 
     // B-5: The Bid amount must be at least .50 higher than the previous Bid for the same listing (integration test)
-    //Test that adding a bid that is not 0.50 higher than previous bid causes validation error on bidAmount field. (exceptional case)
+    //Test that adding a bid that is not 0.50 higher than previous bid causes validation exception on save. (exceptional case)
     @Test
     void testBidNotHighEnoughCausesError()
     {
@@ -33,10 +35,7 @@ class BidIntegrationTests extends GroovyTestCase {
 
 
         def bidTest2 = new Bid(bidAmount: 20.4, bidDateTime: new Date(), bidder: testSeller )
-        
-        bidTest.save()
-        
-        bidTest2.save()
+
 
         testSeller.save()
 
@@ -45,14 +44,15 @@ class BidIntegrationTests extends GroovyTestCase {
 
         testList.addToBids(bidTest)
 
-        bidTest.save()
 
         testList.addToBids(bidTest2)
         //since bidTest2 is only 0.40 greater than the last bid, it should cause a validation error
-        bidTest2.save()
-        assert !bidTest2.validate()
-        
-        assert bidTest2.errors['bidAmount'] != null
+
+        shouldFail(ValidationException){
+            bidTest2.save()       //this should cause validation exception
+        }
+
+
 
 
 
@@ -75,11 +75,13 @@ class BidIntegrationTests extends GroovyTestCase {
 
         def bidTest2 = new Bid(bidAmount: 20.5, bidDateTime: new Date(), bidder: testSeller )
 
-        bidTest.save()
-
-        bidTest2.save()
 
         testSeller.save()
+
+       // bidTest.save()
+
+       // bidTest2.save()
+
 
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
         testList.save()

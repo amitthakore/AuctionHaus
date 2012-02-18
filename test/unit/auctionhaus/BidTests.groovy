@@ -107,7 +107,7 @@ class BidTests {
     }
 
     //  B-3: Bids are required to have a bidder (Customer) (unit test)
-    //check that no nullable error when the bidder is present (happy path)
+    //check that validation is successful and no nullable error when the bidder is present (happy path)
     void testBidBidderNonNullOK()
     {
         mockForConstraintsTests(Bid)

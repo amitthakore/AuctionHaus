@@ -8,7 +8,7 @@ class Listing {
     Date  listingEndDateTime
     BigDecimal startingBidPrice
     String listingDescription
-    Customer seller
+    Customer seller,winner
     BigDecimal bidIncAmt = 0.5
     Collection<Bid> bids
   //Listing belongs to a customer and has many bids
@@ -33,13 +33,13 @@ class Listing {
 
 
     //Get highest Bid Amount for the listing
-    BigDecimal getNextHighestBid(bidAmount) {
+    BigDecimal getNextHighestBid(bidAmount,bidDate) {
 
 
         def highestBid = startingBidPrice
 
         bids.each{
-            if ((it.bidAmount > highestBid) && (it.bidAmount < bidAmount))
+            if ((it.bidAmount > highestBid) && (it.bidAmount < bidAmount) && (it.bidDateTime.before( bidDate )) )
                 highestBid = it.bidAmount
         }
 
@@ -70,7 +70,7 @@ class Listing {
 
     // Get the winner(Customer) for the listing
 
-    Customer getWinner() {
+    Customer getWinningCustomer() {
 
             listingEndDateTime>= new Date() ? getWinningBid().bidder : null
 
@@ -98,7 +98,7 @@ class Listing {
                     return ('invalid listingEndDateTime')
         }
 
-
+        winner nullable:true
 
 
         //B-4: A Listing has a list of Bids for that Listing (unit test)

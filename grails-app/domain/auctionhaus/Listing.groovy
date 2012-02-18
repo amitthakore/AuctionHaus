@@ -32,7 +32,7 @@ class Listing {
     }
 
 
-    //Get highest Bid Amount for the listing
+    //Get next highest Bid Amount for the listing
     BigDecimal getNextHighestBid(bidAmount,bidDate) {
 
 

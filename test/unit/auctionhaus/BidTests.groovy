@@ -133,16 +133,16 @@ class BidTests {
     }
 
   //  B-4: A Listing has a list of Bids for that Listing (unit test)
+    //check that I can add a bid to the list of bids for the Listing (happy path)
     void testListingHasListOfBids()
     {
 
 
 
-        mockForConstraintsTests(Bid)
-
+        mockForConstraintsTests(Listing)
 
         BigDecimal startingBidPrice = 10.00
-        // Create a test end date and time that is one day from today
+
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createddate: new Date())
 
@@ -150,10 +150,16 @@ class BidTests {
 
         def bidTest = new Bid(bidAmount: 20, bidDateTime: new Date(), bidder: testSeller, listing:testList )
 
-        testList.addToBids(bidTest)
         
-        assert bidTest.validate()
+        mockDomain(Listing,[testList])
 
+        testList.addToBids(bidTest)
+
+
+        assert testList.validate()
+
+        assert "validator" != testList.errors["bids"]
+        
     }
 
 

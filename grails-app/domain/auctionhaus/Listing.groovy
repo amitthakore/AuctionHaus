@@ -10,6 +10,7 @@ class Listing {
     String listingDescription
     Customer seller
     BigDecimal bidIncAmt = 0.5
+    Collection<Bid> bids
   //Listing belongs to a customer and has many bids
     static belongsTo = [seller: Customer]
     static hasMany = [bids: Bid]
@@ -17,9 +18,9 @@ class Listing {
   //Get highest Bid Amount for the listing
     BigDecimal getHighestBid() {
 
-    def highestBid
+        def highestBid
 
-     if (bids) {
+    //    if (bids) {
 
          highestBid = Bid.createCriteria().get() {
               eq('listing',this)
@@ -29,7 +30,12 @@ class Listing {
                       }
          }
 
-        }
+      //  }
+
+            if (highestBid == null)
+                return 0
+            else
+                return highestBid
 
     }
 
@@ -78,20 +84,30 @@ class Listing {
                     return ('invalid listingEndDateTime')
         }
 
+
+
+
         //B-4: A Listing has a list of Bids for that Listing (unit test)
-        bids(
-                
-                validator:   {val, obj, errors ->
-                    val.every{
-                        if(it.listing != obj )
-                            return false
+        bids nullable: true, validator: {
+
+
+                    val, obj ->
+
+                    //check each bid and see that its listing property matches instance of listing object
+            
+                    val.each{
+                        if(it.listing != obj)
+                        {
+                              return false
+                        }
+
                     }
-           
+                    return true
                 }
 
 
 
-        )
+
         
     }
 

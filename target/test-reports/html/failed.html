@@ -15,15 +15,10 @@
      - Failed tests</h1>
 <p class="intro">
                         Executed
-                        31
+                        2
                         tests
                     
-                        with
-                        2 errors
-
-                        and
-                        one failure
-                        .
+                        without a single error or failure!
                     </p>
 </div>
 <div class="grid_2 omega">
@@ -46,115 +41,6 @@
 </nav>
 </div>
 <div class="clear"></div>
-<div class="testsuite error">
-<div class="header">
-<h2>BidIntegrationTests</h2>
-<h3>
-                        Executed
-                        4
-                        tests
-                    
-                        with
-                        2 errors
-
-                        and
-                        one failure
-                        .
-                    </h3>
-</div>
-<div class="testcase clearfix failure grid_8 alpha omega" data-name="testBidNotHighEnoughCausesError">
-<div class="grid_3 alpha">
-<p>
-<span class="icon failure"></span><b class="testname message failure">testBidNotHighEnoughCausesError</b>
-</p>
-<p class="summary">Executed in 0.252 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo">
-<div class="details">
-<p>
-<b class="message">junit.framework.AssertionFailedError: Closure auctionhaus.BidIntegrationTests$_testBidNotHighEnoughCausesError_closure1@494c009f should have failed with an exception of type grails.validation.ValidationException, instead got Exception groovy.lang.MissingPropertyException: No such property: highestBid for class: auctionhaus.Listing</b>
-</p>
-<pre>junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Closure auctionhaus.BidIntegrationTests$_testBidNotHighEnoughCausesError_closure1@494c009f should have failed with an exception of type grails.validation.ValidationException, instead got Exception groovy.lang.MissingPropertyException: No such property: highestBid for class: auctionhaus.Listing
-	at auctionhaus.BidIntegrationTests.testBidNotHighEnoughCausesError(BidIntegrationTests.groovy:51)
-</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix error grid_8 alpha omega" data-name="testBidHighEnoughOK">
-<div class="grid_3 alpha">
-<p>
-<span class="icon error"></span><b class="testname message error">testBidHighEnoughOK</b>
-</p>
-<p class="summary">Executed in 0.055 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo">
-<div class="details">
-<p>
-<b class="message">No such property: highestBid for class: auctionhaus.Listing</b>
-</p>
-<pre>groovy.lang.MissingPropertyException: No such property: highestBid for class: auctionhaus.Listing
-	at auctionhaus.Listing$_getNextHighestBid_closure1.doCall(Listing.groovy:31)
-	at auctionhaus.Listing.getNextHighestBid(Listing.groovy:30)
-	at auctionhaus.Bid$__clinit__closure1_closure2.doCall(Bid.groovy:23)
-	at auctionhaus.BidIntegrationTests.testBidHighEnoughOK(BidIntegrationTests.groovy:88)
-</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix error grid_8 alpha omega" data-name="testListingSavedBidsAlsoSaved">
-<div class="grid_3 alpha">
-<p>
-<span class="icon error"></span><b class="testname message error">testListingSavedBidsAlsoSaved</b>
-</p>
-<p class="summary">Executed in 0.037 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo">
-<div class="details">
-<p>
-<b class="message">No such property: highestBid for class: auctionhaus.Listing</b>
-</p>
-<pre>groovy.lang.MissingPropertyException: No such property: highestBid for class: auctionhaus.Listing
-	at auctionhaus.Listing$_getNextHighestBid_closure1.doCall(Listing.groovy:31)
-	at auctionhaus.Listing.getNextHighestBid(Listing.groovy:30)
-	at auctionhaus.Bid$__clinit__closure1_closure2.doCall(Bid.groovy:23)
-	at auctionhaus.BidIntegrationTests.testListingSavedBidsAlsoSaved(BidIntegrationTests.groovy:126)
-</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingNotSavedBidsAlsoNotSaved">
-<div class="grid_3 alpha">
-<p>
-<span class="icon success"></span><b class="testname message success">testListingNotSavedBidsAlsoNotSaved</b>
-</p>
-<p class="summary">Executed in 0.03 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo"></div>
-<div class="clear"></div>
-</div>
-<div class="clearfix output footer">
-<div class="sysout">
-<h2>Standard output</h2>
-<pre class="stdout">--Output from testBidNotHighEnoughCausesError--
---Output from testBidHighEnoughOK--
---Output from testListingSavedBidsAlsoSaved--
---Output from testListingNotSavedBidsAlsoNotSaved--
-</pre>
-</div>
-<div class="syserr">
-<h2>System error</h2>
-<pre class="syserr">--Output from testBidNotHighEnoughCausesError--
---Output from testBidHighEnoughOK--
---Output from testListingSavedBidsAlsoSaved--
---Output from testListingNotSavedBidsAlsoNotSaved--
-</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
 <div class="clear"></div>
 </div>
 <!--

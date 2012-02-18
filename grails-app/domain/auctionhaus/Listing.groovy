@@ -28,7 +28,7 @@ class Listing {
 
         //look at each bid and remember bidAmount of the bid that comes before the argument bidDate
         bids.each{
-            if ((it.bidAmount > highestBid) &&  (it.bidDateTime.before( bidDate )) )
+            if ((it.bidAmount > nextHighestBid) &&  (it.bidDateTime.before( bidDate )) )
                 nextHighestBid = it.bidAmount
         }
 

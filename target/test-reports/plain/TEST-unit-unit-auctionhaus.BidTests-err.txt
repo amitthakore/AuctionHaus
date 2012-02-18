@@ -4,3 +4,4 @@
 --Output from testBidListingNonNullOK--
 --Output from testBidBidderNullCausesError--
 --Output from testBidBidderNonNullOK--
+--Output from testListingHasListOfBids--

@@ -43,7 +43,7 @@ class Listing {
         }
         else{
 
-        StartingBidPrice
+        startingBidPrice
     }
 
     }
@@ -69,14 +69,30 @@ class Listing {
 
         //L-2 : LisitngBidPrice can not be blank
         startingBidPrice blank:false
-        //L-3 : Listing description should be less than 255 characters
-        listingDescription size:0..255
+        //L-3 : Listing description should be less than 255 characters      - optional field
+        listingDescription nullable:true , size:0..255
 
         //L-4: Listing Date time must be in future
         listingEndDateTime nullable:false,validator: {
-                if (it.compareTo(new Date())>0)
-                    return ('invalid ListingEndDateTime')
+                if (it.compareTo(new Date())<0)
+                    return ('invalid listingEndDateTime')
         }
+
+        //B-4: A Listing has a list of Bids for that Listing (unit test)
+        bids(
+                
+                validator:   {val, obj, errors ->
+                    val.every{
+                        if(it.listing != obj )
+                            return false
+                    }
+           
+                }
+
+
+
+        )
+        
     }
 
 }

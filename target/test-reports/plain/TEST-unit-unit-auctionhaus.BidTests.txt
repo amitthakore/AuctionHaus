@@ -1,13 +1,5 @@
 Testsuite: auctionhaus.BidTests
-Tests run: 6, Failures: 1, Errors: 1, Time elapsed: 1.468 sec
-------------- Standard Output ---------------
---Output from testBidNullFieldsCauseError--
---Output from testBidNonNullFieldsOK--
---Output from testBidListingNullCausesError--
---Output from testBidListingNonNullOK--
---Output from testBidBidderNullCausesError--
---Output from testBidBidderNonNullOK--
-------------- ---------------- ---------------
+Tests run: 7, Failures: 0, Errors: 1, Time elapsed: 1.021 sec
 ------------- Standard Error -----------------
 --Output from testBidNullFieldsCauseError--
 --Output from testBidNonNullFieldsOK--
@@ -15,47 +7,20 @@ Tests run: 6, Failures: 1, Errors: 1, Time elapsed: 1.468 sec
 --Output from testBidListingNonNullOK--
 --Output from testBidBidderNullCausesError--
 --Output from testBidBidderNonNullOK--
+--Output from testListingHasListOfBids--
 ------------- ---------------- ---------------
 
-Testcase: testBidNullFieldsCauseError took 0.99 sec
-	FAILED
-Assertion failed: 
-
-assert "nullable" == bidNull.errors["bidDatetime"]
-                  |  |       |     |
-                  |  |       |     null
-                  |  |       org.codehaus.groovy.grails.plugins.testing.GrailsMockErrors: 4 errors
-                  |  |       Field error in object 'auctionhaus.Bid' on field 'bidDateTime': rejected value [null]; codes [auctionhaus.Bid.bidDateTime.nullable.error.auctionhaus.Bid.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.error.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.error.java.util.Date,auctionhaus.Bid.bidDateTime.nullable.error,bid.bidDateTime.nullable.error.auctionhaus.Bid.bidDateTime,bid.bidDateTime.nullable.error.bidDateTime,bid.bidDateTime.nullable.error.java.util.Date,bid.bidDateTime.nullable.error,auctionhaus.Bid.bidDateTime.nullable.auctionhaus.Bid.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.java.util.Date,auctionhaus.Bid.bidDateTime.nullable,bid.bidDateTime.nullable.auctionhaus.Bid.bidDateTime,bid.bidDateTime.nullable.bidDateTime,bid.bidDateTime.nullable.java.util.Date,bid.bidDateTime.nullable,nullable.auctionhaus.Bid.bidDateTime,nullable.bidDateTime,nullable.java.util.Date,nullable]; arguments [bidDateTime,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
-                  |  |       Field error in object 'auctionhaus.Bid' on field 'bidAmount': rejected value [null]; codes [auctionhaus.Bid.bidAmount.nullable.error.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.nullable.error.bidAmount,auctionhaus.Bid.bidAmount.nullable.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.nullable.error,bid.bidAmount.nullable.error.auctionhaus.Bid.bidAmount,bid.bidAmount.nullable.error.bidAmount,bid.bidAmount.nullable.error.java.math.BigDecimal,bid.bidAmount.nullable.error,auctionhaus.Bid.bidAmount.nullable.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.nullable.bidAmount,auctionhaus.Bid.bidAmount.nullable.java.math.BigDecimal,auctionhaus.Bid.bidAmount.nullable,bid.bidAmount.nullable.auctionhaus.Bid.bidAmount,bid.bidAmount.nullable.bidAmount,bid.bidAmount.nullable.java.math.BigDecimal,bid.bidAmount.nullable,nullable.auctionhaus.Bid.bidAmount,nullable.bidAmount,nullable.java.math.BigDecimal,nullable]; arguments [bidAmount,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
-                  |  |       Field error in object 'auctionhaus.Bid' on field 'bidder': rejected value [null]; codes [auctionhaus.Bid.bidder.nullable.error.auctionhaus.Bid.bidder,auctionhaus.Bid.bidder.nullable.error.bidder,auctionhaus.Bid.bidder.nullable.error.auctionhaus.Customer,auctionhaus.Bid.bidder.nullable.error,bid.bidder.nullable.error.auctionhaus.Bid.bidder,bid.bidder.nullable.error.bidder,bid.bidder.nullable.error.auctionhaus.Customer,bid.bidder.nullable.error,auctionhaus.Bid.bidder.nullable.auctionhaus.Bid.bidder,auctionhaus.Bid.bidder.nullable.bidder,auctionhaus.Bid.bidder.nullable.auctionhaus.Customer,auctionhaus.Bid.bidder.nullable,bid.bidder.nullable.auctionhaus.Bid.bidder,bid.bidder.nullable.bidder,bid.bidder.nullable.auctionhaus.Customer,bid.bidder.nullable,nullable.auctionhaus.Bid.bidder,nullable.bidder,nullable.auctionhaus.Customer,nullable]; arguments [bidder,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
-                  |  |       Field error in object 'auctionhaus.Bid' on field 'listing': rejected value [null]; codes [auctionhaus.Bid.listing.nullable.error.auctionhaus.Bid.listing,auctionhaus.Bid.listing.nullable.error.listing,auctionhaus.Bid.listing.nullable.error.auctionhaus.Listing,auctionhaus.Bid.listing.nullable.error,bid.listing.nullable.error.auctionhaus.Bid.listing,bid.listing.nullable.error.listing,bid.listing.nullable.error.auctionhaus.Listing,bid.listing.nullable.error,auctionhaus.Bid.listing.nullable.auctionhaus.Bid.listing,auctionhaus.Bid.listing.nullable.listing,auctionhaus.Bid.listing.nullable.auctionhaus.Listing,auctionhaus.Bid.listing.nullable,bid.listing.nullable.auctionhaus.Bid.listing,bid.listing.nullable.listing,bid.listing.nullable.auctionhaus.Listing,bid.listing.nullable,nullable.auctionhaus.Bid.listing,nullable.listing,nullable.auctionhaus.Listing,nullable]; arguments [listing,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
-                  |  auctionhaus.Bid : null
-                  false
-
-junit.framework.AssertionFailedError: Assertion failed: 
-
-assert "nullable" == bidNull.errors["bidDatetime"]
-                  |  |       |     |
-                  |  |       |     null
-                  |  |       org.codehaus.groovy.grails.plugins.testing.GrailsMockErrors: 4 errors
-                  |  |       Field error in object 'auctionhaus.Bid' on field 'bidDateTime': rejected value [null]; codes [auctionhaus.Bid.bidDateTime.nullable.error.auctionhaus.Bid.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.error.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.error.java.util.Date,auctionhaus.Bid.bidDateTime.nullable.error,bid.bidDateTime.nullable.error.auctionhaus.Bid.bidDateTime,bid.bidDateTime.nullable.error.bidDateTime,bid.bidDateTime.nullable.error.java.util.Date,bid.bidDateTime.nullable.error,auctionhaus.Bid.bidDateTime.nullable.auctionhaus.Bid.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.bidDateTime,auctionhaus.Bid.bidDateTime.nullable.java.util.Date,auctionhaus.Bid.bidDateTime.nullable,bid.bidDateTime.nullable.auctionhaus.Bid.bidDateTime,bid.bidDateTime.nullable.bidDateTime,bid.bidDateTime.nullable.java.util.Date,bid.bidDateTime.nullable,nullable.auctionhaus.Bid.bidDateTime,nullable.bidDateTime,nullable.java.util.Date,nullable]; arguments [bidDateTime,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
-                  |  |       Field error in object 'auctionhaus.Bid' on field 'bidAmount': rejected value [null]; codes [auctionhaus.Bid.bidAmount.nullable.error.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.nullable.error.bidAmount,auctionhaus.Bid.bidAmount.nullable.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.nullable.error,bid.bidAmount.nullable.error.auctionhaus.Bid.bidAmount,bid.bidAmount.nullable.error.bidAmount,bid.bidAmount.nullable.error.java.math.BigDecimal,bid.bidAmount.nullable.error,auctionhaus.Bid.bidAmount.nullable.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.nullable.bidAmount,auctionhaus.Bid.bidAmount.nullable.java.math.BigDecimal,auctionhaus.Bid.bidAmount.nullable,bid.bidAmount.nullable.auctionhaus.Bid.bidAmount,bid.bidAmount.nullable.bidAmount,bid.bidAmount.nullable.java.math.BigDecimal,bid.bidAmount.nullable,nullable.auctionhaus.Bid.bidAmount,nullable.bidAmount,nullable.java.math.BigDecimal,nullable]; arguments [bidAmount,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
-                  |  |       Field error in object 'auctionhaus.Bid' on field 'bidder': rejected value [null]; codes [auctionhaus.Bid.bidder.nullable.error.auctionhaus.Bid.bidder,auctionhaus.Bid.bidder.nullable.error.bidder,auctionhaus.Bid.bidder.nullable.error.auctionhaus.Customer,auctionhaus.Bid.bidder.nullable.error,bid.bidder.nullable.error.auctionhaus.Bid.bidder,bid.bidder.nullable.error.bidder,bid.bidder.nullable.error.auctionhaus.Customer,bid.bidder.nullable.error,auctionhaus.Bid.bidder.nullable.auctionhaus.Bid.bidder,auctionhaus.Bid.bidder.nullable.bidder,auctionhaus.Bid.bidder.nullable.auctionhaus.Customer,auctionhaus.Bid.bidder.nullable,bid.bidder.nullable.auctionhaus.Bid.bidder,bid.bidder.nullable.bidder,bid.bidder.nullable.auctionhaus.Customer,bid.bidder.nullable,nullable.auctionhaus.Bid.bidder,nullable.bidder,nullable.auctionhaus.Customer,nullable]; arguments [bidder,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
-                  |  |       Field error in object 'auctionhaus.Bid' on field 'listing': rejected value [null]; codes [auctionhaus.Bid.listing.nullable.error.auctionhaus.Bid.listing,auctionhaus.Bid.listing.nullable.error.listing,auctionhaus.Bid.listing.nullable.error.auctionhaus.Listing,auctionhaus.Bid.listing.nullable.error,bid.listing.nullable.error.auctionhaus.Bid.listing,bid.listing.nullable.error.listing,bid.listing.nullable.error.auctionhaus.Listing,bid.listing.nullable.error,auctionhaus.Bid.listing.nullable.auctionhaus.Bid.listing,auctionhaus.Bid.listing.nullable.listing,auctionhaus.Bid.listing.nullable.auctionhaus.Listing,auctionhaus.Bid.listing.nullable,bid.listing.nullable.auctionhaus.Bid.listing,bid.listing.nullable.listing,bid.listing.nullable.auctionhaus.Listing,bid.listing.nullable,nullable.auctionhaus.Bid.listing,nullable.listing,nullable.auctionhaus.Listing,nullable]; arguments [listing,class auctionhaus.Bid]; default message [Property [{0}] of class [{1}] cannot be null]
-                  |  auctionhaus.Bid : null
-                  false
-
-	at auctionhaus.BidTests.testBidNullFieldsCauseError(BidTests.groovy:24)
-
-Testcase: testBidNonNullFieldsOK took 0.054 sec
+Testcase: testBidNullFieldsCauseError took 0.584 sec
+Testcase: testBidNonNullFieldsOK took 0.08 sec
+Testcase: testBidListingNullCausesError took 0.03 sec
+Testcase: testBidListingNonNullOK took 0.043 sec
+Testcase: testBidBidderNullCausesError took 0.031 sec
+Testcase: testBidBidderNonNullOK took 0.033 sec
+Testcase: testListingHasListOfBids took 0.171 sec
 	Caused an ERROR
-No such property: bidDatetime for class: auctionhaus.Bid
-Possible solutions: bidDateTime
-groovy.lang.MissingPropertyException: No such property: bidDatetime for class: auctionhaus.Bid
-Possible solutions: bidDateTime
-	at auctionhaus.BidTests.testBidNonNullFieldsOK(BidTests.groovy:37)
+No signature of method: auctionhaus.Listing.addToBids() is applicable for argument types: (auctionhaus.Bid) values: [auctionhaus.Bid : null]
+Possible solutions: getBids()
+groovy.lang.MissingMethodException: No signature of method: auctionhaus.Listing.addToBids() is applicable for argument types: (auctionhaus.Bid) values: [auctionhaus.Bid : null]
+Possible solutions: getBids()
+	at auctionhaus.BidTests.testListingHasListOfBids(BidTests.groovy:199)
 
-Testcase: testBidListingNullCausesError took 0.047 sec
-Testcase: testBidListingNonNullOK took 0.132 sec
-Testcase: testBidBidderNullCausesError took 0.051 sec
-Testcase: testBidBidderNonNullOK took 0.092 sec

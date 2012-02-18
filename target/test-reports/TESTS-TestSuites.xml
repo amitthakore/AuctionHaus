@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="nat-10-20-65-249.uofm.wireless.umn.edu" id="0" name="BidTests" package="auctionhaus" tests="7" time="0.982" timestamp="2012-02-18T14:13:02">
+  <testsuite errors="0" failures="0" hostname="nat-10-20-65-249.uofm.wireless.umn.edu" id="0" name="ListingTests" package="auctionhaus" tests="12" time="0.867" timestamp="2012-02-18T14:27:51">
       <properties />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidNullFieldsCauseError" time="0.566" />
+      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsMissingCauseError" time="0.567" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidNonNullFieldsOK" time="0.101" />
+      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsOK" time="0.056" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidListingNullCausesError" time="0.034" />
+      <testcase classname="auctionhaus.ListingTests" name="testOptionalListingDescriptionFieldOK" time="0.025" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidListingNonNullOK" time="0.042" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingSellerNullCausesError" time="0.029" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidBidderNullCausesError" time="0.035" />
+      <testcase classname="auctionhaus.ListingTests" name="testBidBidderNonNullOK" time="0.03" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidBidderNonNullOK" time="0.035" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOK" time="0.018" />
 
-      <testcase classname="auctionhaus.BidTests" name="testListingHasListOfBids" time="0.144" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOversizeError" time="0.017" />
+
+      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInFutureOK" time="0.016" />
+
+      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInPastCausesError" time="0.016" />
+
+      <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOK" time="0.016" />
+
+      <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOversizeErrors" time="0.024" />
+
+      <testcase classname="auctionhaus.ListingTests" name="testOptionalWinnerFieldOK" time="0.015" />
 
       <system-out><![CDATA[]]></system-out>
 
-      <system-err><![CDATA[--Output from testBidNullFieldsCauseError--
---Output from testBidNonNullFieldsOK--
---Output from testBidListingNullCausesError--
---Output from testBidListingNonNullOK--
---Output from testBidBidderNullCausesError--
+      <system-err><![CDATA[--Output from testRequiredListingFieldsMissingCauseError--
+--Output from testRequiredListingFieldsOK--
+--Output from testOptionalListingDescriptionFieldOK--
+--Output from testListingSellerNullCausesError--
 --Output from testBidBidderNonNullOK--
---Output from testListingHasListOfBids--
+--Output from testListingDescriptionFieldOK--
+--Output from testListingDescriptionFieldOversizeError--
+--Output from testListingEndDateTimeInFutureOK--
+--Output from testListingEndDateTimeInPastCausesError--
+--Output from testListingNameFieldOK--
+--Output from testListingNameFieldOversizeErrors--
+--Output from testOptionalWinnerFieldOK--
 ]]></system-err>
 
   </testsuite>

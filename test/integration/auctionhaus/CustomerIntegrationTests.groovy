@@ -3,25 +3,21 @@ package auctionhaus
 import static org.junit.Assert.*
 import org.junit.*
 
-
-
-class CustomerIntegrationTestTests extends GroovyTestCase   {
-
-
-   @Before
-  void setUp() {
+class CustomerIntegrationTests extends GroovyTestCase{
+    @Before
+    void setUp() {
         // Setup logic here
     }
 
     @After
     void tearDown() {
         // Tear down logic here
-   }
+    }
 
     @Test
     void testUniqueEmailError(){
 
-  //    C-2: Email address must be a unique field (integration test)
+        //    C-2: Email address must be a unique field (integration test)
         def customer = new Customer()
         customer.email = "amitthakore16@gmail.com"
         customer.password = "123459"
@@ -53,8 +49,7 @@ class CustomerIntegrationTestTests extends GroovyTestCase   {
         customer1.save()
 
 
-       assert customer1.validate()
+        assert customer1.validate()
         assert null == customer1.errors["email"]
     }
-
 }

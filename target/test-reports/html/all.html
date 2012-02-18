@@ -15,7 +15,7 @@
      - All tests </h1>
 <p class="intro">
                         Executed
-                        7
+                        12
                         tests
                     
                         without a single error or failure!
@@ -43,61 +43,51 @@
 <div class="clear"></div>
 <div class="testsuite success">
 <div class="header">
-<h2>BidTests</h2>
+<h2>ListingTests</h2>
 <h3>
                         Executed
-                        7
+                        12
                         tests
                     
                         without a single error or failure!
                     </h3>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidNullFieldsCauseError">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testRequiredListingFieldsMissingCauseError">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testBidNullFieldsCauseError</b>
+<span class="icon success"></span><b class="testname message success">testRequiredListingFieldsMissingCauseError</b>
 </p>
-<p class="summary">Executed in 0.566 seconds.</p>
+<p class="summary">Executed in 0.567 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidNonNullFieldsOK">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testRequiredListingFieldsOK">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testBidNonNullFieldsOK</b>
+<span class="icon success"></span><b class="testname message success">testRequiredListingFieldsOK</b>
 </p>
-<p class="summary">Executed in 0.101 seconds.</p>
+<p class="summary">Executed in 0.056 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidListingNullCausesError">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testOptionalListingDescriptionFieldOK">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testBidListingNullCausesError</b>
+<span class="icon success"></span><b class="testname message success">testOptionalListingDescriptionFieldOK</b>
 </p>
-<p class="summary">Executed in 0.034 seconds.</p>
+<p class="summary">Executed in 0.025 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidListingNonNullOK">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingSellerNullCausesError">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testBidListingNonNullOK</b>
+<span class="icon success"></span><b class="testname message success">testListingSellerNullCausesError</b>
 </p>
-<p class="summary">Executed in 0.042 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo"></div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidBidderNullCausesError">
-<div class="grid_3 alpha">
-<p>
-<span class="icon success"></span><b class="testname message success">testBidBidderNullCausesError</b>
-</p>
-<p class="summary">Executed in 0.035 seconds.</p>
+<p class="summary">Executed in 0.029 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -107,17 +97,77 @@
 <p>
 <span class="icon success"></span><b class="testname message success">testBidBidderNonNullOK</b>
 </p>
-<p class="summary">Executed in 0.035 seconds.</p>
+<p class="summary">Executed in 0.03 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingHasListOfBids">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingDescriptionFieldOK">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">testListingHasListOfBids</b>
+<span class="icon success"></span><b class="testname message success">testListingDescriptionFieldOK</b>
 </p>
-<p class="summary">Executed in 0.144 seconds.</p>
+<p class="summary">Executed in 0.018 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingDescriptionFieldOversizeError">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testListingDescriptionFieldOversizeError</b>
+</p>
+<p class="summary">Executed in 0.017 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingEndDateTimeInFutureOK">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testListingEndDateTimeInFutureOK</b>
+</p>
+<p class="summary">Executed in 0.016 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingEndDateTimeInPastCausesError">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testListingEndDateTimeInPastCausesError</b>
+</p>
+<p class="summary">Executed in 0.016 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingNameFieldOK">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testListingNameFieldOK</b>
+</p>
+<p class="summary">Executed in 0.016 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingNameFieldOversizeErrors">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testListingNameFieldOversizeErrors</b>
+</p>
+<p class="summary">Executed in 0.024 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testOptionalWinnerFieldOK">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testOptionalWinnerFieldOK</b>
+</p>
+<p class="summary">Executed in 0.015 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -129,13 +179,18 @@
 </div>
 <div class="syserr">
 <h2>System error</h2>
-<pre class="syserr">--Output from testBidNullFieldsCauseError--
---Output from testBidNonNullFieldsOK--
---Output from testBidListingNullCausesError--
---Output from testBidListingNonNullOK--
---Output from testBidBidderNullCausesError--
+<pre class="syserr">--Output from testRequiredListingFieldsMissingCauseError--
+--Output from testRequiredListingFieldsOK--
+--Output from testOptionalListingDescriptionFieldOK--
+--Output from testListingSellerNullCausesError--
 --Output from testBidBidderNonNullOK--
---Output from testListingHasListOfBids--
+--Output from testListingDescriptionFieldOK--
+--Output from testListingDescriptionFieldOversizeError--
+--Output from testListingEndDateTimeInFutureOK--
+--Output from testListingEndDateTimeInPastCausesError--
+--Output from testListingNameFieldOK--
+--Output from testListingNameFieldOversizeErrors--
+--Output from testOptionalWinnerFieldOK--
 </pre>
 </div>
 </div>

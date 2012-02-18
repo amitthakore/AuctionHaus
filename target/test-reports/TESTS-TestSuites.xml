@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Hennepins-MacBook-Pro.local" id="0" name="CustomerIntegrationTestTests" package="auctionhaus" tests="1" time="0.222" timestamp="2012-02-18T09:58:13">
+  <testsuite errors="0" failures="0" hostname="nat-10-20-65-249.uofm.wireless.umn.edu" id="0" name="BidTests" package="auctionhaus" tests="7" time="0.982" timestamp="2012-02-18T14:13:02">
       <properties />
 
-      <testcase classname="auctionhaus.CustomerIntegrationTestTests" name="testUniqueEmailOK" time="0.212" />
+      <testcase classname="auctionhaus.BidTests" name="testBidNullFieldsCauseError" time="0.566" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidNonNullFieldsOK" time="0.101" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidListingNullCausesError" time="0.034" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidListingNonNullOK" time="0.042" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidBidderNullCausesError" time="0.035" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidBidderNonNullOK" time="0.035" />
+
+      <testcase classname="auctionhaus.BidTests" name="testListingHasListOfBids" time="0.144" />
 
       <system-out><![CDATA[]]></system-out>
 
-      <system-err><![CDATA[--Output from testUniqueEmailOK--
+      <system-err><![CDATA[--Output from testBidNullFieldsCauseError--
+--Output from testBidNonNullFieldsOK--
+--Output from testBidListingNullCausesError--
+--Output from testBidListingNonNullOK--
+--Output from testBidBidderNullCausesError--
+--Output from testBidBidderNonNullOK--
+--Output from testListingHasListOfBids--
 ]]></system-err>
 
   </testsuite>

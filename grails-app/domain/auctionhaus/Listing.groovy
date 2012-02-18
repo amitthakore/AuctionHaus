@@ -40,6 +40,7 @@ class Listing {
 
         def highestBid = startingBidPrice
 
+        //look at each bid and remember bidAmount of the bid that comes before the argument bidDate
         bids.each{
             if ((it.bidAmount > highestBid) &&  (it.bidDateTime.before( bidDate )) )
                 highestBid = it.bidAmount
@@ -78,6 +79,7 @@ class Listing {
 
     }
 
+    //get the winning bid for the listing
     Bid getWinningBid()
     {
 
@@ -86,20 +88,20 @@ class Listing {
 
     static constraints = {
 
-        //L-1:Listing name must be less than 64 characters
+        //Listing name must be less than 64 characters
         listingName nullable: false, blank:false,size:1..63
 
-        //L-2 : LisitngBidPrice can not be blank
+        //LisitngBidPrice can not be blank
         startingBidPrice blank:false
-        //L-3 : Listing description should be less than 255 characters      - optional field
+        // Listing description should be less than 255 characters      - optional field
         listingDescription nullable:true , size:0..255
 
-        //L-4: Listing Date time must be in future
+        //Listing Date time must be in future
         listingEndDateTime nullable:false,validator: {
                 if (it.compareTo(new Date())<0)
                     return ('invalid listingEndDateTime')
         }
-
+        //  Listing has a nullable field for the winner (Customer)
         winner nullable:true
 
 

@@ -37,7 +37,7 @@ class CustomerTests
         customer.email = "amitthakore16@gmail.com"
         customer.password = "123456"
         customer.createdDate  = new Date()
-        customer.validate()
+        assert customer.validate()
 
         assert customer.errors["email"] != "nullable"
         assert customer.errors["password"] != "nullable"

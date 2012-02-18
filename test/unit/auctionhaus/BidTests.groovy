@@ -133,7 +133,7 @@ class BidTests {
     }
 
   //  B-4: A Listing has a list of Bids for that Listing (unit test)
-    //check that I can add a bid to the list of bids for the Listing (happy path)
+    //test that I can add a bid to the list of bids for the Listing
     void testListingHasListOfBids()
     {
 

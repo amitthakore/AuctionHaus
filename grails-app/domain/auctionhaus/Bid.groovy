@@ -29,19 +29,8 @@ class Bid {
 
 
 
-
-
-        // B3: Bids are required to have a bidder(integration test)
-                //seller is not the bidder
-      /*  bidder( validator: {val, obj, errors ->
-            if (obj.listing) {
-                val != obj.listing.seller
-
-            }
-        })     */
-
     }
 
 
-    }
+}
 

@@ -50,39 +50,6 @@ class Listing {
 
 
 
-    //Get  Bid Amount for previous bid
-    BigDecimal getBidAmountPreviousBid(Bid b) {
-
-        def currentBid
-        def previousBid
-
-        def done = false;
-
-        bids.each{
-            previousBid = currentBid
-            currentBid = it
-
-            //if (done){
-              //      return currentBid.bidAmount
-              //}
-
-            if (currentBid.bidAmount == b.bidAmount)
-            {
-            //  done = true;
-                if(previousBid == null)    {
-                    return startingBidPrice
-                }
-                else       {
-                    return previousBid.bidAmount
-                 }
-            }
-        }
-
-       return startingBidPrice
-
-
-    }
-
 
     // Get the next minimum bid a bidder can place
     BigDecimal getMinBid()
@@ -103,16 +70,16 @@ class Listing {
 
     // Get the winner(Customer) for the listing
 
-        Customer getWinner() {
+    Customer getWinner() {
 
-         listingEndDateTime>= new Date() ? getWinningBid().bidder : null
+            listingEndDateTime>= new Date() ? getWinningBid().bidder : null
 
     }
 
     Bid getWinningBid()
     {
 
-     Bid.findByListingAndBidAmount(this,getHighestBid())
+         Bid.findByListingAndBidAmount(this,getHighestBid())
     }
 
     static constraints = {

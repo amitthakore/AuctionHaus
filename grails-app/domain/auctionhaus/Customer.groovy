@@ -1,5 +1,8 @@
 package auctionhaus
 
+
+//Amit Thakore and Ben Williams
+
 class Customer {
          String email
          String password

@@ -3,6 +3,9 @@ package auctionhaus
 import static org.junit.Assert.*
 import org.junit.*
 
+
+//Amit Thakore and Ben Williams
+
 class CustomerIntegrationTests extends GroovyTestCase{
     @Before
     void setUp() {

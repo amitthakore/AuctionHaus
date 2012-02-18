@@ -9,6 +9,9 @@ import com.sun.tools.internal.xjc.generator.util.ExistingBlockReference
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
+
+//Amit Thakore and Ben Williams
+
 @TestFor(Customer)
 
 class CustomerTests

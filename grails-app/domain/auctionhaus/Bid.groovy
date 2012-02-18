@@ -2,6 +2,8 @@ package auctionhaus
 
 import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 
+//Amit Thakore and Ben Williams
+
 class Bid {
      BigDecimal bidAmount
      Date    bidDateTime

@@ -3,6 +3,8 @@ package auctionhaus
 import org.codehaus.groovy.grails.validation.BlankConstraint
 import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 
+//Amit Thakore and Ben Williams
+
 class Listing {
     String listingName
     Date  listingEndDateTime

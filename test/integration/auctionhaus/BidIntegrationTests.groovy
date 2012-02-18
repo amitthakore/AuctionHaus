@@ -78,9 +78,6 @@ class BidIntegrationTests extends GroovyTestCase {
 
         testSeller.save()
 
-       // bidTest.save()
-
-       // bidTest2.save()
 
 
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
@@ -91,7 +88,7 @@ class BidIntegrationTests extends GroovyTestCase {
         bidTest.save()
 
         testList.addToBids(bidTest2)
-        //since bidTest2 is only 0.40 greater than the last bid, it should cause a validation error
+        //since bidTest2 is 0.50 greater than the last bid, it should not cause a validation error
         bidTest2.save()
         assert bidTest2.validate()
 

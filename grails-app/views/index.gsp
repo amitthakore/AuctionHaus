@@ -1,5 +1,7 @@
-<!doctype html>
-<html>
+
+<a href="${createLink(controller:'listing',action:'index')}">Home</a>
+<%--<!doctype html>
+--<html>
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
@@ -113,4 +115,6 @@
 			</div>
 		</div>
 	</body>
-</html>
+</html>  --%>
+
+

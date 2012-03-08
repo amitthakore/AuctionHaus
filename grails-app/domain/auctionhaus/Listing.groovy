@@ -12,12 +12,12 @@ class Listing {
     String listingDescription
     Customer seller,winner
     BigDecimal bidIncAmt = 0.5
+    Date listingCreatedDate
     Collection<Bid> bids
     //Listing belongs to a customer and has many bids
     static belongsTo = [seller: Customer]
     static hasMany = [bids: Bid]
-
-
+    static mapping = {sort listingCreatedDate: "desc"}
 
 
     //Get next highest Bid Amount for the listing
@@ -76,10 +76,6 @@ class Listing {
             }
             return true
         }
-
-
-
-
 
     }
 

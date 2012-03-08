@@ -1,39 +1,159 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="nat-10-20-65-249.uofm.wireless.umn.edu" id="0" name="ListingTests" package="auctionhaus" tests="12" time="0.879" timestamp="2012-02-18T20:10:49">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="0" name="BidIntegrationTests" package="auctionhaus" tests="4" time="0.633" timestamp="2012-02-19T01:11:54">
       <properties />
 
-      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsMissingCauseError" time="0.574" />
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testBidNotHighEnoughCausesError" time="0.469" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsOK" time="0.056" />
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testBidHighEnoughOK" time="0.046" />
+
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testListingSavedBidsAlsoSaved" time="0.082" />
+
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testListingNotSavedBidsAlsoNotSaved" time="0.032" />
+
+      <system-out><![CDATA[--Output from testBidNotHighEnoughCausesError--
+--Output from testBidHighEnoughOK--
+--Output from testListingSavedBidsAlsoSaved--
+--Output from testListingNotSavedBidsAlsoNotSaved--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testBidNotHighEnoughCausesError--
+--Output from testBidHighEnoughOK--
+--Output from testListingSavedBidsAlsoSaved--
+--Output from testListingNotSavedBidsAlsoNotSaved--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="1" name="CustomerIntegrationTests" package="auctionhaus" tests="2" time="0.127" timestamp="2012-02-19T01:11:55">
+      <properties />
+
+      <testcase classname="auctionhaus.CustomerIntegrationTests" name="testUniqueEmailError" time="0.075" />
+
+      <testcase classname="auctionhaus.CustomerIntegrationTests" name="testUniqueEmailOK" time="0.05" />
+
+      <system-out><![CDATA[--Output from testUniqueEmailError--
+--Output from testUniqueEmailOK--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testUniqueEmailError--
+--Output from testUniqueEmailOK--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="2" name="BidTests" package="auctionhaus" tests="7" time="1.978" timestamp="2012-02-19T01:11:42">
+      <properties />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidNullFieldsCauseError" time="1.236" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidNonNullFieldsOK" time="0.162" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidListingNullCausesError" time="0.048" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidListingNonNullOK" time="0.046" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidBidderNullCausesError" time="0.045" />
+
+      <testcase classname="auctionhaus.BidTests" name="testBidBidderNonNullOK" time="0.102" />
+
+      <testcase classname="auctionhaus.BidTests" name="testListingHasListOfBids" time="0.275" />
+
+      <system-out><![CDATA[--Output from testBidNullFieldsCauseError--
+--Output from testBidNonNullFieldsOK--
+--Output from testBidListingNullCausesError--
+--Output from testBidListingNonNullOK--
+--Output from testBidBidderNullCausesError--
+--Output from testBidBidderNonNullOK--
+--Output from testListingHasListOfBids--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testBidNullFieldsCauseError--
+--Output from testBidNonNullFieldsOK--
+--Output from testBidListingNullCausesError--
+--Output from testBidListingNonNullOK--
+--Output from testBidBidderNullCausesError--
+--Output from testBidBidderNonNullOK--
+--Output from testListingHasListOfBids--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="3" name="CustomerTests" package="auctionhaus" tests="6" time="0.705" timestamp="2012-02-19T01:11:44">
+      <properties />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerNullFieldsCauseError" time="0.043" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerNonNullFieldsOK" time="0.525" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerEmailOK" time="0.025" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerEmailError" time="0.021" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerPasswordError" time="0.022" />
+
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerPasswordOK" time="0.023" />
+
+      <system-out><![CDATA[--Output from testCustomerNullFieldsCauseError--
+--Output from testCustomerNonNullFieldsOK--
+--Output from testCustomerEmailOK--
+--Output from testCustomerEmailError--
+--Output from testCustomerPasswordError--
+--Output from testCustomerPasswordOK--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testCustomerNullFieldsCauseError--
+--Output from testCustomerNonNullFieldsOK--
+--Output from testCustomerEmailOK--
+--Output from testCustomerEmailError--
+--Output from testCustomerPasswordError--
+--Output from testCustomerPasswordOK--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="4" name="ListingTests" package="auctionhaus" tests="12" time="0.325" timestamp="2012-02-19T01:11:45">
+      <properties />
+
+      <testcase classname="auctionhaus.ListingTests" name="testBidBidderNonNullOK" time="0.043" />
+
+      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsMissingCauseError" time="0.029" />
+
+      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsOK" time="0.027" />
 
       <testcase classname="auctionhaus.ListingTests" name="testOptionalListingDescriptionFieldOK" time="0.022" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingSellerNullCausesError" time="0.028" />
-
-      <testcase classname="auctionhaus.ListingTests" name="testBidBidderNonNullOK" time="0.029" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingSellerNullCausesError" time="0.024" />
 
       <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOK" time="0.021" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOversizeError" time="0.019" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOversizeError" time="0.036" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInFutureOK" time="0.02" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInFutureOK" time="0.022" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInPastCausesError" time="0.017" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInPastCausesError" time="0.021" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOK" time="0.016" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOK" time="0.022" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOversizeErrors" time="0.016" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOversizeErrors" time="0.023" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testOptionalWinnerFieldOK" time="0.02" />
+      <testcase classname="auctionhaus.ListingTests" name="testOptionalWinnerFieldOK" time="0.019" />
 
-      <system-out><![CDATA[]]></system-out>
-
-      <system-err><![CDATA[--Output from testRequiredListingFieldsMissingCauseError--
+      <system-out><![CDATA[--Output from testBidBidderNonNullOK--
+--Output from testRequiredListingFieldsMissingCauseError--
 --Output from testRequiredListingFieldsOK--
 --Output from testOptionalListingDescriptionFieldOK--
 --Output from testListingSellerNullCausesError--
---Output from testBidBidderNonNullOK--
+--Output from testListingDescriptionFieldOK--
+--Output from testListingDescriptionFieldOversizeError--
+--Output from testListingEndDateTimeInFutureOK--
+--Output from testListingEndDateTimeInPastCausesError--
+--Output from testListingNameFieldOK--
+--Output from testListingNameFieldOversizeErrors--
+--Output from testOptionalWinnerFieldOK--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testBidBidderNonNullOK--
+--Output from testRequiredListingFieldsMissingCauseError--
+--Output from testRequiredListingFieldsOK--
+--Output from testOptionalListingDescriptionFieldOK--
+--Output from testListingSellerNullCausesError--
 --Output from testListingDescriptionFieldOK--
 --Output from testListingDescriptionFieldOversizeError--
 --Output from testListingEndDateTimeInFutureOK--

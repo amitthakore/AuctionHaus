@@ -11,7 +11,6 @@ class Bid {
     // Bids are required to have a bidder(unit Test)
     static belongsTo = [listing : Listing, bidder :Customer]
 
-
     static constraints = {
         // Bid Date time is a required field
         bidDateTime blank:false

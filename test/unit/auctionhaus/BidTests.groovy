@@ -41,7 +41,7 @@ class BidTests {
         BigDecimal startingBidPrice = 10.00
         // Create a test end date and time that is one day from today
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
+        def testSeller = new Customer(email:"akl@yahoo.com",password: "1234567",createdDate: new Date())
 
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 

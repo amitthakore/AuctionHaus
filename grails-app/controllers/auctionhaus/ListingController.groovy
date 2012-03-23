@@ -22,6 +22,8 @@ class ListingController {
 
     def save() {
         def listingInstance = new Listing(params)
+
+        try{
         if (!listingInstance.save(flush: true)) {
             render(view: "create", model: [listingInstance: listingInstance])
             return
@@ -30,9 +32,15 @@ class ListingController {
 		flash.message = message(code: 'default.created.message', args: [message(code: 'listing.label', default: 'Listing'), listingInstance.id])
         redirect(action: "show", id: listingInstance.id)
     }
+        catch (grails.validation.ValidationException e){
+            flash.message = message(code: 'Listing.listingEndDateTime.Invalid')
+            render(view: "create", model: [listingInstance: listingInstance])
+        }
+    }
 
     def show() {
         def listingInstance = Listing.get(params.id)
+
         if (!listingInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'listing.label', default: 'Listing'), params.id])
             redirect(action: "list")
@@ -41,6 +49,8 @@ class ListingController {
         def sellername
         sellername = sellerName(listingInstance)
         [listingInstance: listingInstance,sellername:sellername]
+
+
     }
 
     def edit() {

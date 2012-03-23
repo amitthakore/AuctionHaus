@@ -16,14 +16,15 @@
 		</div>
 		<div id="create-listing" class="content scaffold-create" role="main">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
+	<%--	<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
-			</g:if>
+			</g:if>  --%>
 			<g:hasErrors bean="${listingInstance}">
 			<ul class="errors" role="alert">
 				<g:eachError bean="${listingInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
+		<%--		<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li> --%>
+                    <div class="message" role="status">${flash.message}</div>
+                </g:eachError>
 			</ul>
 			</g:hasErrors>
 			<g:form action="save" >

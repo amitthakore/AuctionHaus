@@ -30,7 +30,8 @@ class CustomerController {
             return
         }
 
-		flash.message = message(code: 'customer.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.email])
+		//flash.message = message(code: 'customer.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.email])
+        flash.message = message(code: 'customer.created.message')
         redirect(action: "show", id: customerInstance.id)
         }
 
@@ -109,11 +110,19 @@ class CustomerController {
         }
 
         try {
+            if (customerInstance.bids.size() == 0)     {
+
             customerInstance.delete(flush: true)
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'customer.label', default: 'Customer'), params.id])
             redirect(action: "list")
+            }
+            else{
+
+                flash.message = message(code: 'customer.not.deleted.active.bids', args: [message(code: 'customer.label', default: 'Customer'), params.id])
+                redirect(action: "show", id: params.id)
+            }
         }
-        catch (DataIntegrityViolationException e) {
+       catch (DataIntegrityViolationException e) {
 			flash.message = message(code: 'customer.not.deleted.active.bids', args: [message(code: 'customer.label', default: 'Customer'), params.id])
             redirect(action: "show", id: params.id)
         }

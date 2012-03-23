@@ -45,7 +45,7 @@
 				<li class="fieldcontain">
 					<span id="bidder-label" class="property-label"><g:message code="bid.bidder.label" default="Bidder" /></span>
 					
-						<span class="property-value" aria-labelledby="bidder-label"><g:link controller="customer" action="show" id="${bidInstance?.bidder?.id}">${bidInstance?.bidder?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="bidder-label"><g:link controller="customer" action="show" id="${bidInstance?.bidder?.id}">${bidInstance?.bidder?.email?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -54,7 +54,7 @@
 				<li class="fieldcontain">
 					<span id="listing-label" class="property-label"><g:message code="bid.listing.label" default="Listing" /></span>
 					
-						<span class="property-value" aria-labelledby="listing-label"><g:link controller="listing" action="show" id="${bidInstance?.listing?.id}">${bidInstance?.listing?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="listing-label"><g:link controller="listing" action="show" id="${bidInstance?.listing?.id}">${bidInstance?.listing?.listingName?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

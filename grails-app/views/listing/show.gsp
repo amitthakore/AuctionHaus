@@ -41,13 +41,15 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${listingInstance?.listingDescription}">
+			<g:if test="${listingInstance?.listingDescription}">
+                 <g:if test="${!listingInstance.listingDescription.isEmpty()}">
 				<li class="fieldcontain">
 					<span id="listingDescription-label" class="property-label"><g:message code="listing.listingDescription.label" default="Listing Description" /></span>
 					
 						<span class="property-value" aria-labelledby="listingDescription-label"><g:fieldValue bean="${listingInstance}" field="listingDescription"/></span>
 					
 				</li>
+             </g:if>
 				</g:if>
 			
 				<g:if test="${listingInstance?.listingEndDateTime}">
@@ -104,12 +106,17 @@
 				<li class="fieldcontain">
 					<span id="seller-label" class="property-label"><g:message code="listing.seller.label" default="Seller" /></span>
 					
-						<span class="property-value" aria-labelledby="seller-label"><g:link controller="customer" action="show" id="${listingInstance?.seller?.email}">${sellername.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="seller-label">${sellername.encodeAsHTML()}</span>
 					
 				</li>
+
 				</g:if>
-			
-			</ol>
+             <div class="fieldcontain">
+                 <span id="Add-Bid-label" class="property-label"><g:message code="listing.add.Bill.label" default="Add New Bid" /></span>
+              <li class="add">
+                  <span class="property-value" aria-labelledby="seller-label">  <g:link controller="bid" action="create" params="['listing.id': listingInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'bid.label', default: 'Bid')])}</g:link> </span>
+                </li>
+             </div>
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${listingInstance?.id}" />

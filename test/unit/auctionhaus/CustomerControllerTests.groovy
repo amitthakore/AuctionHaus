@@ -5,155 +5,60 @@ package auctionhaus
 import org.junit.*
 import grails.test.mixin.*
 
+
 @TestFor(CustomerController)
-@Mock(Customer)
+@Mock([Customer,Listing,Bid])
+
 class CustomerControllerTests {
 
+    //C-3: Verify that Customer can be deleted in there is no active bids (Happy path)
+   void testCustomerDeleteOK()
+    {
 
-    def populateValidParams(params) {
-      assert params != null
-      // TODO: Populate valid properties like...
-      //params["name"] = 'someValidName'
-    }
+        def customerDeleteOK = new Customer(email:"athakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-    void testIndex() {
-        controller.index()
-        assert "/customer/list" == response.redirectedUrl
-    }
+        customerDeleteOK.save(flush: true)
 
-    void testList() {
-
-        def model = controller.list()
-
-        assert model.customerInstanceList.size() == 0
-        assert model.customerInstanceTotal == 0
-    }
-
-    void testCreate() {
-       def model = controller.create()
-
-       assert model.customerInstance != null
-    }
-
-    void testSave() {
-        controller.save()
-
-        assert model.customerInstance != null
-        assert view == '/customer/create'
-
-        response.reset()
-
-        populateValidParams(params)
-        controller.save()
-
-        assert response.redirectedUrl == '/customer/show/1'
-        assert controller.flash.message != null
-        assert Customer.count() == 1
-    }
-
-    void testShow() {
-        controller.show()
-
-        assert flash.message != null
-        assert response.redirectedUrl == '/customer/list'
-
-
-        populateValidParams(params)
-        def customer = new Customer(params)
-
-        assert customer.save() != null
-
-        params.id = customer.id
-
-        def model = controller.show()
-
-        assert model.customerInstance == customer
-    }
-
-    void testEdit() {
-        controller.edit()
-
-        assert flash.message != null
-        assert response.redirectedUrl == '/customer/list'
-
-
-        populateValidParams(params)
-        def customer = new Customer(params)
-
-        assert customer.save() != null
-
-        params.id = customer.id
-
-        def model = controller.edit()
-
-        assert model.customerInstance == customer
-    }
-
-    void testUpdate() {
-        controller.update()
-
-        assert flash.message != null
-        assert response.redirectedUrl == '/customer/list'
-
-        response.reset()
-
-
-        populateValidParams(params)
-        def customer = new Customer(params)
-
-        assert customer.save() != null
-
-        // test invalid parameters in update
-        params.id = customer.id
-        //TODO: add invalid values to params object
-
-        controller.update()
-
-        assert view == "/customer/edit"
-        assert model.customerInstance != null
-
-        customer.clearErrors()
-
-        populateValidParams(params)
-        controller.update()
-
-        assert response.redirectedUrl == "/customer/show/$customer.id"
-        assert flash.message != null
-
-        //test outdated version number
-        response.reset()
-        customer.clearErrors()
-
-        populateValidParams(params)
-        params.id = customer.id
-        params.version = -1
-        controller.update()
-
-        assert view == "/customer/edit"
-        assert model.customerInstance != null
-        assert model.customerInstance.errors.getFieldError('version')
-        assert flash.message != null
-    }
-
-    void testDelete() {
-        controller.delete()
-        assert flash.message != null
-        assert response.redirectedUrl == '/customer/list'
-
-        response.reset()
-
-        populateValidParams(params)
-        def customer = new Customer(params)
-
-        assert customer.save() != null
-        assert Customer.count() == 1
-
-        params.id = customer.id
-
+        assert customerDeleteOK.validate();
+        params.id = customerDeleteOK.id
         controller.delete()
 
         assert Customer.count() == 0
-        assert Customer.get(customer.id) == null
+        assert Customer.get(customerDeleteOK.id) == null
         assert response.redirectedUrl == '/customer/list'
+    }
+
+    //C-4: Verify that Customer can be not be deleted if there are active bids ( path)
+    void testCustomerDeleteError()
+    {
+        response.reset()
+       mockForConstraintsTests(Customer)
+       mockForConstraintsTests(Bid)
+       // mockForConstraintsTests(Listing)
+        mockFor(Customer)
+        def testEndDateTime = new Date() + 1
+
+        def customerDeleteError = new Customer(email:"unique1@yahoo.com",password: "1234567",createdDate: new Date())
+
+        customerDeleteError.save()
+
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:customerDeleteError,listingCreatedDate:new Date())
+        testList.save()
+
+        def bidTest = new Bid(bidAmount: 20, bidDateTime: new Date(), bidder: customerDeleteError, listing:testList)
+
+        bidTest.save()
+
+
+        assert Customer.count() == 1
+        params.id =  bidTest.bidder.id
+
+        controller.delete()
+
+        assert Customer.count() == 1
+
+        assert Customer.get(customerDeleteError.id) != null
+
+
     }
 }

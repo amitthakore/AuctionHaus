@@ -21,6 +21,8 @@ class BidController {
 
     def save() {
         def bidInstance = new Bid(params)
+        
+        try{
         if (!bidInstance.save(flush: true)) {
             render(view: "create", model: [bidInstance: bidInstance])
             return
@@ -29,6 +31,13 @@ class BidController {
 		flash.message = message(code: 'default.created.message', args: [message(code: 'bid.label', default: 'Bid'), bidInstance.id])
         redirect(action: "show", id: bidInstance.id)
     }
+
+    catch(grails.validation.ValidationException e) {
+            flash.message = message(code: 'bid.amount.not.valid')
+        render(view: "create", model: [bidInstance: bidInstance])
+        }
+
+      }
 
     def show() {
         def bidInstance = Bid.get(params.id)

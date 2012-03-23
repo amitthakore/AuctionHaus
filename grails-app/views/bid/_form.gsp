@@ -27,10 +27,12 @@
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: bidInstance, field: 'listing', 'error')} required">
-	<label for="listing">
+<%--	<label for="listing">
 		<g:message code="bid.listing.label" default="Listing" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="listing" name="listing.id" from="${auctionhaus.Listing.list()}" optionKey="id" required="" value="${bidInstance?.listing?.id}" class="many-to-one"/>
+</label> --%>
+    <span id="Listing-Name" class="property-label"><g:message code="Bid.listing.label" default="Listing Name" /></span>
+    <span class="property-value" aria-labelledby="bid.listing.label">${bidInstance?.listing?.listingName}</span>
+    <g:hiddenField name="listing.id" value = "${bidInstance?.listing?.id}"></g:hiddenField>
+	<%--<g:select id="listing" name="listing.id" from="${auctionhaus.Listing.list}s" optionKey="id" required="" value="${bidInstance?.listing?.id}" class="many-to-one"/> --%>
 </div>
 

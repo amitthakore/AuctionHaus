@@ -31,10 +31,11 @@
 		<g:message code="listing.listingEndDateTime.label" default="Listing End Date Time" />
 		<span class="required-indicator">*</span>
 	</label>
+
 	<g:datePicker name="listingEndDateTime" precision="day"  value="${listingInstance?.listingEndDateTime}"  />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: listingInstance, field: 'winner', 'error')} ">
+<%--<div class="fieldcontain ${hasErrors(bean: listingInstance, field: 'winner', 'error')} ">
 	<label for="winner">
 		<g:message code="listing.winner.label" default="Winner" />
 		
@@ -42,7 +43,7 @@
 	<g:select id="winner" name="winner.id" from="${auctionhaus.Customer.list()}" optionKey="id" value="${listingInstance?.winner?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: listingInstance, field: 'bids', 'error')} ">
+<%--<div class="fieldcontain ${hasErrors(bean: listingInstance, field: 'bids', 'error')} ">
 	<label for="bids">
 		<g:message code="listing.bids.label" default="Bids" />
 		
@@ -57,7 +58,7 @@
 </li>
 </ul>
 
-</div>
+</div>  --%>
 
 <div class="fieldcontain ${hasErrors(bean: listingInstance, field: 'bidIncAmt', 'error')} required">
 	<label for="bidIncAmt">
@@ -80,6 +81,6 @@
 		<g:message code="listing.seller.label" default="Seller" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="seller" name="seller.id" from="${auctionhaus.Customer.list()}" optionKey="id" required="" value="${listingInstance?.seller?.email}" class="many-to-one"/>
+	<g:select id="seller" name="seller.id" from="${auctionhaus.Customer.list()}" optionKey="id" required="" value="${listingInstance?.seller?.id}" class="many-to-one"/>
 </div>
 

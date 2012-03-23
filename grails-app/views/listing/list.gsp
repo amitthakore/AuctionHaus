@@ -54,7 +54,7 @@
 						<td>${fieldValue(bean: listingInstance, field: "listingDescription")}</td>
 
 
-                        <td><g:formatDate date="${listingInstance.listingEndDateTime}" /></td>
+                        <td><g:formatDate date="${listingInstance.listingEndDateTime}" type="datetime" style="medium" /></td>
                      <%--   <td><g:formatDate date="${listingInstance.listingCreatedDate}" /></td>   --%>
                         <td>${listingInstance.bids.size()}</td>
                         </g:if>

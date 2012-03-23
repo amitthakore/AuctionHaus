@@ -14,6 +14,7 @@ class Bid {
     static constraints = {
         // Bid Date time is a required field
         bidDateTime blank:false
+        bidder nullable: false
         // Bid are required to have a Bid amount
         // The Bid amount must be at least .50 higher than the previous Bid for the same listing (integration test)
         bidAmount nullable: false, validator: {val, obj ->

@@ -24,11 +24,12 @@ class BidController {
         
         try{
         if (!bidInstance.save(flush: true)) {
+            flash.message = message(code: 'bid.amount.not.valid')
             render(view: "create", model: [bidInstance: bidInstance])
             return
         }
 
-		flash.message = message(code: 'default.created.message', args: [message(code: 'bid.label', default: 'Bid'), bidInstance.id])
+		flash.message = message(code: 'bid.created.message', args: [message(code: 'bid.label', default: 'Bid'), bidInstance.id])
         redirect(action: "show", id: bidInstance.id)
     }
 

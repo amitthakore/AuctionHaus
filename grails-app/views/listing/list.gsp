@@ -15,7 +15,7 @@
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
                 <li><g:link class="create" controller="customer" action="create"><g:message code="default.new.label" args="[customerEntity]" /></g:link></li>
-                <li><g:link class="create" controller="customer" action="edit"><g:message code="default.edit.label" args="[customerEntity]" /></g:link></li>
+                <li><g:link class="create" controller="customer" action="list"><g:message code="default.list.label" args="[customerEntity]" /></g:link></li>
             </ul>
 		</div>
 		<div id="list-listing" class="content scaffold-list" role="main">

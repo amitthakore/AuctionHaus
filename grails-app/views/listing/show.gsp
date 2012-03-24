@@ -74,12 +74,9 @@
 				<li class="fieldcontain">
 					<span id="bids-label" class="property-label"><g:message code="listing.bids.label" default="Most Recent Bid" /></span>
 					
-					<%--	<g:each in="${listingInstance.bids}" var="b">  --%>
-			<%--			<span class="property-value" aria-  labelledby="bids-label"><g:link controller="bid" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></span>     --%>
-             <%--       <span class="property-value" aria-  labelledby="bids-label"><g:link controller="bid" action="show" id="${listingInstance?.bids.bidAmount.max()}">${listingInstance?.bids.bidAmount.max().encodeAsHTML()}</g:link></span>   --%>
 
                     <span class="property-value" aria-  labelledby="bids-label"> <g:maxBidForListingTagLib listingInstance="${listingInstance}"/>
-						<%--	</g:each> --%>
+
 					
 				</li>
 				</g:if>

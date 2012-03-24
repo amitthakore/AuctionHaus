@@ -27,12 +27,27 @@
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: bidInstance, field: 'listing', 'error')} required">
-<%--	<label for="listing">
-		<g:message code="bid.listing.label" default="Listing" />
-</label> --%>
+
     <span id="Listing-Name" class="property-label"><g:message code="Bid.listing.label" default="Listing Name" /></span>
     <span class="property-value" aria-labelledby="bid.listing.label">${bidInstance?.listing?.listingName}</span>
     <g:hiddenField name="listing.id" value = "${bidInstance?.listing?.id}"></g:hiddenField>
-	<%--<g:select id="listing" name="listing.id" from="${auctionhaus.Listing.list}s" optionKey="id" required="" value="${bidInstance?.listing?.id}" class="many-to-one"/> --%>
-</div>
 
+</div>
+<%--<div class="fieldcontain >
+
+<g:if test="${bidInstance.listing?.bidIncAmt}">
+
+    <span id="Bid-Inc-Amt" class="property-label"><g:message code="Bid.listing.label" default="Bid Inc Amt" /></span>
+    <span class="property-value" aria-labelledby="bid.Inc.label">${bidInstance?.listing?.bidIncAmt}</span>
+</g:if>
+</div>
+  <div class="fieldcontain>
+<g:if test ="${bidInstance.listing.bids}">
+    <label for="Most Recent Bid">
+        <g:message code="bid.bidder.label" default="Most Recent Bid Amount" />
+
+    </label>
+    <g:maxBidForListingTagLib listingInstance="${bidInstance.listing}"/>
+
+</g:if>
+</div>  --%>

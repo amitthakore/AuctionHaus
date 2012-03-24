@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites />
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="0" name="BidControllerTests" package="auctionhaus" tests="2" time="3.029" timestamp="2012-03-24T04:15:35">
+      <properties />
+
+      <testcase classname="auctionhaus.BidControllerTests" name="testBidSave" time="2.817" />
+
+      <testcase classname="auctionhaus.BidControllerTests" name="testBidSaveError" time="0.173" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[--Output from testBidSave--
+--Output from testBidSaveError--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

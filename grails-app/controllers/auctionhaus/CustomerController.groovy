@@ -108,15 +108,27 @@ class CustomerController {
             redirect(action: "list")
             return
         }
-
+         def numOfBids = 0
         try {
-            if (customerInstance.bids.size() == 0)     {
+             if (customerInstance.bids != null)
+             {
+            numOfBids = customerInstance.bids.size()
+            }
+            if (numOfBids == 0) {
 
+          //delete the listing first.
+           def c = Listing.createCriteria().list{
+
+               eq("seller", customerInstance)
+           } *.delete()
+
+           // customerInstance.executeUpdate("delete Listing l where l.seller = :sellerId",[sellerId:customerInstance])
             customerInstance.delete(flush: true)
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'customer.label', default: 'Customer'), params.id])
             redirect(action: "list")
             }
             else{
+
 
                 flash.message = message(code: 'customer.not.deleted.active.bids', args: [message(code: 'customer.label', default: 'Customer'), params.id])
                 redirect(action: "show", id: params.id)

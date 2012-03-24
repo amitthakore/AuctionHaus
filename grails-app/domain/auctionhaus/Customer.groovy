@@ -7,6 +7,7 @@ class Customer {
     String email
     String password
     Date   createdDate
+
     static hasMany= [bids:Bid]
 
 

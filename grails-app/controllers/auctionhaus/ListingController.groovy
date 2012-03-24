@@ -29,7 +29,7 @@ class ListingController {
             return
         }
 
-		flash.message = message(code: 'default.created.message', args: [message(code: 'listing.label', default: 'Listing'), listingInstance.id])
+		flash.message = message(code: 'listing.created.message', args: [message(code: 'listing.label', default: 'Listing'), listingInstance.id])
         redirect(action: "show", id: listingInstance.id)
     }
         catch (grails.validation.ValidationException e){

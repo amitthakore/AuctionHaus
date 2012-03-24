@@ -12,14 +12,14 @@ import grails.test.mixin.*
 class CustomerControllerTests {
 
     //C-3: Verify that Customer can be deleted in there is no active bids (Happy path)
-   void testCustomerDeleteOK()
+  void testCustomerDeleteOK()
     {
 
         def customerDeleteOK = new Customer(email:"athakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
         customerDeleteOK.save(flush: true)
 
-        assert customerDeleteOK.validate();
+
         params.id = customerDeleteOK.id
         controller.delete()
 

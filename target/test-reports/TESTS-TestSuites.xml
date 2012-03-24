@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="0" name="BidControllerTests" package="auctionhaus" tests="2" time="3.029" timestamp="2012-03-24T04:15:35">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="0" name="CustomerControllerTests" package="auctionhaus" tests="3" time="3.849" timestamp="2012-03-24T13:29:36">
       <properties />
 
-      <testcase classname="auctionhaus.BidControllerTests" name="testBidSave" time="2.817" />
+      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteOK" time="3.023" />
 
-      <testcase classname="auctionhaus.BidControllerTests" name="testBidSaveError" time="0.173" />
+      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteErrorActiveBids" time="0.548" />
+
+      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteErrorActiveListings" time="0.23" />
 
       <system-out><![CDATA[]]></system-out>
 
-      <system-err><![CDATA[--Output from testBidSave--
---Output from testBidSaveError--
+      <system-err><![CDATA[--Output from testCustomerDeleteOK--
+--Output from testCustomerDeleteErrorActiveBids--
+--Output from testCustomerDeleteErrorActiveListings--
 ]]></system-err>
 
   </testsuite>

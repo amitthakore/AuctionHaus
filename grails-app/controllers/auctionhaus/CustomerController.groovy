@@ -116,11 +116,18 @@ class CustomerController {
             }
             if (numOfBids == 0) {
 
-          //delete the listing first.
-           def c = Listing.createCriteria().list{
+          //check if there are active listings for this customer
+          //used  criteria query.
+           def c = Listing.createCriteria().list {
 
                eq("seller", customerInstance)
-           } *.delete()
+           } 
+              if(c.size() > 0){
+
+                  flash.message = message(code: 'customer.not.deleted.active.listings', args: [message(code: 'customer.label', default: 'Customer'), params.id])
+                  redirect(action: "show", id: params.id)
+                  return
+              }
 
            // customerInstance.executeUpdate("delete Listing l where l.seller = :sellerId",[sellerId:customerInstance])
             customerInstance.delete(flush: true)
@@ -128,7 +135,6 @@ class CustomerController {
             redirect(action: "list")
             }
             else{
-
 
                 flash.message = message(code: 'customer.not.deleted.active.bids', args: [message(code: 'customer.label', default: 'Customer'), params.id])
                 redirect(action: "show", id: params.id)

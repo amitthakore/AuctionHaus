@@ -68,25 +68,21 @@ class BidIntegrationTests extends GroovyTestCase {
 
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
-        testSeller.save()
+        testSeller.save(flush: true)
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
-        testList.save()
+        testList.save(flush: true)
 
         def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
 
-
-        def bidTest2 = new Bid(bidAmount: 20.5, bidDateTime: new Date(), bidder: testSeller,listing: testList )
-
-
+        bidTest.save(flush: true)
+        def bidTest2 = new Bid(bidAmount: 20.5, bidDateTime: new Date()+2, bidder: testSeller,listing: testList )
 
 
-        testList.addToBids(bidTest)
 
-        bidTest.save()
 
-        testList.addToBids(bidTest2)
+
         //since bidTest2 is 0.50 greater than the last bid, it should not cause a validation error
-        bidTest2.save()
+        bidTest2.save(flush: true)
         assert bidTest2.validate()
 
         assert bidTest2.errors['bidAmount'] == null
@@ -104,21 +100,21 @@ class BidIntegrationTests extends GroovyTestCase {
 
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
-
+         testSeller.save(flush: true)
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
+         testList.save(flush: true)
+        def bidTest = new Bid(bidAmount: 25.0, bidDateTime: new Date()+1, bidder: testSeller,listing: testList)
 
-        def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
-
-        testSeller.save()
+         bidTest.save(flush: true)
 
        // def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
 
-        testList.addToBids(bidTest)
+       // testList.addToBids(bidTest)
 
 
 
-        testList.save()
+        //testList.save()
 
 
         //we should find bidTest in the db, because it was added to testList before call to testList.save

@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="2" failures="0" hostname="AmIts-MacBook-Pro.local" id="0" name="BidIntegrationTests" package="auctionhaus" tests="4" time="0.975" timestamp="2012-03-25T03:42:07">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="0" name="BidIntegrationTests" package="auctionhaus" tests="4" time="0.532" timestamp="2012-03-25T04:56:23">
       <properties />
 
-      <testcase classname="auctionhaus.BidIntegrationTests" name="testBidNotHighEnoughCausesError" time="0.453" />
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testBidNotHighEnoughCausesError" time="0.387" />
 
-      <testcase classname="auctionhaus.BidIntegrationTests" name="testBidHighEnoughOK" time="0.255">
-          <error message="Validation Error(s) occurred during save():&#xa;- Field error in object &apos;auctionhaus.Bid&apos; on field &apos;bidAmount&apos;: rejected value [20.0]; codes [auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bidAmount,auctionhaus.Bid.bidAmount.validator.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.validator.error,bid.bidAmount.validator.error.auctionhaus.Bid.bidAmount,bid.bidAmount.validator.error.bidAmount,bid.bidAmount.validator.error.java.math.BigDecimal,bid.bidAmount.validator.error,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,The Bid amount must be at least .50 higher than the previous Bid for the same listing]; arguments [bidAmount,class auctionhaus.Bid,20.0]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]&#xa;" type="grails.validation.ValidationException">grails.validation.ValidationException: Validation Error(s) occurred during save():
-- Field error in object &apos;auctionhaus.Bid&apos; on field &apos;bidAmount&apos;: rejected value [20.0]; codes [auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bidAmount,auctionhaus.Bid.bidAmount.validator.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.validator.error,bid.bidAmount.validator.error.auctionhaus.Bid.bidAmount,bid.bidAmount.validator.error.bidAmount,bid.bidAmount.validator.error.java.math.BigDecimal,bid.bidAmount.validator.error,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,The Bid amount must be at least .50 higher than the previous Bid for the same listing]; arguments [bidAmount,class auctionhaus.Bid,20.0]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testBidHighEnoughOK" time="0.056" />
 
-	at auctionhaus.BidIntegrationTests.testBidHighEnoughOK(BidIntegrationTests.groovy:85)
-</error>
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testListingSavedBidsAlsoSaved" time="0.051" />
 
-      </testcase>
-
-      <testcase classname="auctionhaus.BidIntegrationTests" name="testListingSavedBidsAlsoSaved" time="0.203">
-          <error message="Validation Error(s) occurred during save():&#xa;- Field error in object &apos;auctionhaus.Listing&apos; on field &apos;bids[0].bidAmount&apos;: rejected value [20.0]; codes [auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Listing.bids.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bids[0].bidAmount,auctionhaus.Bid.bidAmount.validator.error.bids.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bidAmount,auctionhaus.Bid.bidAmount.validator.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.validator.error,bid.bidAmount.validator.error.auctionhaus.Listing.bids[0].bidAmount,bid.bidAmount.validator.error.auctionhaus.Listing.bids.bidAmount,bid.bidAmount.validator.error.bids[0].bidAmount,bid.bidAmount.validator.error.bids.bidAmount,bid.bidAmount.validator.error.bidAmount,bid.bidAmount.validator.error.java.math.BigDecimal,bid.bidAmount.validator.error,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,The Bid amount must be at least .50 higher than the previous Bid for the same listing]; arguments [bidAmount,class auctionhaus.Bid,20.0]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]&#xa;" type="grails.validation.ValidationException">grails.validation.ValidationException: Validation Error(s) occurred during save():
-- Field error in object &apos;auctionhaus.Listing&apos; on field &apos;bids[0].bidAmount&apos;: rejected value [20.0]; codes [auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Listing.bids.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bids[0].bidAmount,auctionhaus.Bid.bidAmount.validator.error.bids.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bidAmount,auctionhaus.Bid.bidAmount.validator.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.validator.error,bid.bidAmount.validator.error.auctionhaus.Listing.bids[0].bidAmount,bid.bidAmount.validator.error.auctionhaus.Listing.bids.bidAmount,bid.bidAmount.validator.error.bids[0].bidAmount,bid.bidAmount.validator.error.bids.bidAmount,bid.bidAmount.validator.error.bidAmount,bid.bidAmount.validator.error.java.math.BigDecimal,bid.bidAmount.validator.error,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,The Bid amount must be at least .50 higher than the previous Bid for the same listing]; arguments [bidAmount,class auctionhaus.Bid,20.0]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
-
-	at auctionhaus.BidIntegrationTests.testListingSavedBidsAlsoSaved(BidIntegrationTests.groovy:121)
-</error>
-
-      </testcase>
-
-      <testcase classname="auctionhaus.BidIntegrationTests" name="testListingNotSavedBidsAlsoNotSaved" time="0.059" />
+      <testcase classname="auctionhaus.BidIntegrationTests" name="testListingNotSavedBidsAlsoNotSaved" time="0.034" />
 
       <system-out><![CDATA[--Output from testBidNotHighEnoughCausesError--
 --Output from testBidHighEnoughOK--
@@ -38,12 +24,12 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="1" name="CustomerIntegrationTests" package="auctionhaus" tests="2" time="0.104" timestamp="2012-03-25T03:42:08">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="1" name="CustomerIntegrationTests" package="auctionhaus" tests="2" time="0.114" timestamp="2012-03-25T04:56:24">
       <properties />
 
-      <testcase classname="auctionhaus.CustomerIntegrationTests" name="testUniqueEmailError" time="0.074" />
+      <testcase classname="auctionhaus.CustomerIntegrationTests" name="testUniqueEmailError" time="0.073" />
 
-      <testcase classname="auctionhaus.CustomerIntegrationTests" name="testUniqueEmailOK" time="0.029" />
+      <testcase classname="auctionhaus.CustomerIntegrationTests" name="testUniqueEmailOK" time="0.04" />
 
       <system-out><![CDATA[--Output from testUniqueEmailError--
 --Output from testUniqueEmailOK--
@@ -54,12 +40,12 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="2" name="BidControllerTests" package="auctionhaus" tests="2" time="4.137" timestamp="2012-03-25T03:41:47">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="2" name="BidControllerTests" package="auctionhaus" tests="2" time="2.911" timestamp="2012-03-25T04:56:11">
       <properties />
 
-      <testcase classname="auctionhaus.BidControllerTests" name="testBidSave" time="3.923" />
+      <testcase classname="auctionhaus.BidControllerTests" name="testBidSave" time="2.687" />
 
-      <testcase classname="auctionhaus.BidControllerTests" name="testBidSaveError" time="0.144" />
+      <testcase classname="auctionhaus.BidControllerTests" name="testBidSaveError" time="0.164" />
 
       <system-out><![CDATA[--Output from testBidSave--
 --Output from testBidSaveError--
@@ -70,22 +56,22 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="3" name="BidTests" package="auctionhaus" tests="7" time="0.431" timestamp="2012-03-25T03:41:51">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="3" name="BidTests" package="auctionhaus" tests="7" time="0.433" timestamp="2012-03-25T04:56:14">
       <properties />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidNullFieldsCauseError" time="0.166" />
+      <testcase classname="auctionhaus.BidTests" name="testBidNullFieldsCauseError" time="0.171" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidNonNullFieldsOK" time="0.038" />
+      <testcase classname="auctionhaus.BidTests" name="testBidNonNullFieldsOK" time="0.042" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidListingNullCausesError" time="0.02" />
+      <testcase classname="auctionhaus.BidTests" name="testBidListingNullCausesError" time="0.023" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidListingNonNullOK" time="0.025" />
+      <testcase classname="auctionhaus.BidTests" name="testBidListingNonNullOK" time="0.029" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidBidderNullCausesError" time="0.02" />
+      <testcase classname="auctionhaus.BidTests" name="testBidBidderNullCausesError" time="0.019" />
 
-      <testcase classname="auctionhaus.BidTests" name="testBidBidderNonNullOK" time="0.032" />
+      <testcase classname="auctionhaus.BidTests" name="testBidBidderNonNullOK" time="0.027" />
 
-      <testcase classname="auctionhaus.BidTests" name="testListingHasListOfBids" time="0.052" />
+      <testcase classname="auctionhaus.BidTests" name="testListingHasListOfBids" time="0.047" />
 
       <system-out><![CDATA[--Output from testBidNullFieldsCauseError--
 --Output from testBidNonNullFieldsOK--
@@ -106,14 +92,14 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="4" name="CustomerControllerTests" package="auctionhaus" tests="3" time="1.068" timestamp="2012-03-25T03:41:52">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="4" name="CustomerControllerTests" package="auctionhaus" tests="3" time="0.902" timestamp="2012-03-25T04:56:14">
       <properties />
 
-      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteOK" time="0.459" />
+      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteOK" time="0.433" />
 
-      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteErrorActiveBids" time="0.233" />
+      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteErrorActiveBids" time="0.206" />
 
-      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteErrorActiveListings" time="0.277" />
+      <testcase classname="auctionhaus.CustomerControllerTests" name="testCustomerDeleteErrorActiveListings" time="0.188" />
 
       <system-out><![CDATA[--Output from testCustomerDeleteOK--
 --Output from testCustomerDeleteErrorActiveBids--
@@ -126,20 +112,20 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="5" name="CustomerTests" package="auctionhaus" tests="6" time="0.308" timestamp="2012-03-25T03:41:53">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="5" name="CustomerTests" package="auctionhaus" tests="6" time="0.247" timestamp="2012-03-25T04:56:15">
       <properties />
 
-      <testcase classname="auctionhaus.CustomerTests" name="testCustomerNullFieldsCauseError" time="0.067" />
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerNullFieldsCauseError" time="0.052" />
 
-      <testcase classname="auctionhaus.CustomerTests" name="testCustomerNonNullFieldsOK" time="0.03" />
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerNonNullFieldsOK" time="0.034" />
 
-      <testcase classname="auctionhaus.CustomerTests" name="testCustomerEmailOK" time="0.03" />
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerEmailOK" time="0.027" />
 
-      <testcase classname="auctionhaus.CustomerTests" name="testCustomerEmailError" time="0.032" />
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerEmailError" time="0.025" />
 
-      <testcase classname="auctionhaus.CustomerTests" name="testCustomerPasswordError" time="0.047" />
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerPasswordError" time="0.042" />
 
-      <testcase classname="auctionhaus.CustomerTests" name="testCustomerPasswordOK" time="0.046" />
+      <testcase classname="auctionhaus.CustomerTests" name="testCustomerPasswordOK" time="0.021" />
 
       <system-out><![CDATA[--Output from testCustomerNullFieldsCauseError--
 --Output from testCustomerNonNullFieldsOK--
@@ -158,32 +144,32 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="6" name="ListingTests" package="auctionhaus" tests="12" time="0.387" timestamp="2012-03-25T03:41:53">
+  <testsuite errors="0" failures="0" hostname="AmIts-MacBook-Pro.local" id="6" name="ListingTests" package="auctionhaus" tests="12" time="0.385" timestamp="2012-03-25T04:56:16">
       <properties />
 
-      <testcase classname="auctionhaus.ListingTests" name="testBidBidderNonNullOK" time="0.058" />
+      <testcase classname="auctionhaus.ListingTests" name="testBidBidderNonNullOK" time="0.092" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsMissingCauseError" time="0.028" />
+      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsMissingCauseError" time="0.03" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsOK" time="0.019" />
+      <testcase classname="auctionhaus.ListingTests" name="testRequiredListingFieldsOK" time="0.021" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testOptionalListingDescriptionFieldOK" time="0.02" />
+      <testcase classname="auctionhaus.ListingTests" name="testOptionalListingDescriptionFieldOK" time="0.025" />
 
       <testcase classname="auctionhaus.ListingTests" name="testListingSellerNullCausesError" time="0.021" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOK" time="0.021" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOK" time="0.022" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOversizeError" time="0.042" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingDescriptionFieldOversizeError" time="0.035" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInFutureOK" time="0.026" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInFutureOK" time="0.025" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInPastCausesError" time="0.024" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingEndDateTimeInPastCausesError" time="0.027" />
 
       <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOK" time="0.022" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOversizeErrors" time="0.04" />
+      <testcase classname="auctionhaus.ListingTests" name="testListingNameFieldOversizeErrors" time="0.029" />
 
-      <testcase classname="auctionhaus.ListingTests" name="testOptionalWinnerFieldOK" time="0.053" />
+      <testcase classname="auctionhaus.ListingTests" name="testOptionalWinnerFieldOK" time="0.02" />
 
       <system-out><![CDATA[--Output from testBidBidderNonNullOK--
 --Output from testRequiredListingFieldsMissingCauseError--

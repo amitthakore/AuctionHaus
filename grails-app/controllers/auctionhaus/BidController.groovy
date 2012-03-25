@@ -31,12 +31,13 @@ class BidController {
 
 		flash.message = message(code: 'bid.created.message', args: [message(code: 'bid.label', default: 'Bid'), bidInstance.id])
         redirect(action: "show", id: bidInstance.id)
-    }
+           }
 
-    catch(grails.validation.ValidationException e) {
-            flash.message = message(code: 'bid.amount.not.valid')
-        render(view: "create", model: [bidInstance: bidInstance])
-        }
+        catch(grails.validation.ValidationException e) {
+      // L-8: Validation errors will be displayed on the listing detail page if an added bid does not pass validation (unit test of the controller action that handles this requirement)
+         flash.message = message(code: 'bid.amount.not.valid')
+       render(view: "create", model: [bidInstance: bidInstance])
+       }
 
       }
 

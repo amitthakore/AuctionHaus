@@ -35,7 +35,7 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         assert testList.validate()
 
@@ -48,7 +48,7 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         //create a description for listing
         testList.listingDescription = "test description"
@@ -89,7 +89,7 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         assert testList.validate()
 
@@ -108,7 +108,7 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         //create a description for listing
         testList.listingDescription = "test description"
@@ -125,7 +125,7 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         //create a description for listing
         testList.listingDescription = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -145,7 +145,7 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         //listing should validate without error
         assert testList.validate()
@@ -159,7 +159,7 @@ class ListingTests {
         def testEndDateTime = new Date() - 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         //listing should validate without error
         assert !testList.validate()
@@ -174,10 +174,10 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         //listing should validate without error
-        assert testList.validate()
+      assert testList.validate()
 
     }
     //L-6: Listing name must be less than 64 characters (unit test)
@@ -187,7 +187,7 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         //listing should validate without error
         assert !testList.validate()
@@ -201,7 +201,7 @@ class ListingTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
 
 

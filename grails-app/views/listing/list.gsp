@@ -34,41 +34,36 @@
 						<g:sortableColumn property="listingDescription" title="${message(code: 'listing.listingDescription.label', default: 'Description')}" />
 					
 						<g:sortableColumn property="listingEndDateTime" title="${message(code: 'listing.listingEndDateTime.label', default: 'End Date Time')}" />
-                      <%--  <g:sortableColumn property="listingCreatedDate" title="${message(code: 'listing.listingCreatedDate.label', default: 'Created Date Time')}" /> --%>
+
                         <g:sortableColumn property="bids" title="${message(code: 'listing.bids.label', default: 'Total Bids')}" />
 
-						<%--		<th><g:message code="listing.winner.label" default="Winner" /></th>      --%>
-					
-					<%--	<g:sortableColumn property="bidIncAmt" title="${message(code: 'listing.bidIncAmt.label', default: 'Bid Inc Amt')}" /> --%>
-					
 					</tr>
 				</thead>
 				<tbody>
+
 				<g:each in="${listingInstanceList}" status="i" var="listingInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					   <g:if test="${listingInstance.listingEndDateTime>new Date()}">
+
+                <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                        <%--M-5: The name is visible for each listing--%>
 						<td><g:link action="show" id="${listingInstance.id}">${fieldValue(bean: listingInstance, field: "listingName")}</g:link></td>
-					
+                        <%--M-7: The starting price is visible for each listing--%>
 						<td>${fieldValue(bean: listingInstance, field: "startingBidPrice")}</td>
 					
 						<td>${fieldValue(bean: listingInstance, field: "listingDescription")}</td>
-
-
+                        <%--M-8: The end date/time is visible for each listing --%>
                         <td><g:formatDate date="${listingInstance.listingEndDateTime}" type="datetime" style="medium" /></td>
-                     <%--   <td><g:formatDate date="${listingInstance.listingCreatedDate}" /></td>   --%>
+                       <%--M-6: The number of bids is visible for each listing--%>
                         <td>${listingInstance.bids.size()}</td>
-                        </g:if>
-					
-				<%--		<td>${fieldValue(bean: listingInstance, field: "winner")}</td>  --%>
-					
-					<%--	<td>${fieldValue(bean: listingInstance, field: "bidIncAmt")}</td>  --%>
-					
+
 					</tr>
+
 				</g:each>
 				</tbody>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${listingInstanceTotal}" />
+
+			<g:paginate total="${listingInstanceTotal}" />
+
 			</div>
 		</div>
 	</body>

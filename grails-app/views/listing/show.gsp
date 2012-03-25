@@ -22,17 +22,21 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list listing">
-			
-				<g:if test="${listingInstance?.listingName}">
+
+			  <%--L-1: The detail page for the listing shows the name of the listing--%>
+
+                <g:if test="${listingInstance?.listingName}">
 				<li class="fieldcontain">
 					<span id="listingName-label" class="property-label"><g:message code="listing.listingName.label" default="Listing Name" /></span>
 					
-						<span class="property-value" aria-labelledby="listingName-label"><g:fieldValue bean="${listingInstance}" field="listingName"/></span>
+					<span class="property-value" aria-labelledby="listingName-label"><g:fieldValue bean="${listingInstance}" field="listingName"/></span>
 					
 				</li>
 				</g:if>
-			
-				<g:if test="${listingInstance?.startingBidPrice}">
+
+                <%--L-2: The detail page for the listing shows the starting bid price of the listing --%>
+
+                <g:if test="${listingInstance?.startingBidPrice}">
 				<li class="fieldcontain">
 					<span id="startingBidPrice-label" class="property-label"><g:message code="listing.startingBidPrice.label" default="Starting Bid Price" /></span>
 					
@@ -40,7 +44,7 @@
 					
 				</li>
 				</g:if>
-			
+			    <%--L-5: The detail page for the listing optionally shows the description--%>
 			<g:if test="${listingInstance?.listingDescription}">
                  <g:if test="${!listingInstance.listingDescription.isEmpty()}">
 				<li class="fieldcontain">
@@ -50,8 +54,8 @@
 					
 				</li>
              </g:if>
-				</g:if>
-			
+			 </g:if>
+               <%-- L-4: The detail page for the listing shows the end date/time of the listing --%>
 				<g:if test="${listingInstance?.listingEndDateTime}">
 				<li class="fieldcontain">
 					<span id="listingEndDateTime-label" class="property-label"><g:message code="listing.listingEndDateTime.label" default="Listing End Date Time" /></span>
@@ -63,21 +67,20 @@
 			
 				<g:if test="${listingInstance?.winner}">
 				<li class="fieldcontain">
-					<span id="winner-label" class="property-label"><g:message code="listing.winner.label" default="Winner" /></span>
+
+                    <span id="winner-label" class="property-label"><g:message code="listing.winner.label" default="Winner" /></span>
 					
-						<span class="property-value" aria-labelledby="winner-label"><g:link controller="customer" action="show" id="${listingInstance?.winner?.id}">${listingInstance?.winner?.encodeAsHTML()}</g:link></span>
+					<span class="property-value" aria-labelledby="winner-label"><g:link controller="customer" action="show" id="${listingInstance?.winner?.id}">${listingInstance?.winner?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
-			
+			   <%--L-3: The detail page for the listing shows the most recent bid - Used maxBidForListingTagLib --%>
 				<g:if test="${listingInstance?.bids}">
 				<li class="fieldcontain">
 					<span id="bids-label" class="property-label"><g:message code="listing.bids.label" default="Most Recent Bid" /></span>
-					
 
                     <span class="property-value" aria-  labelledby="bids-label"> <g:maxBidForListingTagLib listingInstance="${listingInstance}"/>
 
-					
 				</li>
 				</g:if>
 			
@@ -106,15 +109,16 @@
 						<span class="property-value" aria-labelledby="seller-label">${sellername.encodeAsHTML()}</span>
 					
 				</li>
-
 				</g:if>
-             <div class="fieldcontain">
+              <%--L-7: The detail page for the listing allows a new bid to be placed --%>
+              <div class="fieldcontain">
                  <span id="Add-Bid-label" class="property-label"><g:message code="listing.add.Bill.label" default="Add New Bid" /></span>
               <li class="add">
                   <span class="property-value" aria-labelledby="seller-label">  <g:link controller="bid" action="create" params="['listing.id': listingInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'bid.label', default: 'Bid')])}</g:link> </span>
-                </li>
+               </li>
              </div>
-			<g:form>
+
+               <g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${listingInstance?.id}" />
 					<g:link class="edit" action="edit" id="${listingInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>

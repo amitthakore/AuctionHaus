@@ -150,7 +150,7 @@ class BidTests {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate:new Date())
 
         def bidTest = new Bid(bidAmount: 20, bidDateTime: new Date(), bidder: testSeller )
 

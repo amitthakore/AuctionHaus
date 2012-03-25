@@ -7,7 +7,7 @@
 		<g:message code="bid.bidDateTime.label" default="Bid Date Time" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="bidDateTime" precision="day"  value="${bidInstance?.bidDateTime}"  />
+	<g:datePicker name="bidDateTime" precision="minute"  value="${bidInstance?.bidDateTime}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: bidInstance, field: 'bidAmount', 'error')} required">
@@ -16,6 +16,14 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field type="number" name="bidAmount" required="" value="${fieldValue(bean: bidInstance, field: 'bidAmount')}"/>
+    <%-- This is added for user convenience - in next phase bids will be added from listing page --%>
+
+    <label for="MostRecentbidAmount">
+        <g:message code="bid.bidAmount.label" default="Most Recent Bid Amount:" />
+
+    </label>
+
+    <g:maxBidForListingTagLib listingInstance="${bidInstance.listing}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: bidInstance, field: 'bidder', 'error')} required">
@@ -33,21 +41,3 @@
     <g:hiddenField name="listing.id" value = "${bidInstance?.listing?.id}"></g:hiddenField>
 
 </div>
-<%--<div class="fieldcontain >
-
-<g:if test="${bidInstance.listing?.bidIncAmt}">
-
-    <span id="Bid-Inc-Amt" class="property-label"><g:message code="Bid.listing.label" default="Bid Inc Amt" /></span>
-    <span class="property-value" aria-labelledby="bid.Inc.label">${bidInstance?.listing?.bidIncAmt}</span>
-</g:if>
-</div>
-  <div class="fieldcontain>
-<g:if test ="${bidInstance.listing.bids}">
-    <label for="Most Recent Bid">
-        <g:message code="bid.bidder.label" default="Most Recent Bid Amount" />
-
-    </label>
-    <g:maxBidForListingTagLib listingInstance="${bidInstance.listing}"/>
-
-</g:if>
-</div>  --%>

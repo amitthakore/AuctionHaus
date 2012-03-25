@@ -11,9 +11,13 @@ class ListingController {
     }
 
     def list() {
+      //M-2: The main landing page shows up to 5 listings at a time
+      // M-3: If more than 5 listings exist, pagination links will be available to let the user page through the listings
         params.max = Math.min(params.max ? params.int('max') : 5, 100)
-        
-        [listingInstanceList: Listing.list(params), listingInstanceTotal: Listing.count()]
+      //M-4: Only listings with a end date/time that is in the future are visible on the main page
+        def listingInstance = Listing.list(params).findAll {it.listingEndDateTime >= new Date()}
+
+        [listingInstanceList:listingInstance, listingInstanceTotal: Listing.count()]
     }
 
     def create() {
@@ -46,6 +50,8 @@ class ListingController {
             redirect(action: "list")
             return
         }
+        // call sellername method to get user portion of email
+        // L-6: The detail page for the listing shows only the user portion of the email address of the user who created the listing (e.g. “mike” if the email address is “mike@piragua.com”)
         def sellername
         sellername = sellerName(listingInstance)
         [listingInstance: listingInstance,sellername:sellername]
@@ -114,6 +120,7 @@ class ListingController {
         }
     }
 
+   //L-6: The detail page for the listing shows only the user portion of the email address of the user who created the listing (e.g. “mike” if the email address is “mike@piragua.com”)
     private String sellerName(Listing listingInstance) {
 
     def sellername = ''

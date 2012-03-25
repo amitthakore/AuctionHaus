@@ -18,6 +18,7 @@ class Listing {
     //Listing belongs to a customer and has many bids
     static belongsTo = [seller: Customer]
     static hasMany = [bids: Bid]
+    //  M-1: The main landing page shows listings sorted by the date they were created (most recent first)
     static mapping = {sort listingCreatedDate: "desc"}
 
 
@@ -29,7 +30,7 @@ class Listing {
 
         //look at each bid and remember bidAmount of the bid that comes before the argument bidDate
         bids.each{
-            if ((it.bidAmount > nextHighestBid) &&  (it.bidDateTime.before( bidDate )) )
+            if ((it.bidAmount > nextHighestBid) &&  ( (it.bidDateTime.before( bidDate ) || (it.bidDateTime.compareTo( bidDate )==0 ) ) ) )
                 nextHighestBid = it.bidAmount
         }
 

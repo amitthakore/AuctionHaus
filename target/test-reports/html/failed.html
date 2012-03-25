@@ -15,10 +15,12 @@
      - Failed tests</h1>
 <p class="intro">
                         Executed
-                        3
+                        36
                         tests
                     
-                        without a single error or failure!
+                        with
+                        2 errors
+                        .
                     </p>
 </div>
 <div class="grid_2 omega">
@@ -41,6 +43,105 @@
 </nav>
 </div>
 <div class="clear"></div>
+<div class="testsuite error">
+<div class="header">
+<h2>BidIntegrationTests</h2>
+<h3>
+                        Executed
+                        4
+                        tests
+                    
+                        with
+                        2 errors
+                        .
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testBidNotHighEnoughCausesError">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testBidNotHighEnoughCausesError</b>
+</p>
+<p class="summary">Executed in 0.453 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix error grid_8 alpha omega" data-name="testBidHighEnoughOK">
+<div class="grid_3 alpha">
+<p>
+<span class="icon error"></span><b class="testname message error">testBidHighEnoughOK</b>
+</p>
+<p class="summary">Executed in 0.255 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">Validation Error(s) occurred during save():
+- Field error in object 'auctionhaus.Bid' on field 'bidAmount': rejected value [20.0]; codes [auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bidAmount,auctionhaus.Bid.bidAmount.validator.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.validator.error,bid.bidAmount.validator.error.auctionhaus.Bid.bidAmount,bid.bidAmount.validator.error.bidAmount,bid.bidAmount.validator.error.java.math.BigDecimal,bid.bidAmount.validator.error,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,The Bid amount must be at least .50 higher than the previous Bid for the same listing]; arguments [bidAmount,class auctionhaus.Bid,20.0]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+</b>
+</p>
+<pre>grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'auctionhaus.Bid' on field 'bidAmount': rejected value [20.0]; codes [auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bidAmount,auctionhaus.Bid.bidAmount.validator.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.validator.error,bid.bidAmount.validator.error.auctionhaus.Bid.bidAmount,bid.bidAmount.validator.error.bidAmount,bid.bidAmount.validator.error.java.math.BigDecimal,bid.bidAmount.validator.error,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Bid.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,The Bid amount must be at least .50 higher than the previous Bid for the same listing]; arguments [bidAmount,class auctionhaus.Bid,20.0]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+
+	at auctionhaus.BidIntegrationTests.testBidHighEnoughOK(BidIntegrationTests.groovy:85)
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix error grid_8 alpha omega" data-name="testListingSavedBidsAlsoSaved">
+<div class="grid_3 alpha">
+<p>
+<span class="icon error"></span><b class="testname message error">testListingSavedBidsAlsoSaved</b>
+</p>
+<p class="summary">Executed in 0.203 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">Validation Error(s) occurred during save():
+- Field error in object 'auctionhaus.Listing' on field 'bids[0].bidAmount': rejected value [20.0]; codes [auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Listing.bids.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bids[0].bidAmount,auctionhaus.Bid.bidAmount.validator.error.bids.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bidAmount,auctionhaus.Bid.bidAmount.validator.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.validator.error,bid.bidAmount.validator.error.auctionhaus.Listing.bids[0].bidAmount,bid.bidAmount.validator.error.auctionhaus.Listing.bids.bidAmount,bid.bidAmount.validator.error.bids[0].bidAmount,bid.bidAmount.validator.error.bids.bidAmount,bid.bidAmount.validator.error.bidAmount,bid.bidAmount.validator.error.java.math.BigDecimal,bid.bidAmount.validator.error,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,The Bid amount must be at least .50 higher than the previous Bid for the same listing]; arguments [bidAmount,class auctionhaus.Bid,20.0]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+</b>
+</p>
+<pre>grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'auctionhaus.Listing' on field 'bids[0].bidAmount': rejected value [20.0]; codes [auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.validator.error.auctionhaus.Listing.bids.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bids[0].bidAmount,auctionhaus.Bid.bidAmount.validator.error.bids.bidAmount,auctionhaus.Bid.bidAmount.validator.error.bidAmount,auctionhaus.Bid.bidAmount.validator.error.java.math.BigDecimal,auctionhaus.Bid.bidAmount.validator.error,bid.bidAmount.validator.error.auctionhaus.Listing.bids[0].bidAmount,bid.bidAmount.validator.error.auctionhaus.Listing.bids.bidAmount,bid.bidAmount.validator.error.bids[0].bidAmount,bid.bidAmount.validator.error.bids.bidAmount,bid.bidAmount.validator.error.bidAmount,bid.bidAmount.validator.error.java.math.BigDecimal,bid.bidAmount.validator.error,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,auctionhaus.Bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,bid.bidAmount.The Bid amount must be at least .50 higher than the previous Bid for the same listing,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids[0].bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.auctionhaus.Listing.bids.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids[0].bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bids.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.bidAmount,The Bid amount must be at least .50 higher than the previous Bid for the same listing.java.math.BigDecimal,The Bid amount must be at least .50 higher than the previous Bid for the same listing]; arguments [bidAmount,class auctionhaus.Bid,20.0]; default message [Property [{0}] of class [{1}] with value [{2}] does not pass custom validation]
+
+	at auctionhaus.BidIntegrationTests.testListingSavedBidsAlsoSaved(BidIntegrationTests.groovy:121)
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="testListingNotSavedBidsAlsoNotSaved">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">testListingNotSavedBidsAlsoNotSaved</b>
+</p>
+<p class="summary">Executed in 0.059 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">--Output from testBidNotHighEnoughCausesError--
+--Output from testBidHighEnoughOK--
+--Output from testListingSavedBidsAlsoSaved--
+--Output from testListingNotSavedBidsAlsoNotSaved--
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">--Output from testBidNotHighEnoughCausesError--
+--Output from testBidHighEnoughOK--
+--Output from testListingSavedBidsAlsoSaved--
+--Output from testListingNotSavedBidsAlsoNotSaved--
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
 <div class="clear"></div>
 </div>
 <!--

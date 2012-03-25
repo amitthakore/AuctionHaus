@@ -32,7 +32,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 
-	<g:datePicker name="listingEndDateTime" precision="day"  value="${listingInstance?.listingEndDateTime}"  />
+	<g:datePicker name="listingEndDateTime" precision="minute"  value="${listingInstance?.listingEndDateTime}"  />
 </div>
 
 <%--<div class="fieldcontain ${hasErrors(bean: listingInstance, field: 'winner', 'error')} ">

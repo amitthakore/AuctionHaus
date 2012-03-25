@@ -39,7 +39,7 @@ class BidIntegrationTests extends GroovyTestCase {
 
         testSeller.save()
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
         testList.save()
 
         testList.addToBids(bidTest)
@@ -68,20 +68,17 @@ class BidIntegrationTests extends GroovyTestCase {
 
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
-
-
-        def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller)
-
-
-        def bidTest2 = new Bid(bidAmount: 20.5, bidDateTime: new Date(), bidder: testSeller )
-
-
         testSeller.save()
-
-
-
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
         testList.save()
+
+        def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+
+
+        def bidTest2 = new Bid(bidAmount: 20.5, bidDateTime: new Date(), bidder: testSeller,listing: testList )
+
+
+
 
         testList.addToBids(bidTest)
 
@@ -105,18 +102,16 @@ class BidIntegrationTests extends GroovyTestCase {
     void testListingSavedBidsAlsoSaved()
     {
 
-
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
 
-        def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller)
-
-
+        def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
 
         testSeller.save()
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+       // def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
 
         testList.addToBids(bidTest)
@@ -144,14 +139,13 @@ class BidIntegrationTests extends GroovyTestCase {
         def testEndDateTime = new Date() + 1
         def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
 
-        def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller)
-
-
+        def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
 
         testSeller.save()
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
+        //def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller)
 
 
         //    testList.addToBids(bidTest)

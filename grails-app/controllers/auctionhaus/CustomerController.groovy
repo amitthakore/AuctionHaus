@@ -3,10 +3,14 @@
 package auctionhaus
 
 import org.springframework.dao.DataIntegrityViolationException
+import auctionhaus.Role
+import auctionhaus.CustomerRole
 
 class CustomerController {
+    def createCustomerService
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+   // def adminRole =  'ROLE_ADMIN'
 
     def index() {
         redirect(action: "list", params: params)
@@ -23,18 +27,16 @@ class CustomerController {
     }
 
     def save() {
-        def customerInstance = new Customer(params)
+           def customerInstance
         try{
-        if (!customerInstance.save(flush: true)) {
+            customerInstance = createCustomerService.createNewCustomer(params)
 
-          render(view: "create", model: [customerInstance: customerInstance])
-            return
+
+        render(view: "show", model: [customerInstance: customerInstance])
+
+		flash.message = message(code: 'customer.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.username])
         }
 
-		//flash.message = message(code: 'customer.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.email])
-        flash.message = message(code: 'customer.created.message')
-        redirect(action: "show", id: customerInstance.id)
-        }
 
     catch (grails.validation.ValidationException e){
 
@@ -162,4 +164,6 @@ class CustomerController {
         }
 
     }
+
+
 }

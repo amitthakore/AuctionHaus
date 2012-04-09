@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'email', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'username', 'error')} required">
 	<label for="email">
-		<g:message code="customer.email.label" default="Email" />
+		<g:message code="customer.username.label" default="Email" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="email" name="email" required="" value="${customerInstance?.email}"/>
+	<g:field type="email" name="username" required="" value="${customerInstance?.username}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'password', 'error')} required">
@@ -15,7 +15,7 @@
 		<g:message code="customer.password.label" default="Password" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="password" maxlength="8" required="" value="${customerInstance?.password}"/>
+	<g:textField name="password" type = "password" maxlength="8" required="" value="${customerInstance?.password}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'createdDate', 'error')} required">
@@ -25,4 +25,6 @@
 	</label>
 	<g:datePicker name="createdDate" precision="day"  value="${customerInstance?.createdDate}"  />
 </div>
+
+
 

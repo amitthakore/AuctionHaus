@@ -45,7 +45,7 @@
 				<li class="fieldcontain">
 					<span id="bidder-label" class="property-label"><g:message code="bid.bidder.label" default="Bidder" /></span>
 					
-						<span class="property-value" aria-labelledby="bidder-label"><g:link controller="customer" action="show" id="${bidInstance?.bidder?.id}">${bidInstance?.bidder?.email?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="bidder-label"><g:link controller="customer" action="show" id="${bidInstance?.bidder?.id}">${bidInstance?.bidder?.username?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

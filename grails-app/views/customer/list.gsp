@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="email" title="${message(code: 'customer.email.label', default: 'Email')}" />
+						<g:sortableColumn property="email" title="${message(code: 'customer.username.label', default: 'username')}" />
 					
-						<g:sortableColumn property="password" title="${message(code: 'customer.password.label', default: 'Password')}" />
+			<%--			<g:sortableColumn property="password" title="${message(code: 'customer.password.label', default: 'Password')}" /> --%>
 					
 						<g:sortableColumn property="createdDate" title="${message(code: 'customer.createdDate.label', default: 'Created Date')}" />
 					
@@ -36,9 +36,9 @@
 				<g:each in="${customerInstanceList}" status="i" var="customerInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${customerInstance.id}">${fieldValue(bean: customerInstance, field: "email")}</g:link></td>
+						<td><g:link action="show" id="${customerInstance.id}">${fieldValue(bean: customerInstance, field: "username")}</g:link></td>
 					
-						<td>${fieldValue(bean: customerInstance, field: "password")}</td>
+					<%--	<td>${fieldValue(bean: customerInstance, field: "password")}</td> --%>
 					
 						<td><g:formatDate date="${customerInstance.createdDate}" /></td>
 					

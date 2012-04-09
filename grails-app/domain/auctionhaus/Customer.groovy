@@ -1,24 +1,48 @@
 package auctionhaus
 
-
-//Amit Thakore and Ben Williams
-
 class Customer {
-    String email
-    String password
-    Date   createdDate
 
-    static hasMany= [bids:Bid]
+	transient springSecurityService
+  //  static transients = ["springSecurityService"]
 
+	String username
+	String password
+    Date createdDate
+	boolean enabled
+	boolean accountExpired
+	boolean accountLocked
+	boolean passwordExpired
+    static hasMany = [bids:Bid]
 
-    static constraints = {
-
-        email email:true,blank:false,unique: true
-        password size: 6..8,blank:false
+	static constraints = {
+        username email:true,blank:false,unique: true
+        password blank:false
         createdDate nullable: false,blank:false
-      bids nullable: true
+        bids nullable: true
+	}
 
-    }
+	static mapping = {
+		password column: '`password`'
+	}
+
+	Set<Role> getAuthorities() {
+		CustomerRole.findAllByCustomer(this).collect { it.role } as Set
+	}
+
+	def beforeInsert() {
+		encodePassword()
+	}
+
+	def beforeUpdate() {
+		if (isDirty('password')) {
+			encodePassword()
+		}
+	}
 
 
+	protected void encodePassword() {
+		password = springSecurityService.encodePassword(password)
+	}
 }
+
+

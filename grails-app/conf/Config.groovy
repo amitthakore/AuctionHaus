@@ -27,7 +27,7 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
                       form: 'application/x-www-form-urlencoded',
                       multipartForm: 'multipart/form-data'
                     ]
-
+grails.debug.productionOverride=anything
 // URL Mapping Cache Max Size, defaults to 5000
 //grails.urlmapping.cache.maxsize = 1000
 
@@ -35,7 +35,6 @@ grails.gorm.failOnError = true
 
 // What URL patterns should be processed by the resources plugin
 grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
-
 
 // The default codec used to encode data with ${}
 grails.views.default.codec = "none" // none, html, base64
@@ -60,7 +59,7 @@ grails.exceptionresolver.params.exclude = ['password']
 
 // enable query caching by default
 grails.hibernate.cache.queries = true
-
+grails.views.javascript.library="jquery"
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {
@@ -80,7 +79,8 @@ log4j = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
-
+    debug 'org.springframework.security',
+      'grails.app.jobs'
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP
            'org.codehaus.groovy.grails.web.sitemesh', //  layouts
@@ -93,3 +93,44 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// Added by the Spring Security Core plugin:
+
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'auctionhaus.Customer'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'auctionhaus.CustomerRole'
+grails.plugins.springsecurity.userLookup.usernamePropertyName = 'username'
+//grails.plugins.springsecurity.userLookup.authoritiesPropertyName = 'authorities'
+grails.plugins.springsecurity.authority.className = 'auctionhaus.Role'
+//grails.plugins.springsecurity.password.algorithm='SHA-512'
+grails.plugins.springsecurity.securityConfigType = "Annotation"
+//grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
+grails.plugin.routing.jms.brokerURL = "tcp://localhost:61616"
+//grails.plugins.springsecurity.interceptUrlMap = [
+  //      '/secure/**':    ['ROLE_ADMIN'],
+    //    '/finance/**':   ['ROLE_FINANCE', 'IS_AUTHENTICATED_FULLY'],
+      //  '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
+      //  '/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
+      // '/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
+      //  '/*':            ['IS_AUTHENTICATED_ANONYMOUSLY'],
+     //   '/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
+     //   '/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY']
+//]
+
+grails {
+    mail {
+        host = "smtp.gmail.com"
+        port = 587
+        username = "amitthakore16@gmail.com"
+        password = "aditi1972"
+        props = ["mail.debug": "true",
+                "mail.smtp.protocol": "smtps",
+                "mail.smtp.auth": "true",
+                "mail.smtp.starttls.enable": "true",
+                "mail.smtp.host": "smtp.gmail.com",
+                "mail.smtp.user": "xyz@gmail.com",
+                "mail.smtp.password": "mypassword"]
+    }
+}
+
+grails.plugins.springsecurity.auth.loginFormUrl = '/'
+grails.plugins.springsecurity.failureHandler.defaultFailureUrl = '/'

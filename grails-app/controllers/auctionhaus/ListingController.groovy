@@ -1,6 +1,8 @@
 package auctionhaus
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.plugins.springsecurity.*
+import grails.converters.JSON
 
 class ListingController {
 
@@ -20,10 +22,27 @@ class ListingController {
         [listingInstanceList:listingInstance, listingInstanceTotal: Listing.count()]
     }
 
+    @Secured(['ROLE_USER'])
+    def myListing() {
+        def springSecurityService
+
+        def user = springSecurityService.getCurrentUser()
+
+         println("loggedinuser", user)
+        def customerInstance = Customer.findByUsername(user)
+
+        def c = Listing.createCriteria().list {
+
+            eq("seller", customerInstance)
+        }
+
+        [listingInstanceList:c, listingInstanceTotal: c.size()]
+    }
+   @Secured(['ROLE_USER'])
     def create() {
         [listingInstance: new Listing(params)]
     }
-
+   @Secured(['ROLE_USER'])
     def save() {
         def listingInstance = new Listing(params)
 
@@ -46,19 +65,22 @@ class ListingController {
         def listingInstance = Listing.get(params.id)
 
         if (!listingInstance) {
-			flash.message = message(code: 'default.not.found.message', args: [message(code: 'listing.label', default: 'Listing'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'listing.label', default: 'Listing'), params.id])
             redirect(action: "list")
             return
         }
         // call sellername method to get user portion of email
         // L-6: The detail page for the listing shows only the user portion of the email address of the user who created the listing (e.g. “mike” if the email address is “mike@piragua.com”)
-        def sellername
-        sellername = sellerName(listingInstance)
-        [listingInstance: listingInstance,sellername:sellername]
+       def sellername = sellerName(listingInstance)
 
+       //Named Query from Bid and Listing
+        def listingInstanceList  = Bid.topBids(listingInstance.id).list(max:10)
 
-    }
+        [listingInstance:listingInstance,sellername:sellername,listingInstanceList:listingInstanceList]
 
+}
+
+    @Secured(['ROLE_USER'])
     def edit() {
         def listingInstance = Listing.get(params.id)
         if (!listingInstance) {
@@ -68,9 +90,11 @@ class ListingController {
         }
         def sellername
         sellername = sellerName(listingInstance)
+
+       
         [listingInstance: listingInstance,sellername:sellername]
     }
-
+    @Secured(['ROLE_USER'])
     def update() {
         def listingInstance = Listing.get(params.id)
         if (!listingInstance) {
@@ -100,7 +124,7 @@ class ListingController {
 		flash.message = message(code: 'default.updated.message', args: [message(code: 'listing.label', default: 'Listing'), listingInstance.id])
         redirect(action: "show", id: listingInstance.id)
     }
-
+    @Secured(['ROLE_USER'])
     def delete() {
         def listingInstance = Listing.get(params.id)
         if (!listingInstance) {
@@ -119,13 +143,26 @@ class ListingController {
             redirect(action: "show", id: params.id)
         }
     }
+    def bidList() {
+
+        Long listingId = Long.valueOf(params['name']);
+
+
+        def listingInstanceList  = Bid.topBids(listingId).list(max:1)
+
+
+        //println (new JSON(listingInstanceList).toString() )
+        render new JSON(listingInstanceList.bidAmount).toString()
+
+        }
+
 
    //L-6: The detail page for the listing shows only the user portion of the email address of the user who created the listing (e.g. “mike” if the email address is “mike@piragua.com”)
     private String sellerName(Listing listingInstance) {
 
     def sellername = ''
     def sellernames = String[]
-    sellernames = listingInstance.seller.email.split("@")
+    sellernames = listingInstance.seller.username.split("@")
     sellername = sellernames[0]
     return sellername;
 }

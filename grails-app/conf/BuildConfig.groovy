@@ -31,6 +31,16 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.jboss.com/maven2/"
     }
     dependencies {
+
+        compile('org.apache.activemq:activemq-core:5.3.0',
+                'org.apache.activemq:activeio-core:3.1.2',
+                'org.apache.xbean:xbean-spring:3.7') {
+            excludes 'activemq-openwire-generator'
+            excludes 'commons-logging'
+            excludes 'xalan'
+            excludes 'xml-apis'
+            exported = false
+        }
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
         // runtime 'mysql:mysql-connector-java:5.1.16'

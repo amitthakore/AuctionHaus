@@ -30,17 +30,15 @@ class Listing {
 
         //look at each bid and remember bidAmount of the bid that comes before the argument bidDate
         bids.each{
-            if ((it.bidAmount > nextHighestBid) &&  ( (it.bidDateTime.before( bidDate ) || (it.bidDateTime.compareTo( bidDate )==0 ) ) ) )
+          //  if ((it.bidAmount > nextHighestBid) &&  ( (it.bidDateTime.before( bidDate ) || (it.bidDateTime.compareTo( bidDate )==0 ) ) ) )
+                if ((it.bidAmount > nextHighestBid) &&  ( (it.bidDateTime.compareTo( bidDate ) <0 || (it.bidDateTime.compareTo( bidDate )==0 ) ) ) )
                 nextHighestBid = it.bidAmount
         }
-
+        println(nextHighestBid)
         return nextHighestBid
 
 
     }
-
-
-
 
     static constraints = {
 
@@ -80,5 +78,16 @@ class Listing {
         }
 
     }
+
+    static namedQueries = {
+
+            recentBids { id ->
+                eq 'id',id
+
+            }
+
+        }
+
+
 
 }

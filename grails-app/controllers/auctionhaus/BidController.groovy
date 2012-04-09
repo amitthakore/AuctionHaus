@@ -1,6 +1,9 @@
 package auctionhaus
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.plugins.springsecurity.Secured
+import grails.converters.JSON
+
 
 class BidController {
 
@@ -14,29 +17,36 @@ class BidController {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [bidInstanceList: Bid.list(params), bidInstanceTotal: Bid.count()]
     }
-
+    @Secured(['ROLE_USER'])
     def create() {
         [bidInstance: new Bid(params)]
     }
-
+    @Secured(['ROLE_USER'])
     def save() {
+
         def bidInstance = new Bid(params)
-        
+         bidInstance.bidDateTime = new Date()
         try{
         if (!bidInstance.save(flush: true)) {
             flash.message = message(code: 'bid.amount.not.valid')
-            render(view: "create", model: [bidInstance: bidInstance])
+           // render(view: "create", model: [bidInstance: bidInstance])
             return
         }
+             def biddata = [
+              bidDateTime : bidInstance.bidDateTime,
+              bidAmount : bidInstance.bidAmount,
+              bidder :   bidInstance.bidder.username
+                          ]
 
-		flash.message = message(code: 'bid.created.message', args: [message(code: 'bid.label', default: 'Bid'), bidInstance.id])
-        redirect(action: "show", id: bidInstance.id)
-           }
+           //render biddata as JSON
+            render new JSON(biddata).toString()
+            flash.message = message(code: 'bid.created.message')
+        }
 
         catch(grails.validation.ValidationException e) {
       // L-8: Validation errors will be displayed on the listing detail page if an added bid does not pass validation (unit test of the controller action that handles this requirement)
-         flash.message = message(code: 'bid.amount.not.valid')
-       render(view: "create", model: [bidInstance: bidInstance])
+         render flash.message = message(code: 'bid.amount.not.valid')
+      // render(view: "create", model: [bidInstance: bidInstance])
        }
 
       }
@@ -51,7 +61,7 @@ class BidController {
 
         [bidInstance: bidInstance]
     }
-
+    @Secured(['ROLE_USER'])
     def edit() {
         def bidInstance = Bid.get(params.id)
         if (!bidInstance) {
@@ -62,7 +72,7 @@ class BidController {
 
         [bidInstance: bidInstance]
     }
-
+    @Secured(['ROLE_USER'])
     def update() {
         def bidInstance = Bid.get(params.id)
         if (!bidInstance) {
@@ -92,7 +102,7 @@ class BidController {
 		flash.message = message(code: 'default.updated.message', args: [message(code: 'bid.label', default: 'Bid'), bidInstance.id])
         redirect(action: "show", id: bidInstance.id)
     }
-
+  @Secured(['ROLE_USER'])
     def delete() {
         def bidInstance = Bid.get(params.id)
         if (!bidInstance) {

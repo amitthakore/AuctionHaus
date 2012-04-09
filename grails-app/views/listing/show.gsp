@@ -1,15 +1,21 @@
 
 <%@ page import="auctionhaus.Listing" %>
+<%@ page import="auctionhaus.Bid" %>
 <!doctype html>
 <html>
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'listing.label', default: 'Listing')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
+        <g:javascript library="jquery" plugin="jquery"/>
+        <g:setProvider library="jquery"/>
 	</head>
-	<body>
+
+	<body onload="bidUpdater()">
+
 		<a href="#show-listing" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
+
+    <div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
@@ -19,7 +25,7 @@
 		<div id="show-listing" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+			<div id="messages" class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list listing">
 
@@ -64,7 +70,7 @@
 					
 				</li>
 				</g:if>
-			
+
 				<g:if test="${listingInstance?.winner}">
 				<li class="fieldcontain">
 
@@ -79,8 +85,10 @@
 				<li class="fieldcontain">
 					<span id="bids-label" class="property-label"><g:message code="listing.bids.label" default="Most Recent Bid" /></span>
 
-                    <span class="property-value" aria-  labelledby="bids-label"> <g:maxBidForListingTagLib listingInstance="${listingInstance}"/>
-
+                    <span class="property-value" aria-  labelledby="bids-label">
+                        <div class = "maxbid">
+                        <g:maxBidForListingTagLib listingInstance="${listingInstance}"/>
+                    </div>
 				</li>
 				</g:if>
 			
@@ -110,13 +118,7 @@
 					
 				</li>
 				</g:if>
-              <%--L-7: The detail page for the listing allows a new bid to be placed --%>
-              <div class="fieldcontain">
-                 <span id="Add-Bid-label" class="property-label"><g:message code="listing.add.Bill.label" default="Add New Bid" /></span>
-              <li class="add">
-                  <span class="property-value" aria-labelledby="seller-label">  <g:link controller="bid" action="create" params="['listing.id': listingInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'bid.label', default: 'Bid')])}</g:link> </span>
-               </li>
-             </div>
+
 
                <g:form>
 				<fieldset class="buttons">
@@ -125,6 +127,111 @@
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
-		</div>
-	</body>
-</html>
+
+              </div>
+
+    <g:formRemote name="createBid"
+                  url= "[controller:'bid', action:'save']"
+       onSuccess="addTableRow(data)"
+       on401="showLogin();">
+        <input name="bidAmount" type="number">
+        <g:hiddenField name="bidder.id" value = "${listingInstance?.seller?.id}"></g:hiddenField>
+        <g:hiddenField name="listing.id" value = "${listingInstance?.id}"></g:hiddenField>
+        <g:submitButton name="create" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+
+    </g:formRemote>
+
+              <%--
+
+              jQuery.ajax({
+          url: '/AuctionHaus/listing/bidList',
+          data = $('listingInstance').serialize(),
+          type: "GET",
+          dataType: "json",
+          timeout: 1000,
+          success:function(data,textStatus){addBidsTable(data);}
+                  {alert(data); },
+          error: function(x, t, m) {
+              if(t==="timeout") {
+                  alert("got timeout");
+              } else {
+                  alert(t);
+              }
+          }
+      });--%>
+
+    <table id="bidtable">
+
+        <thead>
+        <tr>
+
+            <g:sortableColumn property="bidDateTime" title="${message(code: 'bid.bidDateTime.label', default: 'Bid Date Time')}" />
+
+            <g:sortableColumn property="bidAmount" title="${message(code: 'bid.bidAmount.label', default: 'Bid Amount')}" />
+
+            <th><g:message code="bid.bidder.label" default="Bidder" /></th>
+
+
+        </tr>
+        </thead>
+
+        <tbody>
+
+
+        <g:each in="${listingInstanceList}" status="i" var="bidInstance">
+            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+
+                <td><g:link action="show" id="${bidInstance.id}">${fieldValue(bean: bidInstance, field: "bidDateTime")}</g:link></td>
+
+                <td>${fieldValue(bean: bidInstance, field: "bidAmount")}</td>
+
+                <td>${fieldValue(bean: bidInstance, field: "bidder.username")}</td>
+
+
+            </tr>
+        </g:each>
+        </tbody>
+
+    </table>
+
+
+        <script type="text/javascript">
+
+        var addTableRow = function(data){
+            var obj = jQuery.parseJSON(data);
+        //    var bidDate = new Date(obj.bidDateTime.replace(/\/Date\((-?\d+)\)\//gi, "$1"))
+
+         $("table#bidtable tr:first").after('<tr><td>'+obj.bidDateTime+'</td><td>'+obj.bidAmount+'</td><td>'+obj.bidder+'</td></tr>').fadeIn('slow');
+
+            $('div.maxbid').replaceWith( "<div class='maxbid'>"+ ''+obj.bidAmount+'' + "<div>")
+        }
+
+
+
+      function bidUpdater() {
+
+               var listingId = "${listingInstance.id}";
+
+                   $.ajax({
+                       url: '/AuctionHaus/listing/bidList',
+                       data: {name: listingId},
+                       type: "GET",
+                       dataType: "json",
+                       timeout:10000,
+                       success:function(data,textStatus){addBidsTable(data);}
+               },10000);
+
+                }
+
+       var addBidsTable = function(data){
+
+           $('div.maxbid').replaceWith( "<div class='maxbid'>"+ ''+data+'' + "<div>")
+           setTimeout("bidUpdater();", 50000)
+
+        }
+
+    </script>
+
+
+    </body>
+  </html>

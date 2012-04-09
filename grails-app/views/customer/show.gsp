@@ -23,23 +23,23 @@
 			</g:if>
 			<ol class="property-list customer">
 			
-				<g:if test="${customerInstance?.email}">
+				<g:if test="${customerInstance?.username}">
 				<li class="fieldcontain">
-					<span id="email-label" class="property-label"><g:message code="customer.email.label" default="Email" /></span>
+					<span id="email-label" class="property-label"><g:message code="customer.username.label" default="username" /></span>
 					
-						<span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${customerInstance}" field="email"/></span>
+                            <span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${customerInstance}" field="username"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${customerInstance?.password}">
+				 <%--<g:if test="${customerInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="customer.password.label" default="Password" /></span>
 					
 						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${customerInstance}" field="password"/></span>
 					
 				</li>
-				</g:if>
+				</g:if> --%>
 			
 				<g:if test="${customerInstance?.createdDate}">
 				<li class="fieldcontain">

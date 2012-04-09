@@ -11,6 +11,13 @@
 // }
 
 
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'auctionhaus.Customer'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'auctionhaus.CustomerRole'
+grails.plugins.springsecurity.password.algorithm='SHA-512'
+grails.plugins.springsecurity.securityConfigType = "Annotation"
+grails.plugins.springsecurity.auth.loginFormUrl = '/'
+grails.plugins.springsecurity.failureHandler.defaultFailureUrl = '/'
+
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
@@ -79,8 +86,8 @@ log4j = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
-    debug 'org.springframework.security',
-      'grails.app.jobs'
+    debug 'org.springframework.security'
+
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP
            'org.codehaus.groovy.grails.web.sitemesh', //  layouts
@@ -96,14 +103,8 @@ log4j = {
 
 // Added by the Spring Security Core plugin:
 
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'auctionhaus.Customer'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'auctionhaus.CustomerRole'
-grails.plugins.springsecurity.userLookup.usernamePropertyName = 'username'
-//grails.plugins.springsecurity.userLookup.authoritiesPropertyName = 'authorities'
-grails.plugins.springsecurity.authority.className = 'auctionhaus.Role'
-//grails.plugins.springsecurity.password.algorithm='SHA-512'
-grails.plugins.springsecurity.securityConfigType = "Annotation"
-//grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
+
+
 grails.plugin.routing.jms.brokerURL = "tcp://localhost:61616"
 //grails.plugins.springsecurity.interceptUrlMap = [
   //      '/secure/**':    ['ROLE_ADMIN'],
@@ -132,5 +133,3 @@ grails {
     }
 }
 
-grails.plugins.springsecurity.auth.loginFormUrl = '/'
-grails.plugins.springsecurity.failureHandler.defaultFailureUrl = '/'

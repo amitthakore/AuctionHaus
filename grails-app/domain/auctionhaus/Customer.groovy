@@ -29,7 +29,7 @@ class Customer {
 		CustomerRole.findAllByCustomer(this).collect { it.role } as Set
 	}
 
-	def beforeInsert() {
+ def beforeInsert() {
 		encodePassword()
 	}
 
@@ -38,7 +38,6 @@ class Customer {
 			encodePassword()
 		}
 	}
-
 
 	protected void encodePassword() {
 		password = springSecurityService.encodePassword(password)

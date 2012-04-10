@@ -6,6 +6,8 @@ import grails.converters.JSON
 
 class ListingController {
 
+    def springSecurityService
+
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -24,16 +26,14 @@ class ListingController {
 
     @Secured(['ROLE_USER'])
     def myListing() {
-        def springSecurityService
 
         def user = springSecurityService.getCurrentUser()
 
-         println("loggedinuser", user)
-        def customerInstance = Customer.findByUsername(user)
+        //def customerInstance = Customer.findByUsername(user)
 
         def c = Listing.createCriteria().list {
 
-            eq("seller", customerInstance)
+            eq("seller", user)
         }
 
         [listingInstanceList:c, listingInstanceTotal: c.size()]

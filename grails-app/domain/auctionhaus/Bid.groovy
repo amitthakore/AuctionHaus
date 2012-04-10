@@ -22,8 +22,8 @@ class Bid {
                 //check whether bid value is al least .50 higher than the previous Bid for the listing
                 def isGood = (val >= (obj.listing.getNextHighestBid(val, obj.bidDateTime) + 0.5))
                 if (!isGood) {
-                    println("bid not created")
-                    return ('The Bid amount must be at least .50 higher than the previous Bid for the same listing')
+
+                    return ('BIDERROR')
                 }
                 return isGood
             }

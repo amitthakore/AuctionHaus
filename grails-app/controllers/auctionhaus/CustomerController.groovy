@@ -5,6 +5,7 @@ package auctionhaus
 import org.springframework.dao.DataIntegrityViolationException
 import auctionhaus.Role
 import auctionhaus.CustomerRole
+import grails.plugins.springsecurity.Secured
 
 class CustomerController {
     def createCustomerService
@@ -15,7 +16,7 @@ class CustomerController {
     def index() {
         redirect(action: "list", params: params)
     }
-
+    @Secured(['ROLE_ADMIN'])
     def list() {
 
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
@@ -55,7 +56,7 @@ class CustomerController {
 
         [customerInstance: customerInstance]
     }
-
+    @Secured(['ROLE_ADMIN'])
     def edit() {
         def customerInstance = Customer.get(params.id)
         if (!customerInstance) {
@@ -66,7 +67,7 @@ class CustomerController {
 
         [customerInstance: customerInstance]
     }
-
+    @Secured(['ROLE_ADMIN'])
     def update() {
         def customerInstance = Customer.get(params.id)
         try{
@@ -103,7 +104,7 @@ class CustomerController {
         render(view: "edit", model: [customerInstance: customerInstance])
     }
     }
-
+    @Secured(['ROLE_ADMIN'])
     def delete() {
         def customerInstance = Customer.get(params.id)
         if (!customerInstance) {

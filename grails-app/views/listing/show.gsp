@@ -12,21 +12,29 @@
 	</head>
 
 	<body onload="bidUpdater()">
-
-		<a href="#show-listing" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-
+    <g:render template="login"></g:render>
+	<a href="#show-listing" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
     <div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
+
+                <sec:ifAllGranted roles="ROLE_USER">
+                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                <li><g:link class="create" controller="listing" action="myListing"><g:message code="My Listings"/></g:link></li>
+                </sec:ifAllGranted>
+                <g:render template="loggedIn"></g:render>
+            </ul>
 		</div>
 		<div id="show-listing" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div id="messages" class="message" role="status">${flash.message}</div>
+
+            <div class="bidmessage"></div>
+
+            <g:if test="${flash.message}">
+			<div class="message">${flash.message}</div>
 			</g:if>
+
 			<ol class="property-list listing">
 
 			  <%--L-1: The detail page for the listing shows the name of the listing--%>
@@ -118,8 +126,6 @@
 					
 				</li>
 				</g:if>
-
-
                <g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${listingInstance?.id}" />
@@ -129,37 +135,22 @@
 			</g:form>
 
               </div>
-
+<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_USER">
     <g:formRemote name="createBid"
                   url= "[controller:'bid', action:'save']"
        onSuccess="addTableRow(data)"
-       on401="showLogin();">
+       onFailure="bidError()">
         <input name="bidAmount" type="number">
         <g:hiddenField name="bidder.id" value = "${listingInstance?.seller?.id}"></g:hiddenField>
         <g:hiddenField name="listing.id" value = "${listingInstance?.id}"></g:hiddenField>
         <g:submitButton name="create" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 
     </g:formRemote>
+</sec:ifAnyGranted>
 
-              <%--
-
-              jQuery.ajax({
-          url: '/AuctionHaus/listing/bidList',
-          data = $('listingInstance').serialize(),
-          type: "GET",
-          dataType: "json",
-          timeout: 1000,
-          success:function(data,textStatus){addBidsTable(data);}
-                  {alert(data); },
-          error: function(x, t, m) {
-              if(t==="timeout") {
-                  alert("got timeout");
-              } else {
-                  alert(t);
-              }
-          }
-      });--%>
-
+<sec:ifNotLoggedIn>
+    <h1>Please register/login to place bid</h1>
+</sec:ifNotLoggedIn>
     <table id="bidtable">
 
         <thead>
@@ -181,7 +172,7 @@
         <g:each in="${listingInstanceList}" status="i" var="bidInstance">
             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-                <td><g:link action="show" id="${bidInstance.id}">${fieldValue(bean: bidInstance, field: "bidDateTime")}</g:link></td>
+                <td>${fieldValue(bean: bidInstance, field: "bidDateTime")}</td>
 
                 <td>${fieldValue(bean: bidInstance, field: "bidAmount")}</td>
 
@@ -197,14 +188,23 @@
 
         <script type="text/javascript">
 
-        var addTableRow = function(data){
-            var obj = jQuery.parseJSON(data);
-        //    var bidDate = new Date(obj.bidDateTime.replace(/\/Date\((-?\d+)\)\//gi, "$1"))
+            var addTableRow = function(data){
+               try{
+                var obj = jQuery.parseJSON(data);
 
-         $("table#bidtable tr:first").after('<tr><td>'+obj.bidDateTime+'</td><td>'+obj.bidAmount+'</td><td>'+obj.bidder+'</td></tr>').fadeIn('slow');
+                   $("table#bidtable tr:first").after('<tr><td>'+obj.bidDateTime+'</td><td>'+obj.bidAmount+'</td><td>'+obj.bidder+'</td></tr>').fadeIn('slow');
 
-            $('div.maxbid').replaceWith( "<div class='maxbid'>"+ ''+obj.bidAmount+'' + "<div>")
-        }
+                   $('div.maxbid').replaceWith( "<div class='maxbid'>"+ ''+obj.bidAmount+'' + "</div>")
+
+                   $('div.bidmessage').replaceWith( "<div class='bidmessage'><b1>"+ "Bid Created" + "</b1></div>")
+               }catch(e){
+
+                   $('div.bidmessage').replaceWith( "<div class='bidmessage'><b1>"+ ''+data+'' + "</b1></div>")
+
+               }
+
+
+            }
 
 
 
@@ -225,10 +225,16 @@
 
        var addBidsTable = function(data){
 
-           $('div.maxbid').replaceWith( "<div class='maxbid'>"+ ''+data+'' + "<div>")
+           $('div.maxbid').replaceWith( "<div class='maxbid'>"+ ''+data+'' + "</div>")
            setTimeout("bidUpdater();", 50000)
 
         }
+
+       function bidError(){
+
+           $('div.bidmessage').replaceWith( "<div class='bidmessage'>" + "Login is required for placing the bid!" + "</div>")
+
+                    }
 
     </script>
 

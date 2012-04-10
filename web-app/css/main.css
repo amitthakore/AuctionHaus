@@ -45,6 +45,9 @@ body {
 
 #grailsLogo {
 	background-color: #abbf78;
+    no-repeat center center;
+    height:100px;
+    width:100px;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -73,6 +76,16 @@ h1 {
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
+}
+
+b1 {
+    background: #f3f3ff;
+    border: 1px solid #b2d1ff;
+    color: #006dba;
+    -moz-box-shadow: 0 0 0.25em #b2d1ff;
+    -webkit-box-shadow: 0 0 0.25em #b2d1ff;
+    box-shadow: 0 0 0.25em #b2d1ff;
+
 }
 
 ul {
@@ -362,6 +375,8 @@ fieldset.embedded legend {
 	text-indent: 22px;
 }
 
+
+
 /* form fields with errors */
 
 .error input, .error select, .error textarea {
@@ -582,4 +597,10 @@ th:hover, tr:hover {
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+
+.bidmessage {
+    background: transparent url(../images/skin/information.png) 0 50% no-repeat;
+    text-indent: 22px;
 }

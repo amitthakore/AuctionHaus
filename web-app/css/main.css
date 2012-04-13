@@ -45,9 +45,8 @@ body {
 
 #grailsLogo {
 	background-color: #abbf78;
-    no-repeat center center;
-    height:100px;
-    width:100px;
+    height:200px;
+    width:200px;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -600,7 +599,3 @@ a.skip {
 }
 
 
-.bidmessage {
-    background: transparent url(../images/skin/information.png) 0 50% no-repeat;
-    text-indent: 22px;
-}

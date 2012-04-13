@@ -1,6 +1,6 @@
 
 <a href="${createLink(controller:'listing',action:'index')}">Home</a>
-<%--<!doctype html>
+<!doctype html>
 --<html>
 	<head>
 		<meta name="layout" content="main"/>
@@ -115,6 +115,6 @@
 			</div>
 		</div>
 	</body>
-</html>  --%>
+</html>
 
 

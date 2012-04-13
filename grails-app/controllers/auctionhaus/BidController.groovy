@@ -6,7 +6,7 @@ import grails.converters.JSON
 
 
 class BidController {
-
+  def createBidService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -25,13 +25,10 @@ class BidController {
     def save() {
 
         def bidInstance = new Bid(params)
-         bidInstance.bidDateTime = new Date()
+
         try{
-        if (!bidInstance.save(flush: true)) {
-            flash.message = message(code: 'bid.amount.not.valid')
-           // render(view: "create", model: [bidInstance: bidInstance])
-            return
-        }
+           bidInstance = createBidService.createNewBid(bidInstance)
+
              def biddata = [
               bidDateTime : bidInstance.bidDateTime,
               bidAmount : bidInstance.bidAmount,

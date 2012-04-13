@@ -6,30 +6,31 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'listing.label', default: 'Listing')}" />
-		<title><g:message code="default.show.label" args="[entityName]" /></title>
+        <g:set var="customerEntity" value="${message(code: 'customer.label', default: 'User ')}" />
+        <title><g:message code="default.show.label" args="[entityName]" /></title>
         <g:javascript library="jquery" plugin="jquery"/>
         <g:setProvider library="jquery"/>
 	</head>
 
 	<body onload="bidUpdater()">
-    <g:render template="login"></g:render>
+
 	<a href="#show-listing" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
     <div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-
+                <sec:ifNotLoggedIn>
+                <li><g:link class="create" controller="customer" action="create"><g:message code="default.register.label" args="[customerEntity]" /></g:link></li>
+                </sec:ifNotLoggedIn>
                 <sec:ifAllGranted roles="ROLE_USER">
                 <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
                 <li><g:link class="create" controller="listing" action="myListing"><g:message code="My Listings"/></g:link></li>
                 </sec:ifAllGranted>
-                <g:render template="loggedIn"></g:render>
+
             </ul>
 		</div>
 		<div id="show-listing" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
-
-            <div class="bidmessage"></div>
 
             <g:if test="${flash.message}">
 			<div class="message">${flash.message}</div>
@@ -135,7 +136,7 @@
 			</g:form>
 
               </div>
-<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_USER">
+<sec:ifAllGranted roles="ROLE_USER">
     <g:formRemote name="createBid"
                   url= "[controller:'bid', action:'save']"
        onSuccess="addTableRow(data)"
@@ -143,10 +144,10 @@
         <input name="bidAmount" type="number">
         <g:hiddenField name="bidder.id" value = "${listingInstance?.seller?.id}"></g:hiddenField>
         <g:hiddenField name="listing.id" value = "${listingInstance?.id}"></g:hiddenField>
-        <g:submitButton name="create" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+        <g:submitButton name="create" value="${message(code: 'default.button.create.bid.label', default: 'Create Bid')}" />
 
     </g:formRemote>
-</sec:ifAnyGranted>
+</sec:ifAllGranted>
 
 <sec:ifNotLoggedIn>
     <h1>Please register/login to place bid</h1>
@@ -196,17 +197,13 @@
 
                    $('div.maxbid').replaceWith( "<div class='maxbid'>"+ ''+obj.bidAmount+'' + "</div>")
 
-                   $('div.bidmessage').replaceWith( "<div class='bidmessage'><b1>"+ "Bid Created" + "</b1></div>")
+                  alert("Bid Created");
                }catch(e){
 
-                   $('div.bidmessage').replaceWith( "<div class='bidmessage'><b1>"+ ''+data+'' + "</b1></div>")
+                   alert(data);
 
                }
-
-
             }
-
-
 
       function bidUpdater() {
 

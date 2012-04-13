@@ -28,23 +28,19 @@ class CustomerController {
     }
 
     def save() {
-           def customerInstance
+        def customerInstance  = new Customer(params)
         try{
-            customerInstance = createCustomerService.createNewCustomer(params)
 
+        customerInstance = createCustomerService.createNewCustomer(customerInstance)
 
-        render(view: "show", model: [customerInstance: customerInstance])
-
-		flash.message = message(code: 'customer.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.username])
+        flash.message = message(code: 'customer.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.username])
+        redirect(action: "show", id: customerInstance.id)
         }
+       catch(grails.validation.ValidationException e){
 
-
-    catch (grails.validation.ValidationException e){
-
-        render(view: "create", model: [customerInstance: customerInstance])
+      render(view: "create", model: [customerInstance: customerInstance])
     }
     }
-
 
     def show() {
         def customerInstance = Customer.get(params.id)

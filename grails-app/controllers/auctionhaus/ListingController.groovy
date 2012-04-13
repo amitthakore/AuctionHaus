@@ -7,7 +7,7 @@ import grails.converters.JSON
 class ListingController {
 
     def springSecurityService
-
+    def createListingService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -18,6 +18,8 @@ class ListingController {
       //M-2: The main landing page shows up to 5 listings at a time
       // M-3: If more than 5 listings exist, pagination links will be available to let the user page through the listings
         params.max = Math.min(params.max ? params.int('max') : 5, 100)
+
+
       //M-4: Only listings with a end date/time that is in the future are visible on the main page
         def listingInstance = Listing.list(params).findAll {it.listingEndDateTime >= new Date()}
 
@@ -43,23 +45,23 @@ class ListingController {
         [listingInstance: new Listing(params)]
     }
    @Secured(['ROLE_USER'])
-    def save() {
-        def listingInstance = new Listing(params)
 
-        try{
-        if (!listingInstance.save(flush: true)) {
-            render(view: "create", model: [listingInstance: listingInstance])
-            return
-        }
+       def save() {
+           def listingInstance  = new Listing(params)
+           Customer user =  springSecurityService.getCurrentUser()
+           listingInstance.seller = user
+            try{
+               listingInstance = createListingService.createNewListing(listingInstance)
+               flash.message = message(code: 'listing.created.message', args: [message(code: 'listning.label', default: 'Listning'), listingInstance.id])
+               redirect(action:"show", id: listingInstance.id)
+           }
 
-		flash.message = message(code: 'listing.created.message', args: [message(code: 'listing.label', default: 'Listing'), listingInstance.id])
-        redirect(action: "show", id: listingInstance.id)
-    }
-        catch (grails.validation.ValidationException e){
-            flash.message = message(code: 'Listing.listingEndDateTime.Invalid')
-            render(view: "create", model: [listingInstance: listingInstance])
-        }
-    }
+           catch(grails.validation.ValidationException e){
+               flash.message = message(code: 'Listing.listingEndDateTime.Invalid')
+               render(view: "create", model: [listingInstance: listingInstance])
+           }
+
+       }
 
     def show() {
         def listingInstance = Listing.get(params.id)
@@ -69,6 +71,8 @@ class ListingController {
             redirect(action: "list")
             return
         }
+        if (listingInstance.listingEndDateTime>new Date()) {
+
         // call sellername method to get user portion of email
         // L-6: The detail page for the listing shows only the user portion of the email address of the user who created the listing (e.g. “mike” if the email address is “mike@piragua.com”)
        def sellername = sellerName(listingInstance)
@@ -78,11 +82,20 @@ class ListingController {
 
         [listingInstance:listingInstance,sellername:sellername,listingInstanceList:listingInstanceList]
 
+        }else{
+            flash.message = message(code: 'listing.expired.message', args: [message(code: 'listing.label', default: 'Listing'), params.id])
+            redirect(action: "list")
+            return
+
+        }
+
 }
 
     @Secured(['ROLE_USER'])
     def edit() {
         def listingInstance = Listing.get(params.id)
+        def user = springSecurityService.getCurrentUser()
+        listingInstance.seller = user
         if (!listingInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'listing.label', default: 'Listing'), params.id])
             redirect(action: "list")

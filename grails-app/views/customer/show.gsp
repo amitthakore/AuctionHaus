@@ -4,13 +4,10 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'customer.label', default: 'Customer')}" />
+		<g:set var="entityName" value="${message(code: 'customer.label', default: 'User')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-<sec:ifNotLoggedIn>
-    <g:render template="/grails-app/views/listing/login"></g:render>
-    </sec:ifNotLoggedIn>
 		<a href="#show-customer" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>

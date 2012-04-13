@@ -107,3 +107,9 @@ h2 {
 .snippet .line:last-child .lineNumber {
 	padding-bottom: 5px;
 }
+
+.bidmessage {
+
+    background-color:#cc0000;
+    text-indent: 22px;
+}

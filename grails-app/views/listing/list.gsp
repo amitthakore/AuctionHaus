@@ -1,6 +1,7 @@
 
 <%@ page import="auctionhaus.Listing" %>
 <%@ page import="auctionhaus.Bid" %>
+
 <!doctype html>
 <html>
 	<head>
@@ -9,9 +10,9 @@
         <g:set var="customerEntity" value="${message(code: 'customer.label', default: 'User ')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
-	<body>
 
-        <g:render template="login"></g:render>
+
+	<body>
 
 		<a href="#list-listing" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
@@ -28,7 +29,7 @@
                 <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
                 <li><g:link class="create" controller="listing" action="myListing"><g:message code="My Listings"/></g:link></li>
                </sec:ifAllGranted>
-                <g:render template="loggedIn"></g:render>
+
             </ul>
 		</div>
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13aab7ee-ed8a-4089-be97-220bf15c987a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/customer/_editform.gsp" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ApplicationResources$_run_closure1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ApplicationResources$_run_closure1_closure2.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ApplicationResources.class" afterPath="" />
@@ -52,31 +53,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Listing.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/resources$_run_closure1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/resources.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AuctionHaus-grailsPlugins.iml" afterPath="$PROJECT_DIR$/AuctionHaus-grailsPlugins.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AuctionHaus.iml" afterPath="$PROJECT_DIR$/AuctionHaus.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/BidController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/BidController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/CustomerController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/CustomerController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/ListingController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/ListingController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/auctionhaus/Customer.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/auctionhaus/Customer.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/customer/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/customer/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/customer/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/customer/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listing/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listing/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stacktrace.log" afterPath="$PROJECT_DIR$/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/auctionhaus/BidIntegrationTests.groovy" afterPath="$PROJECT_DIR$/test/integration/auctionhaus/BidIntegrationTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTests.groovy" afterPath="$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/BidControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/BidControllerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/BidTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/BidTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerControllerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/main.css" afterPath="$PROJECT_DIR$/web-app/css/main.css" />
     </list>
     <ignored path="AuctionHaus.iws" />
     <ignored path=".idea/workspace.xml" />

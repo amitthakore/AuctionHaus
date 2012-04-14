@@ -18,10 +18,19 @@
         <r:layoutResources />
 	</head>
 	<body onload="${pageProperty(name:'body.onload')?:'onLoad();'}">
-		<div role = "Banner" id="grailsLogo"><img src="${resource(dir: 'images', file: 'logo_comp1.jpg')}" alt="BIG DEAL"/></a>
-            <g:render template="/grails-app/views/listing/login"></g:render>
+	<table>
+        <tr>
+        <td>
+    <div role = "Banner" id="grailsLogo"><img src="${resource(dir: 'images', file: 'logo_comp.jpg')}" alt="BIG DEAL"/></a>
+        </td>
+        <td>
+        <g:render template="/grails-app/views/listing/login"></g:render>
+
         <g:render template="/grails-app/views/listing/loggedIn"></g:render> </div>
-    <g:layoutBody/>
+        </td>
+            </tr>
+        </table>
+            <g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>

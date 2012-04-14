@@ -26,7 +26,8 @@ class BidController {
 
         def bidInstance = new Bid(params)
 
-        try{
+        try {
+           def createBidService = new CreateBidService()
            bidInstance = createBidService.createNewBid(bidInstance)
 
              def biddata = [
@@ -38,6 +39,7 @@ class BidController {
            //render biddata as JSON
             render new JSON(biddata).toString()
             flash.message = message(code: 'bid.created.message')
+
         }
 
         catch(grails.validation.ValidationException e) {

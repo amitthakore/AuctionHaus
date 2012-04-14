@@ -2,24 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13aab7ee-ed8a-4089-be97-220bf15c987a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ApplicationResources$_run_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ApplicationResources$_run_closure1_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ApplicationResources.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BootStrap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BuildConfig$_run_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BuildConfig$_run_closure1_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BuildConfig$_run_closure1_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BuildConfig$_run_closure1_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BuildConfig$_run_closure1_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure1_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure1_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Config$_run_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Config.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure4_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure5_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure6_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure6_closure9_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/DataSource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/UrlMappings$__clinit__closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/UrlMappings$__clinit__closure1_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/UrlMappings$__clinit__closure1_closure2_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/UrlMappings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Bid$__clinit__closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Bid$__clinit__closure1_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Bid$__clinit__closure1_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Bid.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Customer$__clinit__closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Customer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/CustomerListing$__clinit__closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/CustomerListing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Listing$_GetHighestBid_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Listing$_GetHighestBid_closure1_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Listing$__clinit__closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Listing$__clinit__closure1_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Listing$__clinit__closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Listing$__clinit__closure2_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/auctionhaus/Listing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/resources$_run_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/resources.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/ListingTests.groovy" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AuctionHaus-grailsPlugins.iml" afterPath="$PROJECT_DIR$/AuctionHaus-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AuctionHaus.iml" afterPath="$PROJECT_DIR$/AuctionHaus.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/BidController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/BidController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/CustomerController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/CustomerController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/ListingController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/auctionhaus/ListingController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/customer/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/customer/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/auctionhaus/Customer.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/auctionhaus/Customer.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/auctionhaus/Listing.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/customer/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/customer/edit.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/customer/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/customer/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/customer/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/customer/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listing/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listing/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listing/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listing/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listing/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listing/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listing/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listing/list.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/listing/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/listing/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stacktrace.log" afterPath="$PROJECT_DIR$/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/errors.css" afterPath="$PROJECT_DIR$/web-app/css/errors.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" afterPath="$PROJECT_DIR$/target/test-reports/TESTS-TestSuites.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/auctionhaus/BidIntegrationTests.groovy" afterPath="$PROJECT_DIR$/test/integration/auctionhaus/BidIntegrationTests.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTests.groovy" afterPath="$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTests.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/BidControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/BidControllerTests.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/BidTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/BidTests.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerControllerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerControllerTests.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" afterPath="$PROJECT_DIR$/test/unit/auctionhaus/CustomerTests.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/main.css" afterPath="$PROJECT_DIR$/web-app/css/main.css" />
     </list>
     <ignored path="AuctionHaus.iws" />
@@ -94,8 +150,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -104,58 +160,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_login.gsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/listing/_login.gsp">
+      <file leaf-file-name="Config.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="666" selection-end="666" vertical-scroll-proportion="1.1538461">
+            <state line="147" column="4" selection-start="6055" selection-end="6055" vertical-scroll-proportion="-84.80769">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationResources.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy">
+      <file leaf-file-name="CustomerIntegrationTests.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="-3.9130435">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
+      <file leaf-file-name="ListingJMSEmailIntegrationTests.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/ListingJMSEmailIntegrationTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="4135" selection-end="4135" vertical-scroll-proportion="-9.454545">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="ResourceBundle">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/listing/create.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.6595745">
-              <folding />
+            <state line="61" column="22" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#21#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/listing/list.gsp">
+      <file leaf-file-name="BidIntegrationTests.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/BidIntegrationTests.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="-0.9574468">
+            <state line="192" column="36" selection-start="7297" selection-end="7297" vertical-scroll-proportion="-123.26087">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_loggedIn.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/listing/_loggedIn.gsp">
+      <file leaf-file-name="edit.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/customer/edit.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="16" selection-start="385" selection-end="385" vertical-scroll-proportion="-4.1489363">
+            <state line="34" column="4" selection-start="1647" selection-end="1647" vertical-scroll-proportion="-2.8723404">
               <folding />
             </state>
           </provider>
@@ -164,36 +210,43 @@
       <file leaf-file-name="_form.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/customer/_form.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="-0.9574468">
+            <state line="30" column="17" selection-start="0" selection-end="1102" vertical-scroll-proportion="-4.87234">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/customer/list.gsp">
+      <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/customer/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="6.382979">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListingController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/auctionhaus/ListingController.groovy">
+      <file leaf-file-name="_editform.gsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/customer/_editform.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="41" selection-start="1029" selection-end="1051" vertical-scroll-proportion="-8.478261">
-              <folding>
-                <element signature="e#21#83#0" expanded="true" />
-              </folding>
+            <state line="11" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="0.63706565">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+      <file leaf-file-name="CustomerController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/auctionhaus/CustomerController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="4" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0">
+            <state line="131" column="11" selection-start="4667" selection-end="4667" vertical-scroll-proportion="-50.869564">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendEmailServiceTests.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/SendEmailServiceTests.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -218,22 +271,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web-app/css/main.css" />
-        <option value="$PROJECT_DIR$/grails-app/services/auctionhaus/ListingService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/services/auctionhaus/CreateListingService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/auctionhaus/CustomerController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/auctionhaus/BidController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/auctionhaus/CreateBidService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/services/auctionhaus/CreateCustomerService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
+        <option value="$PROJECT_DIR$/test/unit/auctionhaus/CreateBidServiceTests.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/jobs/auctionhaus/ListingExpiredJob.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/auctionhaus/ListeningService.groovy" />
+        <option value="$PROJECT_DIR$/test/unit/auctionhaus/CreateListingServiceTests.groovy" />
+        <option value="$USER_HOME$/.grails/2.0.0/projects/AuctionHaus/plugins/activemq-0.3/plugin.xml" />
+        <option value="$USER_HOME$/.grails/2.0.0/projects/AuctionHaus/plugins/activemq-0.3/dependencies.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/auctionhaus/ListingJMSEmailService.groovy" />
+        <option value="$PROJECT_DIR$/test/integration/auctionhaus/ListingJMSEmailIntegrationTests.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/LoginController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/auctionhaus/ListingController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/listing/_loggedIn.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/listing/list.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
-        <option value="$PROJECT_DIR$/grails-app/views/listing/_login.gsp" />
+        <option value="$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTests.groovy" />
+        <option value="$PROJECT_DIR$/test/integration/auctionhaus/BidIntegrationTests.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/customer/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/auctionhaus/CustomerController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/customer/_editform.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/customer/edit.gsp" />
       </list>
     </option>
   </component>
@@ -270,7 +323,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -300,6 +352,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="integration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auctionhaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="grails-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -318,12 +446,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="i18n" />
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionHaus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resource Bundle 'messages'" />
-              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auctionhaus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -332,26 +478,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionHaus-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="AuctionHaus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionHaus-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+              <option name="myItemId" value="activemq-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spring-security-core-1.2.7.2" />
+              <option name="myItemId" value="localhost" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KahaDB" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,10 +523,10 @@
     </key>
   </component>
   <component name="RunManager" selected="Grails.Grails:AuctionHaus">
-    <configuration default="false" name="BidTests" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
+    <configuration default="false" name="testBidSave()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="AuctionHaus" />
       <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: auctionhaus.Bid -echoOut" />
+      <setting name="cmdLine" value="test-app unit: auctionhaus.BidController.testBidSave -echoOut" />
       <setting name="depsClasspath" value="true" />
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -392,10 +537,10 @@
         <option name="Make" enabled="false" />
       </method>
     </configuration>
-    <configuration default="false" name="CustomerTests" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
+    <configuration default="false" name="testBidSaveError()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="AuctionHaus" />
       <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: auctionhaus.Customer -echoOut" />
+      <setting name="cmdLine" value="test-app unit: auctionhaus.BidController.testBidSaveError -echoOut" />
       <setting name="depsClasspath" value="true" />
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -406,10 +551,10 @@
         <option name="Make" enabled="false" />
       </method>
     </configuration>
-    <configuration default="false" name="BidIntegrationTests" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
+    <configuration default="false" name="testBidErrorListingExpired()" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
       <module name="AuctionHaus" />
       <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app integration: auctionhaus.BidIntegration -echoOut" />
+      <setting name="cmdLine" value="test-app unit: auctionhaus.CreateBidService.testBidErrorListingExpired -echoOut" />
       <setting name="depsClasspath" value="true" />
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -419,7 +564,29 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="ListingJMSEmailIntegrationTests" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
+      <module name="AuctionHaus" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="test-app integration: auctionhaus.ListingJMSEmailIntegration -echoOut" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="Make" enabled="false" />
       </method>
@@ -432,34 +599,21 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="true" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="Make" enabled="false" />
       </method>
     </configuration>
-    <configuration default="false" name="CustomerControllerTests" type="GrailsRunConfigurationType" factoryName="Grails" temporary="true">
-      <module name="AuctionHaus" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="test-app unit: auctionhaus.CustomerController -echoOut" />
-      <setting name="depsClasspath" value="true" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="true" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
       <method>
-        <option name="Make" enabled="false" />
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -470,17 +624,6 @@
       <setting name="passParentEnv" value="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <setting name="launchBrowser" value="true" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -501,24 +644,6 @@
       </method>
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/Applications/Flash Player Debugger.app" port="0" run_mode="HtmlOrSwfFile" run_trusted="true" scope="Class" socket_policy_port="0" url_to_launch="http://">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -552,6 +677,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -605,6 +748,20 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy Script">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="false" name="Grails:AuctionHaus" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="AuctionHaus" />
       <setting name="vmparams" value="" />
@@ -625,13 +782,28 @@
         <option name="Make" enabled="false" />
       </method>
     </configuration>
-    <list size="6">
+    <configuration default="false" name="testBidNotHighEnoughCausesError()" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="AuctionHaus" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="test-app integration: auctionhaus.BidIntegration.testBidNotHighEnoughCausesError -echoOut" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="true" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Grails.Grails:AuctionHaus" />
-      <item index="1" class="java.lang.String" itemvalue="Grails.BidTests" />
-      <item index="2" class="java.lang.String" itemvalue="Grails.CustomerTests" />
-      <item index="3" class="java.lang.String" itemvalue="Grails.BidIntegrationTests" />
-      <item index="4" class="java.lang.String" itemvalue="Grails.testBidHighEnoughOK()" />
-      <item index="5" class="java.lang.String" itemvalue="Grails.CustomerControllerTests" />
+      <item index="1" class="java.lang.String" itemvalue="Grails.testBidSave()" />
+      <item index="2" class="java.lang.String" itemvalue="Grails.testBidSaveError()" />
+      <item index="3" class="java.lang.String" itemvalue="Grails.testBidErrorListingExpired()" />
+      <item index="4" class="java.lang.String" itemvalue="Grails.ListingJMSEmailIntegrationTests" />
+      <item index="5" class="java.lang.String" itemvalue="Grails.testBidNotHighEnoughCausesError()" />
+      <item index="6" class="java.lang.String" itemvalue="Grails.testBidHighEnoughOK()" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -693,27 +865,27 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32698962" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33910036" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33910036" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39829302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3979239" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.37743506" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34083045" sideWeight="0.45454547" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34775087" sideWeight="0.45454547" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67128026" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.49675325" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31118315" sideWeight="0.66089964" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.29757786" sideWeight="0.6168831" order="7" side_tool="false" content_ui="tabs" x="48" y="22" width="1232" height="697" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30875203" sideWeight="0.65224916" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.29757786" sideWeight="0.6168831" order="7" side_tool="true" content_ui="tabs" x="35" y="27" width="1232" height="697" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -774,119 +946,120 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/LoginController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/auctionhaus/ListeningService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="33" selection-start="4528" selection-end="4528" vertical-scroll-proportion="-7.173913">
+        <state line="5" column="32" selection-start="99" selection-end="110" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+    <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/BidControllerTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="7" selection-start="3290" selection-end="3290" vertical-scroll-proportion="-6.9583335">
+        <state line="7" column="6" selection-start="128" selection-end="128" vertical-scroll-proportion="37.826088">
+          <folding>
+            <element signature="e#21#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/BidTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="108" selection-start="1392" selection-end="1492" vertical-scroll-proportion="-6.826087">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/spring/resources.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/login/auth.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/auctionhaus/CreateBidService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="18" selection-start="1607" selection-end="1701" vertical-scroll-proportion="6.191489">
+        <state line="2" column="6" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/login/denied.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/auctionhaus/ListingJMSEmailService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="21" selection-start="1726" selection-end="1726" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/auctionhaus/SendEmailServiceTests.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="4" selection-start="6055" selection-end="6055" vertical-scroll-proportion="-84.80769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/CustomerIntegrationTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="-3.9130435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/ListingJMSEmailIntegrationTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="22" selection-start="1986" selection-end="1986" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/auctionhaus/BidIntegrationTests.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="36" selection-start="7297" selection-end="7297" vertical-scroll-proportion="-123.26087">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/auctionhaus/CustomerController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="11" selection-start="4667" selection-end="4667" vertical-scroll-proportion="-50.869564">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/customer/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="6.7021275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/customer/list.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/auctionhaus/ListingController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="41" selection-start="1029" selection-end="1051" vertical-scroll-proportion="-8.478261">
-          <folding>
-            <element signature="e#21#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="4" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/listing/_loggedIn.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="385" selection-end="385" vertical-scroll-proportion="-4.1489363">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="6.382979">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/customer/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="-0.9574468">
+        <state line="30" column="17" selection-start="0" selection-end="1102" vertical-scroll-proportion="-4.87234">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/listing/list.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/customer/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="-0.9574468">
+        <state line="34" column="4" selection-start="1647" selection-end="1647" vertical-scroll-proportion="-2.8723404">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/listing/create.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/customer/_editform.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.6595745">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="4135" selection-end="4135" vertical-scroll-proportion="-9.454545">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/listing/_login.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="666" selection-end="666" vertical-scroll-proportion="1.1538461">
+        <state line="11" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="0.63706565">
           <folding />
         </state>
       </provider>
@@ -899,7 +1072,7 @@
           <value>
             <GrailsSettings>
               <option name="buildConfigCrc" value="1019978652" />
-              <option name="pluginDependenciesCrc" value="-1553500616" />
+              <option name="pluginDependenciesCrc" value="573939514" />
               <option name="properties">
                 <map>
                   <entry key="grails.project.class.dir" value="target/classes" />

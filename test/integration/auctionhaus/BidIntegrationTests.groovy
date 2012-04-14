@@ -5,7 +5,7 @@ import org.junit.*
 import org.springframework.test.annotation.ExpectedException
 import grails.validation.ValidationException
 
-//Amit Thakore and Ben Williams
+//Amit Thakore
 
 class BidIntegrationTests extends GroovyTestCase {
 
@@ -28,8 +28,7 @@ class BidIntegrationTests extends GroovyTestCase {
 
 
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
-
+        def testSeller = new Customer(username: "amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date(),enabled: true)
 
         def bidTest = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller)
 
@@ -37,9 +36,9 @@ class BidIntegrationTests extends GroovyTestCase {
         def bidTest2 = new Bid(bidAmount: 20.4, bidDateTime: new Date(), bidder: testSeller )
 
 
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
         testSeller.save()
 
-        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
         testList.save()
 
         testList.addToBids(bidTest)
@@ -49,12 +48,9 @@ class BidIntegrationTests extends GroovyTestCase {
         //since bidTest2 is only 0.40 greater than the last bid, it should cause a validation error
 
         shouldFail(ValidationException){
-            bidTest2.save()       //this should cause validation exception
+            bidTest2.save()
+
         }
-
-
-
-
 
     }
 
@@ -67,7 +63,7 @@ class BidIntegrationTests extends GroovyTestCase {
 
 
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
+        def testSeller = new Customer(username: "amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
         testSeller.save(flush: true)
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
         testList.save(flush: true)
@@ -99,7 +95,7 @@ class BidIntegrationTests extends GroovyTestCase {
     {
 
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
+        def testSeller = new Customer(username: "amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
          testSeller.save(flush: true)
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
          testList.save(flush: true)
@@ -133,7 +129,7 @@ class BidIntegrationTests extends GroovyTestCase {
 
 
         def testEndDateTime = new Date() + 1
-        def testSeller = new Customer(email:"amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
+        def testSeller = new Customer(username: "amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
 
         def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
 
@@ -154,9 +150,46 @@ class BidIntegrationTests extends GroovyTestCase {
         //we should find not bidTest in the db, because it was never saved nor added to testList before call to testList.save
         assert (!Bid.find(bidTest))
 
+    }
 
+    void testTopTenBidsForListing()
+    {
 
+        def testEndDateTime = new Date() + 1
+        def testSeller = new Customer(username: "amit_thakore1@yahoo.com",password: "1234567",createdDate: new Date())
+        testSeller.save()
+        def testList = new Listing(listingName: "Apple TV",listingEndDateTime: testEndDateTime, startingBidPrice: 10.00, seller:testSeller,listingCreatedDate: new Date())
+        testList.save()
 
+        def bidTest1 = new Bid(bidAmount: 20.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest2 = new Bid(bidAmount: 21.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest3 = new Bid(bidAmount: 22.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest4 = new Bid(bidAmount: 23.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest5 = new Bid(bidAmount: 24.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest6 = new Bid(bidAmount: 25.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest7 = new Bid(bidAmount: 26.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest8 = new Bid(bidAmount: 27.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest9 = new Bid(bidAmount: 28.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest10 = new Bid(bidAmount: 29.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+        def bidTest11 = new Bid(bidAmount: 30.0, bidDateTime: new Date(), bidder: testSeller,listing: testList)
+
+        bidTest1.save()
+        bidTest2.save()
+        bidTest3.save()
+        bidTest4.save()
+        bidTest5.save()
+        bidTest6.save()
+        bidTest7.save()
+        bidTest8.save()
+        bidTest9.save()
+        bidTest10.save()
+        bidTest11.save()
+        def listingInstanceList  = Bid.topBids(testList.id).list(max:10)
+      // check that query is returning 10
+        assert (listingInstanceList.size()==10)
+        // check that query is returning last 10
+        assert listingInstanceList[0].bidAmount==30
+        assert listingInstanceList[9].bidAmount== 21
     }
 
 }

@@ -54,9 +54,9 @@
                 <g:if test="${listingInstance?.startingBidPrice}">
 				<li class="fieldcontain">
 					<span id="startingBidPrice-label" class="property-label"><g:message code="listing.startingBidPrice.label" default="Starting Bid Price" /></span>
-					
+
 						<span class="property-value" aria-labelledby="startingBidPrice-label"><g:fieldValue bean="${listingInstance}" field="startingBidPrice"/></span>
-					
+
 				</li>
 				</g:if>
 			    <%--L-5: The detail page for the listing optionally shows the description--%>
@@ -80,15 +80,7 @@
 				</li>
 				</g:if>
 
-				<g:if test="${listingInstance?.winner}">
-				<li class="fieldcontain">
 
-                    <span id="winner-label" class="property-label"><g:message code="listing.winner.label" default="Winner" /></span>
-					
-					<span class="property-value" aria-labelledby="winner-label"><g:link controller="customer" action="show" id="${listingInstance?.winner?.id}">${listingInstance?.winner?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
 			   <%--L-3: The detail page for the listing shows the most recent bid - Used maxBidForListingTagLib --%>
 				<g:if test="${listingInstance?.bids}">
 				<li class="fieldcontain">
@@ -100,16 +92,7 @@
                     </div>
 				</li>
 				</g:if>
-			
-				<g:if test="${listingInstance?.bidIncAmt}">
-				<li class="fieldcontain">
-					<span id="bidIncAmt-label" class="property-label"><g:message code="listing.bidIncAmt.label" default="Bid Inc Amt" /></span>
-					
-						<span class="property-value" aria-labelledby="bidIncAmt-label"><g:fieldValue bean="${listingInstance}" field="bidIncAmt"/></span>
-					
-				</li>
-				</g:if>
-			
+
 				<g:if test="${listingInstance?.listingCreatedDate}">
 				<li class="fieldcontain">
 					<span id="listingCreatedDate-label" class="property-label"><g:message code="listing.listingCreatedDate.label" default="Listing Created Date" /></span>

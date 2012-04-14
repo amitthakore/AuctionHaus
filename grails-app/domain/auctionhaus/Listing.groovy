@@ -34,9 +34,8 @@ class Listing {
                 if ((it.bidAmount > nextHighestBid) &&  ( (it.bidDateTime.compareTo( bidDate ) <0 || (it.bidDateTime.compareTo( bidDate )==0 ) ) ) )
                 nextHighestBid = it.bidAmount
         }
-        println(nextHighestBid)
-        return nextHighestBid
 
+        return nextHighestBid
 
     }
 

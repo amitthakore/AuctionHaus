@@ -5,7 +5,7 @@ import org.junit.*
 import grails.validation.ValidationException
 
 
-//Amit Thakore and Ben Williams
+//Amit Thakore
 
 class CustomerIntegrationTests extends GroovyTestCase{
     @Before
@@ -26,12 +26,12 @@ class CustomerIntegrationTests extends GroovyTestCase{
 
 
         def customer = new Customer()
-        customer.email = "amitthakore16@gmail.com"
+        customer.username = "amitthakore16@gmail.com"
         customer.password = "123459"
         customer.createdDate  = new Date()
         customer.save()
         def customer1 = new Customer()
-        customer1.email = "amitthakore16@gmail.com"
+        customer1.username = "amitthakore16@gmail.com"
         customer1.password = "123459"
         customer1.createdDate  = new Date()
 
@@ -50,12 +50,12 @@ class CustomerIntegrationTests extends GroovyTestCase{
 
 
         def customer = new Customer()
-        customer.email = "amitthakore16@gmail.com"
+        customer.username = "amitthakore16@gmail.com"
         customer.password = "123459"
         customer.createdDate  = new Date()
         customer.save()
         def customer1 = new Customer()
-        customer1.email = "amitthakore17@gmail.com"
+        customer1.username = "amitthakore17@gmail.com"
         customer1.password = "123459"
         customer1.createdDate  = new Date()
         customer1.save()

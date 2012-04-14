@@ -14,7 +14,7 @@
 				<sec:ifAnyGranted roles="ROLE_ADMIN">
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			    <sec:ifAnyGranted>
+			    </sec:ifAnyGranted>
 			</ul>
 		</div>
 		<div id="edit-customer" class="content scaffold-edit" role="main">
@@ -33,7 +33,7 @@
 				<g:hiddenField name="id" value="${customerInstance?.id}" />
 				<g:hiddenField name="version" value="${customerInstance?.version}" />
 				<fieldset class="form">
-					<g:render template="form"/>
+					<g:render template="_editform"/>
 				</fieldset>
 				<fieldset class="buttons">
 					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />

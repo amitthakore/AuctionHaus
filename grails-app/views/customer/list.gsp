@@ -15,7 +15,7 @@
 
 				    <sec:ifAnyGranted roles="ROLE_ADMIN">
 						<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			        <sec:ifAnyGranted>
+			        </sec:ifAnyGranted>
 
 			</ul>
 		</div>

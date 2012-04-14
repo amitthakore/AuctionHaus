@@ -78,7 +78,7 @@ class ListingController {
        def sellername = sellerName(listingInstance)
 
        //Named Query from Bid and Listing
-        def listingInstanceList  = Bid.topBids(listingInstance.id).list(max:10)
+            def listingInstanceList  = Bid.topBids(listingInstance.id).list(max:10)
 
         [listingInstance:listingInstance,sellername:sellername,listingInstanceList:listingInstanceList]
 

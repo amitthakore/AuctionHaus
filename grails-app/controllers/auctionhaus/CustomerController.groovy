@@ -30,7 +30,7 @@ class CustomerController {
     def save() {
         def customerInstance  = new Customer(params)
         try{
-
+         customerInstance.enabled = 'true'
         customerInstance = createCustomerService.createNewCustomer(customerInstance)
 
         flash.message = message(code: 'customer.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.username])
@@ -129,7 +129,7 @@ class CustomerController {
 
              }
             if (numOfBids == 0) {
-//now check customer listing
+           //now check customer listing
                 if(c.size() > 0){
 
                     flash.message = message(code: 'customer.not.deleted.active.listings', args: [message(code: 'customer.label', default: 'Customer'), params.id])

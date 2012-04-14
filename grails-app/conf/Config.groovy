@@ -68,14 +68,27 @@ grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = true
 grails.views.javascript.library="jquery"
 // set per-environment serverURL stem for creating absolute links
-environments {
+environments
+        {
     development {
         grails.logging.jul.usebridge = true
+        grails.mail.port = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port
+        grails.serverURL = "http://localhost:8080/${appName}"
     }
     production {
+        grails.mail.port = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
+
+    test {
+
+        def smtpPort = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port
+        grails.mail.port = smtpPort
+        greenmail.ports.smtp = smtpPort
+
+    }
+
 }
 
 // log4j configuration
@@ -101,11 +114,11 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 
-// Added by the Spring Security Core plugin:
 
-
-
-grails.plugin.routing.jms.brokerURL = "tcp://localhost:61616"
+grails.plugins.activemq.port=7892
+grails.plugins.activemq.useJmx=true
+grails.plugins.activemq.persistent=true
+//grails.plugin.routing.jms.brokerURL = "vm://LocalBroker"
 //grails.plugins.springsecurity.interceptUrlMap = [
   //      '/secure/**':    ['ROLE_ADMIN'],
     //    '/finance/**':   ['ROLE_FINANCE', 'IS_AUTHENTICATED_FULLY'],
@@ -118,11 +131,12 @@ grails.plugin.routing.jms.brokerURL = "tcp://localhost:61616"
 //]
 
 grails {
+    development{
     mail {
         host = "smtp.gmail.com"
         port = 587
-        username = "amitthakore16@gmail.com"
-        password = "aditi1972"
+        username = "biddeal4u@gmail.com"
+        password = "bundi323001"
         props = ["mail.debug": "true",
                 "mail.smtp.protocol": "smtps",
                 "mail.smtp.auth": "true",
@@ -131,5 +145,7 @@ grails {
                 "mail.smtp.user": "xyz@gmail.com",
                 "mail.smtp.password": "mypassword"]
     }
+    }
 }
+
 

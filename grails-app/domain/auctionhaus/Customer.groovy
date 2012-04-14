@@ -15,11 +15,19 @@ class Customer {
     static hasMany = [bids:Bid]
 
 	static constraints = {
+
         username email:true,blank:false,unique: true
-        password blank:false
         createdDate nullable: false,blank:false
         bids nullable: true
-	}
+
+        password blank:false
+
+        /*validator: {
+            if (it.size()<7 || it.size()>8)
+                return ('Password is too long or too short')
+        } */
+    
+    }
 
 	static mapping = {
 		password column: '`password`'

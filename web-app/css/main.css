@@ -45,8 +45,8 @@ body {
 
 #grailsLogo {
 	background-color: #abbf78;
-    height:200px;
-    width:200px;
+    height:10px;
+    width:10px;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -98,9 +98,11 @@ img {
 /* GENERAL */
 
 #grailsLogo a {
-	display: inline-block;
-	margin: 1em;
+
+    margin:3px;
+    border:1px solid #ffffff;
 }
+
 
 .content {
 }

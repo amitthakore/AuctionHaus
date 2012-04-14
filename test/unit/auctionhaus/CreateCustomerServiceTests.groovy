@@ -11,7 +11,7 @@ import org.junit.*
 @Mock([Customer,Role,CustomerRole])
 class CreateCustomerServiceTests {
 
-    void testCustomerSave()
+    void testCustomerSaveOK()
     {
 
         mockForConstraintsTests(Customer)
@@ -30,6 +30,37 @@ class CreateCustomerServiceTests {
         createCustomerService.createNewCustomer(customerOK)
 
         assert customerOK.validate()
+
+    }
+
+    void testCustomerSaveError()
+    {
+
+        mockForConstraintsTests(Customer)
+
+        Customer customerOK = new Customer()
+
+        customerOK.password =  "1234567"
+        customerOK.username = "athakore@hotmail.com"
+        customerOK.enabled = "true"
+        customerOK.createdDate = new Date()
+        //Groovy's meta-programming to override the encodePassword method customer object is saved and we don't
+        // care about the password for this test.
+        Customer.metaClass.encodePassword = { -> }
+        def createCustomerService = new CreateCustomerService()
+
+        createCustomerService.createNewCustomer(customerOK)
+
+        Customer customerError = new Customer()
+
+        customerError.password =  "1234567"
+        customerError.username = "athakore@hotmail.com"
+        customerError.enabled = "true"
+        customerError.createdDate = new Date()
+
+        createCustomerService.createNewCustomer(customerError)
+
+        assert !customerError.validate()
 
     }
 

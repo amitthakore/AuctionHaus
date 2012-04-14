@@ -7,7 +7,7 @@
         <g:message code="customer.username.label" default="Email" />
         <span class="required-indicator">*</span>
     </label>
-    <g:field type="email" name="username" required="" value="${customerInstance?.username}"/>
+    <g:field type="email" name="Username" required="" value="${customerInstance?.username}"/>
 </div>
 
 

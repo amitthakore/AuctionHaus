@@ -4,6 +4,7 @@ import static org.junit.Assert.*
 import org.junit.*
 import grails.plugin.jms.Queue
 import com.icegreen.greenmail.util.*
+import grails.converters.JSON
 
 class ListingJMSEmailIntegrationTests {
     def listingJMSEmailService
@@ -31,12 +32,13 @@ class ListingJMSEmailIntegrationTests {
          testList.save()
         def bidTest = new Bid(bidAmount: 20, bidDateTime: new Date(), bidder: testCustomer, listing:testList )
          bidTest.save()
+
         def listingCreateService = new CreateListingService()
 
-        listingJMSEmailService.expiredListing()
+        def listingDetails = new JSON(bidTest).toString()
+        listingJMSEmailService.sendJMSMessage(listingDetails)
         listeningService.receive()
-
-   assert listeningService.QUEUE_NAME != []
+        assert listeningService.QUEUE_NAME != []
 
     }
 

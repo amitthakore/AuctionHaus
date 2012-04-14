@@ -141,9 +141,6 @@ class BidIntegrationTests extends GroovyTestCase {
 
 
         //    testList.addToBids(bidTest)
-
-
-
         testList.save()
 
 

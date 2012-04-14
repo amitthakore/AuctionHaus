@@ -93,15 +93,6 @@
 				</li>
 				</g:if>
 
-				<g:if test="${listingInstance?.listingCreatedDate}">
-				<li class="fieldcontain">
-					<span id="listingCreatedDate-label" class="property-label"><g:message code="listing.listingCreatedDate.label" default="Listing Created Date" /></span>
-					
-						<span class="property-value" aria-labelledby="listingCreatedDate-label"><g:formatDate date="${listingInstance?.listingCreatedDate}" /></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${listingInstance?.seller}">
 				<li class="fieldcontain">
 					<span id="seller-label" class="property-label"><g:message code="listing.seller.label" default="Seller" /></span>
@@ -111,12 +102,17 @@
 				</li>
 				</g:if>
                <g:form>
-				<fieldset class="buttons">
+                   <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_USER">
+					<fieldset class="buttons">
 					<g:hiddenField name="id" value="${listingInstance?.id}" />
+
+                    <g:if test="${listingInstanceList.size()==0}">
 					<g:link class="edit" action="edit" id="${listingInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                    </g:if>
+				   <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
-			</g:form>
+                    </sec:ifAnyGranted>
+                   </g:form>
 
               </div>
 <sec:ifAllGranted roles="ROLE_USER">

@@ -21,7 +21,7 @@
 	<table>
         <tr>
         <td>
-    <div role = "Banner" id="grailsLogo"><img src="${resource(dir: 'images', file: 'logo_comp.jpg')}" alt="BIG DEAL"/></a>
+    <div role = "Banner" id="grailsLogo"><img src="${resource(dir: 'images', file: 'logo_comp.png')}" alt="BIG DEAL"/></a>
         </td>
         <td>
         <g:render template="/grails-app/views/listing/login"></g:render>

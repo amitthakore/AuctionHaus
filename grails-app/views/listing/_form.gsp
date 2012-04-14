@@ -35,21 +35,12 @@
 	<g:datePicker name="listingEndDateTime" precision="minute"  value="${listingInstance?.listingEndDateTime}"  />
 </div>
 
-
-<div class="fieldcontain ${hasErrors(bean: listingInstance, field: 'bidIncAmt', 'error')} required">
-	<label for="bidIncAmt">
-		<g:message code="listing.bidIncAmt.label" default="Bid Inc Amt" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="number" name="bidIncAmt" required="" value="${fieldValue(bean: listingInstance, field: 'bidIncAmt')}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: listingInstance, field: 'listingCreatedDate', 'error')} required">
-	<label for="listingCreatedDate">
-		<g:message code="listing.listingCreatedDate.label" default="Listing Created Date" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="listingCreatedDate" precision="day"  value="${listingInstance?.listingCreatedDate}"  />
+    <label for="listingCreatedDate">
+        <g:message code="listing.listingCreatedDate.label" default="Listing Created Date" />
+        <span class="required-indicator">*</span>
+    </label>
+    <g:datePicker name="listingCreatedDate" precision="day"  value="${listingInstance?.listingCreatedDate}"  />
 </div>
 
 

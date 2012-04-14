@@ -46,8 +46,10 @@ class ListingJMSEmailService {
                 def listingDetails = new JSON(listingData).toString()
 
                 //send listingdetails JSON to JMS message Q
-                jmsService.send(service: 'listening', method: 'receive', "${listingDetails}")
 
+               sendJMSMessage(listingDetails)
+
+               // send email
                sendEmail(maxBid,it)
 
                 // update the listing to avoid sending multiple mails/messages
@@ -66,11 +68,15 @@ class ListingJMSEmailService {
         to maxBid.bidder.username;listing.seller.username
         from "fromEmail"
         subject listing.listingName
-        body  "Congratulaitons you are the winner of " + listing.listingName +"." + "Winning bid amount for the listing is " + "\$" + maxBid.bidAmount
-
+        body  "Congratulaitons you are the winner of " + listing.listingName +"." + "Winning bid amount for the listing is " + "\$" +
+        maxBid.bidAmount + " " + "http://localhost:8080/AuctionHaus/listing/showWin/" + "${listing.id}"
 
 
     }
     }
 
+   def sendJMSMessage(String listingDetails){
+
+        jmsService.send(service: 'listening', method: 'receive', "${listingDetails}")
+    }
 }

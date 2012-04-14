@@ -29,8 +29,15 @@ class CustomerController {
 
     def save() {
         def customerInstance  = new Customer(params)
-        try{
-         customerInstance.enabled = 'true'
+
+        if ((params.password.size() < 6) || (params.password.size() > 8)){
+            flash.message = message(code: 'customer.password.short')
+            render(view: "create", model: [customerInstance: customerInstance])
+            return
+        }
+            try{
+
+        customerInstance.enabled = 'true'
         customerInstance = createCustomerService.createNewCustomer(customerInstance)
 
         flash.message = message(code: 'customer.created.message', args: [message(code: 'customer.label', default: 'Customer'), customerInstance.username])
@@ -136,6 +143,12 @@ class CustomerController {
                     redirect(action: "show", id: params.id)
                     return
                 }
+
+              // delete the customer from customer role file
+
+                Collection<CustomerRole> customerRoles = CustomerRole.findAllByCustomer(customerInstance);
+                customerRoles*.delete();
+
             customerInstance.delete(flush: true)
 			flash.message = message(code: 'default.deleted.message', args: [message(code: 'customer.label', default: 'Customer'), params.id])
             redirect(action: "list")

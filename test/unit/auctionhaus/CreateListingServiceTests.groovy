@@ -10,7 +10,7 @@ import org.junit.*
 @Mock([Listing,Customer])
 class CreateListingServiceTests {
 
-    void testListingSave() {
+    void testListingOK() {
     def testEndDateTime = new Date() + 1
     //add customer
     def testCustomer = new Customer(username: "unique1@yahoo.com",password: "1234567",createdDate: new Date(),enabled: true)
@@ -27,4 +27,6 @@ class CreateListingServiceTests {
 
 
 }
+
+
 }

@@ -21,9 +21,14 @@ class ListingController {
 
 
       //M-4: Only listings with a end date/time that is in the future are visible on the main page
-        def listingInstance = Listing.list(params).findAll {it.listingEndDateTime >= new Date()}
 
-        [listingInstanceList:listingInstance, listingInstanceTotal: Listing.count()]
+        def listingInstance = Listing.findAllByListingEndDateTimeGreaterThan(new Date(), params)
+
+        [listingInstanceList: listingInstance, listingInstanceTotal: Listing.countByListingEndDateTimeGreaterThan(new Date())]
+
+       // def listingInstance = Listing.list(params).findAll {it.listingEndDateTime >= new Date()}
+
+       // [listingInstanceList:listingInstance, listingInstanceTotal: Listing.count()]
     }
 
     @Secured(['ROLE_USER'])
@@ -127,7 +132,16 @@ class ListingController {
             }
         }
 
+
+
         listingInstance.properties = params
+
+       // Would like to exclude starting bid and bids while updating
+       // bindData(listingInstance, params, [exclude: ['startingBidPrice', 'bids']])
+
+       // println ("a:" + listingInstance.startingBidPrice + " - b:" + listingInstance.bids)
+
+       // Listing.metaClass.getNextHighestBid = { -> }
 
         if (!listingInstance.save(flush: true)) {
             render(view: "edit", model: [listingInstance: listingInstance])
@@ -168,6 +182,29 @@ class ListingController {
         render new JSON(listingInstanceList.bidAmount).toString()
 
         }
+      // show winning bid to user this will be sent in email link
+    def showWin() {
+        def listingInstance = Listing.get(params.id)
+
+        if (!listingInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'listing.label', default: 'Listing'), params.id])
+            redirect(action: "list")
+            return
+        }
+
+
+            // call sellername method to get user portion of email
+            // L-6: The detail page for the listing shows only the user portion of the email address of the user who created the listing (e.g. “mike” if the email address is “mike@piragua.com”)
+            def sellername = sellerName(listingInstance)
+
+            //Named Query from Bid and Listing
+            def listingInstanceList  = Bid.topBids(listingInstance.id).list(max:10)
+
+            [listingInstance:listingInstance,sellername:sellername,listingInstanceList:listingInstanceList]
+
+
+        }
+
 
 
    //L-6: The detail page for the listing shows only the user portion of the email address of the user who created the listing (e.g. “mike” if the email address is “mike@piragua.com”)

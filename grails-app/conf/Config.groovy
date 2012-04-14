@@ -131,7 +131,7 @@ grails.plugins.activemq.persistent=true
 //]
 
 grails {
-    development{
+
     mail {
         host = "smtp.gmail.com"
         port = 587
@@ -144,7 +144,7 @@ grails {
                 "mail.smtp.host": "smtp.gmail.com",
                 "mail.smtp.user": "xyz@gmail.com",
                 "mail.smtp.password": "mypassword"]
-    }
+
     }
 }
 

@@ -9,12 +9,15 @@
 	<body>
 
 		<a href="#create-listing" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
+
+         <div class="nav" role="navigation">
+<sec:ifAllGranted roles="ROLE_USER">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-
+                <li><g:link class="create" controller="listing" action="myListing"><g:message code="My Listings"/></g:link></li>
             </ul>
+    </sec:ifAllGranted>
 		</div>
 		<div id="create-listing" class="content scaffold-create" role="main">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>

@@ -44,7 +44,14 @@ class BidController {
 
         catch(grails.validation.ValidationException e) {
       // L-8: Validation errors will be displayed on the listing detail page if an added bid does not pass validation (unit test of the controller action that handles this requirement)
-         render flash.message = message(code: 'bid.amount.not.valid')
+            if (bidInstance.listing.listingEndDateTime > new Date())
+            {
+            render flash.message = message(code: 'bid.amount.not.valid')
+            }
+            else
+            {
+                render flash.message = message(code: 'listing.expired.message')
+            }
 
        }
 

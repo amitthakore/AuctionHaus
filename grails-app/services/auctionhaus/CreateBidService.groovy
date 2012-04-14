@@ -9,13 +9,15 @@ class CreateBidService {
         {
 
         } else  {
+
             throw new grails.validation.ValidationException("Bid Error", bidInstance.errors)
 
         }
 
         }
         else {
-                throw new grails.validation.ValidationException("Listing Expired Bid can not be added", bidInstance.errors)
+
+            throw new grails.validation.ValidationException("Listing Expired", bidInstance.errors)
             }
 
         return bidInstance

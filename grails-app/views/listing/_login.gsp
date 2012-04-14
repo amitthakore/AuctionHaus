@@ -12,15 +12,12 @@
 
 <g:if test = "${session.getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION)!= null}">
         <div class="error">
-             <g:set var="loginErrorMessage" value="Login Incorrect" scope="page" />
-
+             <g:set var="loginErrorMessage" value="Incorrect Username or Password" scope="page" color="#cc0000" />
             <% session.removeValue("SPRING_SECURITY_LAST_EXCEPTION")%>
             <% session.invalidate() %>
         </div>
  </g:if>
  <g:else>
-
-  <g:set var="loginErrorMessage" value=" " scope="page" />
  </g:else>
     ${loginErrorMessage}
     <div style="margin-left: 275px;">
@@ -41,5 +38,5 @@
             </table>
         </form>
     </div>
-
+    <g:set var="loginErrorMessage" value=" " scope="page" />
     </sec:ifNotLoggedIn>

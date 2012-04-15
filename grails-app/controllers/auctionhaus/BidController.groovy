@@ -21,6 +21,7 @@ class BidController {
     def create() {
         [bidInstance: new Bid(params)]
     }
+   //U1-2 Asynchronously place bid
     @Secured(['ROLE_USER'])
     def save() {
 

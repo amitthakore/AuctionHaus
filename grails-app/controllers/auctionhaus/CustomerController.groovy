@@ -59,6 +59,8 @@ class CustomerController {
 
         [customerInstance: customerInstance]
     }
+
+  // S-4 only a user with an admin role is able to view/edit customers screens
     @Secured(['ROLE_ADMIN'])
     def edit() {
         def customerInstance = Customer.get(params.id)

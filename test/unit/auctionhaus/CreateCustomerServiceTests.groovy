@@ -7,6 +7,7 @@ import org.junit.*
 /**
  * See the API for {@link grails.test.mixin.services.ServiceUnitTestMixin} for usage instructions
  */
+//sRV-1Test
 @TestFor(CreateCustomerService)
 @Mock([Customer,Role,CustomerRole])
 class CreateCustomerServiceTests {
@@ -35,10 +36,12 @@ class CreateCustomerServiceTests {
 
     void testCustomerSaveError()
     {
-
+        def customerOK
+        def customerError
+       try{
         mockForConstraintsTests(Customer)
 
-        Customer customerOK = new Customer()
+       customerOK = new Customer()
 
         customerOK.password =  "1234567"
         customerOK.username = "athakore@hotmail.com"
@@ -51,7 +54,7 @@ class CreateCustomerServiceTests {
 
         createCustomerService.createNewCustomer(customerOK)
 
-        Customer customerError = new Customer()
+        customerError = new Customer()
 
         customerError.password =  "1234567"
         customerError.username = "athakore@hotmail.com"
@@ -59,10 +62,12 @@ class CreateCustomerServiceTests {
         customerError.createdDate = new Date()
 
         createCustomerService.createNewCustomer(customerError)
+       }
+       catch(grails.validation.ValidationException e){
 
         assert !customerError.validate()
 
     }
 
-
+    }
 }

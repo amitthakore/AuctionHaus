@@ -2,7 +2,7 @@ package auctionhaus
 
 import grails.test.mixin.*
 import org.junit.*
-
+//SRV-3Tests
 /**
  * See the API for {@link grails.test.mixin.services.ServiceUnitTestMixin} for usage instructions
  */
@@ -37,7 +37,7 @@ class CreateBidServiceTests {
 
 
     void testBidSaveError() {
-
+       try{
         def testEndDateTime = new Date() + 1
         //add customer
         def testCustomer = new Customer(username: "unique1@yahoo.com",password: "1234567",createdDate: new Date(),enabled: true)
@@ -62,7 +62,11 @@ class CreateBidServiceTests {
         bidTest1.listing = testList
         bidCreateService.createNewBid(bidTest1)
        // bid not created bid amount not correct
+       }
+       catch(grails.validation.ValidationException e){
+
         assert Bid.count() == 1
+           }
 
     }
 

@@ -4,7 +4,7 @@ import grails.plugin.jms.JmsService
 import grails.converters.JSON
 import grails.plugin.mail.MailService
 import grails.gorm.*
-
+ //C-2 C-3 Send JMS message and Email
 class ListingJMSEmailService {
 
 
@@ -74,7 +74,7 @@ class ListingJMSEmailService {
 
     }
     }
-
+//Send JMS message
    def sendJMSMessage(String listingDetails){
 
         jmsService.send(service: 'listening', method: 'receive', "${listingDetails}")

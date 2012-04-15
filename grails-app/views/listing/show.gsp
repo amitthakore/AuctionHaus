@@ -115,6 +115,7 @@
                    </g:form>
 
               </div>
+    <%--UI-1Place Bid asynchrously--%>
 <sec:ifAllGranted roles="ROLE_USER">
     <g:formRemote name="createBid"
                   url= "[controller:'bid', action:'save']"
@@ -127,7 +128,7 @@
 
     </g:formRemote>
 </sec:ifAllGranted>
-
+ <%--Bidding require that user is logged in --%>
 <sec:ifNotLoggedIn>
     <h1>Please register/login to place bid</h1>
 </sec:ifNotLoggedIn>
@@ -148,7 +149,7 @@
 
         <tbody>
 
-
+    <%--Display top bids--%>
         <g:each in="${listingInstanceList}" status="i" var="bidInstance">
             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
@@ -185,7 +186,7 @@
             }
 
       function bidUpdater() {
-
+     //UI-6 poll server to update bid
                var listingId = "${listingInstance.id}";
 
                    $.ajax({

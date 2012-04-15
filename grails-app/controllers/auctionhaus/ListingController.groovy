@@ -19,18 +19,14 @@ class ListingController {
       // M-3: If more than 5 listings exist, pagination links will be available to let the user page through the listings
         params.max = Math.min(params.max ? params.int('max') : 5, 100)
 
-
       //M-4: Only listings with a end date/time that is in the future are visible on the main page
 
         def listingInstance = Listing.findAllByListingEndDateTimeGreaterThan(new Date(), params)
 
         [listingInstanceList: listingInstance, listingInstanceTotal: Listing.countByListingEndDateTimeGreaterThan(new Date())]
 
-       // def listingInstance = Listing.list(params).findAll {it.listingEndDateTime >= new Date()}
-
-       // [listingInstanceList:listingInstance, listingInstanceTotal: Listing.count()]
     }
-
+   // user with user role should be able to see my listing view
     @Secured(['ROLE_USER'])
     def myListing() {
 
@@ -45,6 +41,7 @@ class ListingController {
 
         [listingInstanceList:c, listingInstanceTotal: c.size()]
     }
+
    @Secured(['ROLE_USER'])
     def create() {
         [listingInstance: new Listing(params)]
@@ -82,12 +79,13 @@ class ListingController {
         // L-6: The detail page for the listing shows only the user portion of the email address of the user who created the listing (e.g. “mike” if the email address is “mike@piragua.com”)
        def sellername = sellerName(listingInstance)
 
-       //Named Query from Bid and Listing
+       //U-1 Named Query from Bid and Listing
             def listingInstanceList  = Bid.topBids(listingInstance.id).list(max:10)
 
         [listingInstance:listingInstance,sellername:sellername,listingInstanceList:listingInstanceList]
 
         }else{
+            //UI-7 Listing Expired
             flash.message = message(code: 'listing.expired.message', args: [message(code: 'listing.label', default: 'Listing'), params.id])
             redirect(action: "list")
             return
@@ -132,16 +130,7 @@ class ListingController {
             }
         }
 
-
-
         listingInstance.properties = params
-
-       // Would like to exclude starting bid and bids while updating
-       // bindData(listingInstance, params, [exclude: ['startingBidPrice', 'bids']])
-
-       // println ("a:" + listingInstance.startingBidPrice + " - b:" + listingInstance.bids)
-
-       // Listing.metaClass.getNextHighestBid = { -> }
 
         if (!listingInstance.save(flush: true)) {
             render(view: "edit", model: [listingInstance: listingInstance])
@@ -170,6 +159,8 @@ class ListingController {
             redirect(action: "show", id: params.id)
         }
     }
+  //UI-6 Code to poll the server for max bid for the listing. get the ID from client
+    @Secured(['ROLE_USER'])
     def bidList() {
 
         Long listingId = Long.valueOf(params['name']);

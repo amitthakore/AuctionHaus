@@ -1,6 +1,6 @@
 package auctionhaus
 import grails.plugin.jms.Queue
-
+//C-1Receive message
 class ListeningService {
 
         static final QUEUE_NAME = 'lQueue'

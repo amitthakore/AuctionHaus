@@ -160,7 +160,7 @@ class ListingController {
         }
     }
   //UI-6 Code to poll the server for max bid for the listing. get the ID from client
-    @Secured(['ROLE_USER'])
+    
     def bidList() {
 
         Long listingId = Long.valueOf(params['name']);

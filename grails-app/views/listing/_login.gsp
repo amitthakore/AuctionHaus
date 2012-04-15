@@ -20,7 +20,7 @@
  <g:else>
      <g:set var="loginErrorMessage" value=" " scope="page" />
    </g:else>
-    ${loginErrorMessage}
+
     <div style="margin-left: 275px;">
         <form method="POST" action="${resource(file: 'j_spring_security_check')}">
             <table >
@@ -39,5 +39,5 @@
             </table>
         </form>
     </div>
-
+    ${loginErrorMessage}
     </sec:ifNotLoggedIn>
